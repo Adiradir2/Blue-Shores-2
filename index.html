@@ -154,7 +154,23 @@ img{max-width:100%}
                 </sc-if>
 
                 <sc-if value="{{ b.isNote }}" hint-placeholder-val="{{ false }}">
-                  <div style="border-right:3px solid #C9A227;border-radius:16px;background:rgba(201,162,39,.08);padding:clamp(16px,2.2vw,22px);font-size:clamp(14.5px,1.7vw,17px);color:#EDF0F6;max-width:52em;text-wrap:pretty"><b style="color:#E4C766;font-weight:800">{{ b.label }}</b> {{ b.x }}</div>
+                  <div style="border:2px solid #C9A227;border-radius:24px;overflow:hidden;background:linear-gradient(135deg,rgba(201,162,39,.2),rgba(201,162,39,.04) 65%);box-shadow:0 26px 70px rgba(201,162,39,.12)">
+                    <div style="display:inline-flex;align-items:center;gap:11px;background:#C9A227;color:#1B2A4A;font-weight:900;font-size:clamp(16px,2.1vw,22px);letter-spacing:1.4px;padding:11px 24px;border-radius:999px;margin:clamp(18px,2.4vw,28px) clamp(20px,3vw,38px) 0">
+                      <span style="display:block;width:10px;height:10px;border-radius:50%;background:#1B2A4A"></span>{{ b.label }}
+                    </div>
+                    <div style="padding:clamp(18px,2.6vw,32px) clamp(20px,3vw,38px) clamp(22px,3vw,36px)">
+                      <div style="font-family:'Rubik',sans-serif;font-size:clamp(22px,3.4vw,38px);font-weight:800;line-height:1.15;color:#FFFFFF;letter-spacing:-.8px;max-width:20em;text-wrap:balance">{{ b.head }}</div>
+                      <div style="margin-top:10px;font-size:clamp(15px,1.8vw,18px);color:#CFD8E8;font-weight:300;max-width:34em;text-wrap:pretty">{{ b.sub }}</div>
+                      <div style="margin-top:clamp(18px,2.4vw,26px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,150px),1fr));gap:clamp(10px,1.6vw,16px)">
+                        <sc-for list="{{ b.items }}" as="it" hint-placeholder-count="3">
+                          <div style="background:rgba(19,31,56,.55);border:1px solid rgba(201,162,39,.4);border-radius:18px;padding:clamp(14px,2vw,20px);text-align:center">
+                            <div style="font-family:'Rubik',sans-serif;font-size:clamp(22px,3vw,32px);font-weight:900;line-height:1;color:#E4C766;letter-spacing:-1px">{{ it.v }}</div>
+                            <div style="margin-top:8px;font-size:clamp(14px,1.5vw,16px);color:#FFFFFF;font-weight:700">{{ it.k }}</div>
+                          </div>
+                        </sc-for>
+                      </div>
+                    </div>
+                  </div>
                 </sc-if>
 
                 <sc-if value="{{ b.isMedia }}" hint-placeholder-val="{{ false }}">
@@ -495,7 +511,13 @@ class Component extends DCLogic {
         o.items = (b.items || []).map((c) => ({ x: this.tx(c.x), u: c.u || '', isLink: !!c.u, plain: !c.u }));
       }
       else if (b.t === 'trend') { o.isTrend = true; o.x = this.tx(b.x); }
-      else if (b.t === 'note') { o.isNote = true; o.label = this.tx(b.label); o.x = this.tx(b.x); }
+      else if (b.t === 'note') {
+        o.isNote = true;
+        o.label = this.tx(b.label);
+        o.head = this.tx(b.head);
+        o.sub = this.tx(b.sub);
+        o.items = (b.items || []).map((it) => ({ v: this.tx(it.v), k: this.tx(it.k) }));
+      }
       else if (b.t === 'media') {
         o.isMedia = true; o.cap = this.tx(b.cap);
         o.isRail = String(b.src).indexOf('lrail') !== -1;

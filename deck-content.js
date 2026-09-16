@@ -166,7 +166,15 @@
           L('רוכשים זכויות בקרקע, אשר בהמשך ייתרגמו לזכויות בנייה.', 'You acquire land rights, which later translate into building rights.'),
           L('הקרקע פרטית ו<b>נרשמת בטאבו על שם הרוכש</b> — סחירה, וניתנת למכירה ברווח בכל שלב.', 'The land is private and <b>registered in the Land Registry (Tabu)</b> in the buyer\'s name — tradeable, and sellable at a profit at any stage.')
         ] },
-        { t: 'note', label: L('יתרון מבני:', 'Structural advantage:'), x: L('רכישת קרקע בשלב זה חוסכת עלויות משמעותיות הכלולות ברכישת דירה גמורה — ובהן מע"מ (18%), מס רכישה מוגדל ורווח יזמי.', 'Buying land at this stage saves major costs baked into a finished apartment — including VAT (18%), higher purchase tax and developer profit.') },
+        { t: 'note',
+          label: L('יתרון מבני', 'Structural advantage'),
+          head: L('רכישת קרקע בשלב זה חוסכת עלויות משמעותיות', 'Buying land at this stage saves major costs'),
+          sub: L('עלויות הכלולות ממילא במחיר של דירה גמורה', 'Costs that are already baked into the price of a finished apartment'),
+          items: [
+            { v: L('18%', '18%'), k: L('מע"מ', 'VAT') },
+            { v: L('מוגדל', 'Higher'), k: L('מס רכישה', 'purchase tax') },
+            { v: L('יזמי', 'Developer'), k: L('רווח', 'profit') }
+          ] },
         { t: 'media', src: K6, cap: L('הדמיה: קייזר אדריכלים', 'Rendering: Kaiser Architects') }
       ]
     },
