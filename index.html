@@ -303,21 +303,11 @@ img{max-width:100%}
   <footer style="flex:0 0 auto;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:0 clamp(10px,2vw,20px);padding-bottom:env(safe-area-inset-bottom,0px);background:#1B2A4A;border-top:1px solid rgba(201,162,39,.24)">
     <button type="button" onClick="{{ prev }}" style="background:transparent;border:1px solid rgba(255,255,255,.2);color:#DFE5F0;padding:10px 16px;min-height:44px;min-width:84px;border-radius:999px;white-space:nowrap;font-family:'Rubik',sans-serif;font-size:clamp(12.5px,1.4vw,15px);font-weight:700;cursor:pointer;opacity:{{ prevOpacity }}" style-hover="border-color:#C9A227;color:#FFFFFF">{{ prevLabel }}</button>
     <div style="display:flex;align-items:center;gap:clamp(6px,1.4vw,16px);min-width:0;flex:1 1 auto;justify-content:center">
-      <sc-if value="{{ wide }}" hint-placeholder-val="{{ true }}">
-        <div style="display:flex;align-items:center;gap:1px">
-          <sc-for list="{{ dots }}" as="d" hint-placeholder-count="9">
-            <button type="button" onClick="{{ d.pick }}" title="{{ d.label }}" style="background:transparent;border:0;padding:20px 18px;min-height:44px;min-width:44px;cursor:pointer;display:flex;align-items:center;justify-content:center">
-              <sc-if value="{{ d.on }}" hint-placeholder-val="{{ true }}"><span style="display:block;width:24px;height:5px;border-radius:999px;background:#C9A227"></span></sc-if>
-              <sc-if value="{{ d.off }}" hint-placeholder-val="{{ true }}"><span style="display:block;width:8px;height:5px;border-radius:999px;background:rgba(255,255,255,.22)"></span></sc-if>
-            </button>
-          </sc-for>
-        </div>
-      </sc-if>
-      <sc-if value="{{ narrow }}" hint-placeholder-val="{{ false }}">
-        <div style="flex:1 1 auto;height:5px;border-radius:999px;overflow:hidden;background:rgba(255,255,255,.14);min-width:40px">
-          <div ref="{{ progressRef }}" style="height:100%;background:#C9A227;transition:width .2s linear;width:2%"></div>
-        </div>
-      </sc-if>
+      <button type="button" onClick="{{ seek }}" title="{{ counter }}" style="flex:1 1 auto;min-width:40px;background:transparent;border:0;padding:19px 0;cursor:pointer;display:block">
+        <span style="display:block;height:6px;border-radius:999px;overflow:hidden;background:rgba(255,255,255,.16)">
+          <span ref="{{ progressRef }}" style="display:block;height:100%;background:linear-gradient(90deg,#A6851C,#E4C766);transition:width .2s linear;width:2%"></span>
+        </span>
+      </button>
       <span style="font-family:'Rubik',sans-serif;font-size:clamp(12px,1.2vw,13px);color:#96A0B2;white-space:nowrap;flex:0 0 auto" dir="ltr">{{ counter }}</span>
     </div>
     <button type="button" onClick="{{ next }}" style="background:#C9A227;border:1px solid #C9A227;color:#1B2A4A;padding:10px 16px;min-height:44px;min-width:84px;border-radius:999px;white-space:nowrap;font-family:'Rubik',sans-serif;font-size:clamp(12.5px,1.4vw,15px);font-weight:800;cursor:pointer;opacity:{{ nextOpacity }}" style-hover="background:#E4C766">{{ nextLabel }}</button>
@@ -595,6 +585,16 @@ class Component extends DCLogic {
       })),
       prev: () => this.go(idx - 1),
       next: () => this.go(idx + 1),
+      seek: (e) => {
+        const el = this.scrollRef.current;
+        const track = e.currentTarget;
+        if (!el || !track) return;
+        const r = track.getBoundingClientRect();
+        const rtl = lang === 'he';
+        let frac = rtl ? (r.right - e.clientX) / r.width : (e.clientX - r.left) / r.width;
+        frac = Math.max(0, Math.min(1, frac));
+        el.scrollTo({ top: frac * (el.scrollHeight - el.clientHeight), behavior: 'smooth' });
+      },
       onScroll: () => {
         if (this.ticking) return;
         this.ticking = true;

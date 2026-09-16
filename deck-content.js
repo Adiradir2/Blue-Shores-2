@@ -78,7 +78,7 @@
           big2: L('למתן תוקף', 'for validity'),
           date: L('פברואר 2022', 'February 2022'),
           ref: L('תוכנית המתאר "חוף התכלת" · הר/2200/א׳', 'The "Blue Shores" master plan · Har/2200/A'),
-          x: L('הבסיס לוודאות לגבי <b>הייעוד והזכויות</b>. מכאן, הדרך להיתרי בנייה עוברת בהשלמת <b>תוכנית מפורטת הכוללת איחוד וחלוקה</b>.', 'The basis for certainty on <b>land use and rights</b>. From here, the path to building permits runs through completing a <b>detailed plan including consolidation & division</b>.'),
+          x: L('הבסיס לוודאות לגבי <b>הייעוד והזכויות</b>. מכאן, הדרך להיתרי בנייה עוברת בהשלמת <b>תוכנית מפורטת שמכוחה ניתן להוציא היתרי בנייה, הכוללת איחוד וחלוקה</b>.', 'The basis for certainty on <b>land use and rights</b>. From here, the path runs through completing a <b>detailed plan — including consolidation & division — under which building permits can be issued</b>.'),
           note: L('במקביל נחתם <b>הסכם גג</b> עם המדינה למימון הפיתוח והתשתיות.', 'In parallel, an <b>agreement</b> was signed with the State to fund development and infrastructure.') },
         { t: 'morph', a: 'assets/land.jpg', b: 'assets/map.jpg',
           hintA: L('לתוכנית המאושרת לחצו', 'Tap for the approved plan'),
