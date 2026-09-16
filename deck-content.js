@@ -122,8 +122,8 @@
           sub: L('עלויות שכלולות ממילא במחיר של דירה גמורה', 'Costs that are already built into the price of a finished apartment'),
           items: [
             { v: L('18%', '18%'), k: L('מע"מ', 'VAT'), d: L('על כל דירה חדשה שנמכרת בישראל', 'Charged on every new apartment sold in Israel') },
-            { v: L('מוגדל', 'Higher'), k: L('מס רכישה', 'purchase tax'), d: L('נגזר משווי הנכס — ועולה ככל שהשווי עולה (אנו קונים לפי שווי הקרקע)', 'Scaled to the value of the property — it rises as the value rises (we buy at land value)') },
-            { v: L('יזמי', 'Developer'), k: L('רווח', 'profit'), d: L('חברי הקבוצה מאורגנים כיזם ולכן חוסכים את הרווח היזמי', 'Group members are organized as the developer, so the developer\'s profit is saved') }
+            { k: L('מס רכישה מוגדל', 'Higher purchase tax'), d: L('נגזר משווי הנכס — ועולה ככל שהשווי עולה (אנו קונים לפי שווי הקרקע)', 'Scaled to the value of the property — it rises as the value rises (we buy at land value)') },
+            { k: L('רווח יזמי', 'Developer profit'), d: L('חברי הקבוצה מאורגנים כיזם ולכן חוסכים את הרווח היזמי', 'Group members are organized as the developer, so the developer\'s profit is saved') }
           ] },
         { t: 'media', src: K6, cap: L('הדמיה: קייזר אדריכלים', 'Rendering: Kaiser Architects') }
       ]

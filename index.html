@@ -164,8 +164,13 @@ img{max-width:100%}
                       <div style="margin-top:clamp(18px,2.4vw,26px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,150px),1fr));gap:clamp(10px,1.6vw,16px)">
                         <sc-for list="{{ b.items }}" as="it" hint-placeholder-count="3">
                           <div style="background:rgba(19,31,56,.55);border:1px solid rgba(201,162,39,.4);border-radius:18px;padding:clamp(16px,2.2vw,22px);display:flex;flex-direction:column;gap:7px">
-                            <div style="font-family:'Rubik',sans-serif;font-size:clamp(22px,3vw,32px);font-weight:900;line-height:1;color:#E4C766;letter-spacing:-1px">{{ it.v }}</div>
-                            <div style="font-size:clamp(15px,1.7vw,17px);color:#FFFFFF;font-weight:800">{{ it.k }}</div>
+                            <sc-if value="{{ it.hasV }}" hint-placeholder-val="{{ false }}">
+                              <div style="font-family:'Rubik',sans-serif;font-size:clamp(26px,3.4vw,36px);font-weight:900;line-height:1;color:#E4C766;letter-spacing:-1px">{{ it.v }}</div>
+                              <div style="font-family:'Rubik',sans-serif;font-size:clamp(17px,2vw,21px);color:#FFFFFF;font-weight:800;line-height:1.2">{{ it.k }}</div>
+                            </sc-if>
+                            <sc-if value="{{ it.noV }}" hint-placeholder-val="{{ true }}">
+                              <div style="font-family:'Rubik',sans-serif;font-size:clamp(19px,2.3vw,25px);font-weight:900;color:#E4C766;line-height:1.15;letter-spacing:-.5px">{{ it.k }}</div>
+                            </sc-if>
                             <div style="font-size:clamp(13.5px,1.5vw,15px);color:#CFD8E8;line-height:1.45;font-weight:300;text-wrap:pretty">{{ it.d }}</div>
                           </div>
                         </sc-for>
@@ -516,7 +521,10 @@ class Component extends DCLogic {
         o.label = this.tx(b.label);
         o.head = this.tx(b.head);
         o.sub = this.tx(b.sub);
-        o.items = (b.items || []).map((it) => ({ v: this.tx(it.v), k: this.tx(it.k), d: this.tx(it.d) }));
+        o.items = (b.items || []).map((it) => {
+          const v = it.v ? this.tx(it.v) : '';
+          return { v, k: this.tx(it.k), d: this.tx(it.d), hasV: !!v, noV: !v };
+        });
       }
       else if (b.t === 'media') {
         o.isMedia = true; o.cap = this.tx(b.cap);
