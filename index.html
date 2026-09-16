@@ -64,7 +64,7 @@ img{max-width:100%}
               <h1 style="font-family:'Rubik',sans-serif;font-weight:300;font-size:clamp(40px,8.6vw,94px);line-height:.96;margin:0 0 16px;letter-spacing:-2px;color:#FFFFFF">{{ s.t1 }} <b style="font-weight:900;color:#E4C766">{{ s.t2 }}</b></h1>
               <div style="width:clamp(56px,10vw,120px);height:3px;border-radius:999px;background:linear-gradient(90deg,#C9A227,rgba(201,162,39,0));margin-bottom:18px"></div>
               <p style="margin:0 0 clamp(18px,2.6vw,28px);font-size:clamp(15px,2vw,22px);font-weight:300;color:#CFD8E8;max-width:34em;text-wrap:pretty">{{ s.sub }}</p>
-              <div style="padding-top:14px;border-top:1px solid rgba(255,255,255,.16);font-size:clamp(12.5px,1.3vw,14px);color:#96A0B2;max-width:40em">{{ s.meta }}</div>
+              <div style="padding-top:16px;border-top:1px solid rgba(255,255,255,.16);font-size:clamp(13.5px,1.35vw,14.5px);line-height:1.7;color:#AAB6CC;max-width:40em">{{ s.meta }}</div>
               <div style="margin-top:clamp(16px,2.4vw,26px);display:flex;align-items:center;gap:10px;color:#C9A227;font-size:clamp(12.5px,1.3vw,13.5px);font-weight:700;letter-spacing:1.6px">
                 <span>{{ scrollCue }}</span>
                 <span style="font-size:16px;line-height:1">↓</span>
@@ -78,13 +78,13 @@ img{max-width:100%}
             <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px">
               <span style="font-family:'Rubik',sans-serif;font-size:clamp(12.5px,1.3vw,13.5px);font-weight:800;color:#C9A227;letter-spacing:1px" dir="ltr">{{ s.label }}</span>
               <span style="display:block;width:9px;height:9px;border-radius:50%;background:#C9A227;flex:0 0 auto"></span>
-              <span style="font-size:clamp(12.5px,1.3vw,13.5px);font-weight:700;letter-spacing:2px;color:#E4C766">{{ s.pill }}</span>
+              <span style="font-size:clamp(13.5px,1.35vw,14.5px);font-weight:700;letter-spacing:1.8px;color:#E4C766">{{ s.pill }}</span>
             </div>
             <h2 style="font-family:'Rubik',sans-serif;font-weight:300;font-size:clamp(25px,4.6vw,48px);line-height:1.1;margin:0 0 12px;letter-spacing:-1px;color:#FFFFFF;text-wrap:balance">{{ s.h }}</h2>
             <p style="margin:0 0 clamp(24px,3.4vw,38px);font-size:clamp(15.5px,2vw,21px);font-weight:300;color:#AAB6CC;max-width:38em;text-wrap:pretty">{{ s.lead }}</p>
 
             <sc-for list="{{ s.blocks }}" as="b" hint-placeholder-count="3">
-              <div style="margin-bottom:clamp(22px,3.2vw,34px)">
+              <div style="margin-bottom:clamp(28px,3.6vw,38px)">
 
                 <sc-if value="{{ b.isStatus }}" hint-placeholder-val="{{ false }}">
                   <div style="border:2px solid #C9A227;border-radius:24px;overflow:hidden;background:linear-gradient(135deg,rgba(201,162,39,.2),rgba(201,162,39,.04) 65%);box-shadow:0 0 0 1px rgba(201,162,39,.22),0 26px 70px rgba(201,162,39,.12)">
@@ -108,20 +108,20 @@ img{max-width:100%}
                 </sc-if>
 
                 <sc-if value="{{ b.isStats }}" hint-placeholder-val="{{ false }}">
-                  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,150px),1fr));gap:clamp(10px,1.6vw,20px)">
+                  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,160px),1fr));gap:clamp(13px,1.8vw,20px)">
                     <sc-for list="{{ b.items }}" as="st" hint-placeholder-count="3">
-                      <div style="padding:clamp(14px,2vw,20px);background:rgba(255,255,255,.04);border:1px solid rgba(201,162,39,.26);border-radius:18px">
-                        <div style="font-family:'Rubik',sans-serif;font-size:clamp(24px,3.8vw,40px);font-weight:800;line-height:1;letter-spacing:-1.4px;color:{{ st.color }}"><span dir="ltr" style="display:inline-block">{{ st.v }}</span><span style="font-size:clamp(14px,1.7vw,18px);font-weight:700;color:#DFE5F0"> {{ st.u }}</span></div>
-                        <div style="margin-top:10px;font-size:clamp(14px,1.5vw,16px);letter-spacing:.3px;color:#CFD8E8;line-height:1.45">{{ st.k }}</div>
+                      <div style="padding:clamp(18px,2.4vw,24px);background:rgba(255,255,255,.04);border:1px solid rgba(201,162,39,.26);border-radius:18px">
+                        <div style="font-family:'Rubik',sans-serif;font-size:clamp(24px,3.8vw,40px);font-weight:800;line-height:1;letter-spacing:-1.4px;color:{{ st.color }}"><span dir="ltr" style="display:inline-block">{{ st.v }}</span><span style="font-size:clamp(15.5px,1.7vw,18px);font-weight:700;color:#DFE5F0"> {{ st.u }}</span></div>
+                        <div style="margin-top:13px;font-size:clamp(15.5px,1.6vw,17px);letter-spacing:.2px;color:#CFD8E8;line-height:1.6">{{ st.k }}</div>
                       </div>
                     </sc-for>
                   </div>
                 </sc-if>
 
                 <sc-if value="{{ b.isUl }}" hint-placeholder-val="{{ false }}">
-                  <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px;max-width:52em">
+                  <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:15px;max-width:52em">
                     <sc-for list="{{ b.items }}" as="li" hint-placeholder-count="4">
-                      <li style="display:flex;gap:13px;font-size:clamp(15px,1.8vw,17.5px);color:#DFE5F0;text-wrap:pretty">
+                      <li style="display:flex;gap:13px;font-size:clamp(16px,1.85vw,17.5px);color:#DFE5F0;text-wrap:pretty;line-height:1.75">
                         <span style="color:#C9A227;font-weight:800;flex:0 0 auto">—</span>
                         <span><sc-for list="{{ li.parts }}" as="p" hint-placeholder-count="2"><sc-if value="{{ p.b }}" hint-placeholder-val="{{ false }}"><b style="color:#FFFFFF;font-weight:800">{{ p.s }}</b></sc-if><sc-if value="{{ p.plain }}" hint-placeholder-val="{{ true }}">{{ p.s }}</sc-if></sc-for></span>
                       </li>
@@ -130,17 +130,17 @@ img{max-width:100%}
                 </sc-if>
 
                 <sc-if value="{{ b.isP }}" hint-placeholder-val="{{ false }}">
-                  <p style="margin:0;font-size:clamp(15px,1.8vw,17.5px);color:#CFD8E8;max-width:50em;text-wrap:pretty"><sc-for list="{{ b.parts }}" as="p" hint-placeholder-count="2"><sc-if value="{{ p.b }}" hint-placeholder-val="{{ false }}"><b style="color:#FFFFFF;font-weight:700">{{ p.s }}</b></sc-if><sc-if value="{{ p.plain }}" hint-placeholder-val="{{ true }}">{{ p.s }}</sc-if></sc-for></p>
+                  <p style="margin:0;font-size:clamp(16px,1.85vw,17.5px);color:#CFD8E8;max-width:50em;text-wrap:pretty"><sc-for list="{{ b.parts }}" as="p" hint-placeholder-count="2"><sc-if value="{{ p.b }}" hint-placeholder-val="{{ false }}"><b style="color:#FFFFFF;font-weight:700">{{ p.s }}</b></sc-if><sc-if value="{{ p.plain }}" hint-placeholder-val="{{ true }}">{{ p.s }}</sc-if></sc-for></p>
                 </sc-if>
 
                 <sc-if value="{{ b.isChips }}" hint-placeholder-val="{{ false }}">
                   <div style="display:flex;flex-wrap:wrap;gap:9px">
                     <sc-for list="{{ b.items }}" as="c" hint-placeholder-count="4">
                       <sc-if value="{{ c.isLink }}" hint-placeholder-val="{{ false }}">
-                        <a href="{{ c.u }}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;background:#C9A227;color:#1B2A4A;border:1px solid #C9A227;border-radius:999px;padding:10px 16px;font-size:clamp(12.5px,1.4vw,14px);font-weight:800;min-height:44px" style-hover="background:#E4C766;color:#1B2A4A">{{ c.x }} <span>↗</span></a>
+                        <a href="{{ c.u }}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;background:#C9A227;color:#1B2A4A;border:1px solid #C9A227;border-radius:999px;padding:12px 19px;font-size:clamp(14px,1.45vw,15px);font-weight:800;min-height:44px" style-hover="background:#E4C766;color:#1B2A4A">{{ c.x }} <span>↗</span></a>
                       </sc-if>
                       <sc-if value="{{ c.plain }}" hint-placeholder-val="{{ true }}">
-                        <span style="display:inline-flex;align-items:center;background:rgba(255,255,255,.05);color:#DFE5F0;border:1px solid rgba(255,255,255,.16);border-radius:999px;padding:10px 16px;font-size:clamp(12.5px,1.4vw,14px);font-weight:700;min-height:44px">{{ c.x }}</span>
+                        <span style="display:inline-flex;align-items:center;background:rgba(255,255,255,.05);color:#DFE5F0;border:1px solid rgba(255,255,255,.16);border-radius:999px;padding:12px 19px;font-size:clamp(14px,1.45vw,15px);font-weight:700;min-height:44px">{{ c.x }}</span>
                       </sc-if>
                     </sc-for>
                   </div>
@@ -163,7 +163,7 @@ img{max-width:100%}
                       <div style="margin-top:10px;font-size:clamp(15px,1.8vw,18px);color:#CFD8E8;font-weight:300;max-width:34em;text-wrap:pretty">{{ b.sub }}</div>
                       <div style="margin-top:clamp(18px,2.4vw,26px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,150px),1fr));gap:clamp(10px,1.6vw,16px)">
                         <sc-for list="{{ b.items }}" as="it" hint-placeholder-count="3">
-                          <div style="background:rgba(19,31,56,.55);border:1px solid rgba(201,162,39,.4);border-radius:18px;padding:clamp(16px,2.2vw,22px);display:flex;flex-direction:column;gap:7px">
+                          <div style="background:rgba(19,31,56,.55);border:1px solid rgba(201,162,39,.4);border-radius:18px;padding:clamp(19px,2.4vw,24px);display:flex;flex-direction:column;gap:9px">
                             <sc-if value="{{ it.hasV }}" hint-placeholder-val="{{ false }}">
                               <div style="font-family:'Rubik',sans-serif;font-size:clamp(26px,3.4vw,36px);font-weight:900;line-height:1;color:#E4C766;letter-spacing:-1px">{{ it.v }}</div>
                               <div style="font-family:'Rubik',sans-serif;font-size:clamp(17px,2vw,21px);color:#FFFFFF;font-weight:800;line-height:1.2">{{ it.k }}</div>
@@ -171,7 +171,7 @@ img{max-width:100%}
                             <sc-if value="{{ it.noV }}" hint-placeholder-val="{{ true }}">
                               <div style="font-family:'Rubik',sans-serif;font-size:clamp(19px,2.3vw,25px);font-weight:900;color:#E4C766;line-height:1.15;letter-spacing:-.5px">{{ it.k }}</div>
                             </sc-if>
-                            <div style="font-size:clamp(13.5px,1.5vw,15px);color:#CFD8E8;line-height:1.45;font-weight:300;text-wrap:pretty">{{ it.d }}</div>
+                            <div style="font-size:clamp(14.5px,1.55vw,15.5px);color:#CFD8E8;line-height:1.6;font-weight:300;text-wrap:pretty">{{ it.d }}</div>
                           </div>
                         </sc-for>
                       </div>
@@ -183,7 +183,7 @@ img{max-width:100%}
                   <figure style="margin:0">
                     <sc-if value="{{ b.isRail }}" hint-placeholder-val="{{ false }}"><img src="assets/lrail.jpg" alt="" loading="lazy" decoding="async" style="width:100%;display:block;border:1px solid rgba(255,255,255,.1);border-radius:16px" /></sc-if>
                     <sc-if value="{{ b.isRender }}" hint-placeholder-val="{{ false }}"><img src="https://static.wixstatic.com/media/1691bd_c6d360bfb02744d39e604a79628c6052~mv2.png/v1/fit/w_1200,h_580,q_85,enc_avif,quality_auto/1691bd_c6d360bfb02744d39e604a79628c6052~mv2.png" alt="" loading="lazy" decoding="async" style="width:100%;display:block;border:1px solid rgba(255,255,255,.1);border-radius:16px" /></sc-if>
-                    <figcaption style="margin-top:10px;font-size:clamp(13px,1.3vw,13.5px);color:#96A0B2;line-height:1.55;text-wrap:pretty">{{ b.cap }}</figcaption>
+                    <figcaption style="margin-top:13px;font-size:clamp(14px,1.4vw,15px);color:#AAB6CC;line-height:1.65;text-wrap:pretty">{{ b.cap }}</figcaption>
                   </figure>
                 </sc-if>
 
@@ -202,7 +202,7 @@ img{max-width:100%}
                       <img src="https://static.wixstatic.com/media/1691bd_4d75feadb096433d953708683ecc892b~mv2.png/v1/fit/w_1200,h_580,q_85,enc_avif,quality_auto/1691bd_4d75feadb096433d953708683ecc892b~mv2.png" alt="" loading="lazy" decoding="async" style="width:100%;display:block;border:1px solid rgba(255,255,255,.1);border-radius:16px" />
                       <img src="https://static.wixstatic.com/media/1691bd_5017aa72fe404831a91c75c5dbb40585~mv2.png/v1/fit/w_1200,h_580,q_85,enc_avif,quality_auto/1691bd_5017aa72fe404831a91c75c5dbb40585~mv2.png" alt="" loading="lazy" decoding="async" style="width:100%;display:block;border:1px solid rgba(255,255,255,.1);border-radius:16px" />
                     </div>
-                    <figcaption style="margin-top:10px;font-size:clamp(13px,1.3vw,13.5px);color:#96A0B2;line-height:1.55;text-wrap:pretty">{{ b.cap }}</figcaption>
+                    <figcaption style="margin-top:13px;font-size:clamp(14px,1.4vw,15px);color:#AAB6CC;line-height:1.65;text-wrap:pretty">{{ b.cap }}</figcaption>
                   </figure>
                 </sc-if>
 
@@ -213,7 +213,7 @@ img{max-width:100%}
                       <img src="assets/map.jpg" alt="" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:{{ morphPlanOpacity }};transition:opacity 1s cubic-bezier(.4,0,.2,1)" />
                       <span style="position:absolute;inset:auto 14px 14px auto;background:#C9A227;color:#1B2A4A;font-weight:800;font-size:clamp(12px,1.4vw,14px);border-radius:999px;padding:10px 17px;box-shadow:0 8px 24px rgba(0,0,0,.4)">{{ morphHint }}</span>
                     </button>
-                    <figcaption style="margin-top:10px;font-size:clamp(13px,1.3vw,13.5px);color:#96A0B2;line-height:1.55;text-wrap:pretty">{{ b.cap }}</figcaption>
+                    <figcaption style="margin-top:13px;font-size:clamp(14px,1.4vw,15px);color:#AAB6CC;line-height:1.65;text-wrap:pretty">{{ b.cap }}</figcaption>
                   </figure>
                 </sc-if>
 
@@ -222,7 +222,7 @@ img{max-width:100%}
 
             <sc-if value="{{ s.hasSrcs }}" hint-placeholder-val="{{ false }}">
               <div style="border-top:1px solid rgba(255,255,255,.14);padding-top:16px">
-                <div style="font-size:clamp(12.5px,1.2vw,13px);font-weight:700;letter-spacing:1.6px;color:#96A0B2;margin-bottom:12px">{{ s.srclabel }}</div>
+                <div style="font-size:clamp(13.5px,1.3vw,14px);font-weight:700;letter-spacing:1.4px;color:#AAB6CC;margin-bottom:15px">{{ s.srclabel }}</div>
                 <div style="display:flex;flex-wrap:wrap;gap:9px">
                   <sc-for list="{{ s.srcs }}" as="sr" hint-placeholder-count="3">
                     <sc-if value="{{ sr.gov }}" hint-placeholder-val="{{ false }}">
@@ -248,7 +248,7 @@ img{max-width:100%}
             <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px">
               <span style="font-family:'Rubik',sans-serif;font-size:clamp(12.5px,1.3vw,13.5px);font-weight:800;color:#C9A227;letter-spacing:1px" dir="ltr">{{ s.label }}</span>
               <span style="display:block;width:9px;height:9px;border-radius:50%;background:#C9A227;flex:0 0 auto"></span>
-              <span style="font-size:clamp(12.5px,1.3vw,13.5px);font-weight:700;letter-spacing:2px;color:#E4C766">{{ s.pill }}</span>
+              <span style="font-size:clamp(13.5px,1.35vw,14.5px);font-weight:700;letter-spacing:1.8px;color:#E4C766">{{ s.pill }}</span>
             </div>
             <h2 style="font-family:'Rubik',sans-serif;font-weight:300;font-size:clamp(25px,4.6vw,48px);line-height:1.1;margin:0 0 12px;letter-spacing:-1px;color:#FFFFFF">{{ s.h }}</h2>
             <p style="margin:0 0 clamp(24px,3.4vw,34px);font-size:clamp(15.5px,2vw,21px);font-weight:300;color:#AAB6CC;max-width:38em;text-wrap:pretty">{{ s.lead }}</p>
@@ -260,15 +260,15 @@ img{max-width:100%}
                       <span style="display:block;width:7px;height:7px;border-radius:50%;background:#1B2A4A"></span>{{ c.official }}
                     </div>
                     <div style="color:#FFFFFF;font-weight:800;font-size:clamp(14px,1.55vw,15.5px);margin-bottom:6px;line-height:1.4">{{ c.h }}</div>
-                    <div style="color:#DFE5F0;font-size:clamp(13px,1.4vw,14px);line-height:1.5;margin-bottom:9px">{{ c.d }}</div>
+                    <div style="color:#DFE5F0;font-size:clamp(14px,1.45vw,14.5px);line-height:1.6;margin-bottom:11px">{{ c.d }}</div>
                     <div style="color:#E4C766;font-size:12.5px;font-weight:700" dir="ltr">{{ c.host }} ↗</div>
                   </a>
                 </sc-if>
                 <sc-if value="{{ c.plain }}" hint-placeholder-val="{{ true }}">
                   <a href="{{ c.u }}" target="_blank" rel="noopener" style="display:block;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:16px 18px" style-hover="border-color:#C9A227;background:rgba(201,162,39,.1)">
                     <div style="color:#E4C766;font-weight:800;font-size:clamp(13.5px,1.5vw,15px);margin-bottom:6px;line-height:1.4">{{ c.h }}</div>
-                    <div style="color:#CFD8E8;font-size:clamp(13px,1.4vw,14px);line-height:1.5;margin-bottom:9px">{{ c.d }}</div>
-                    <div style="color:#96A0B2;font-size:12.5px" dir="ltr">{{ c.host }} ↗</div>
+                    <div style="color:#CFD8E8;font-size:clamp(14px,1.45vw,14.5px);line-height:1.6;margin-bottom:11px">{{ c.d }}</div>
+                    <div style="color:#AAB6CC;font-size:13px" dir="ltr">{{ c.host }} ↗</div>
                   </a>
                 </sc-if>
               </sc-for>
@@ -283,14 +283,14 @@ img{max-width:100%}
               <span style="background:#FFFFFF;border-radius:16px;padding:13px 20px;display:inline-flex;margin-bottom:clamp(20px,3vw,30px)"><img src="assets/logo.png" alt="קבוצת שניידר נדלן" style="height:clamp(40px,5vw,64px);display:block" /></span>
               <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px">
                 <span style="display:block;width:9px;height:9px;border-radius:50%;background:#C9A227"></span>
-                <span style="font-size:clamp(12.5px,1.3vw,13.5px);font-weight:700;letter-spacing:2px;color:#E4C766">{{ s.pill }}</span>
+                <span style="font-size:clamp(13.5px,1.35vw,14.5px);font-weight:700;letter-spacing:1.8px;color:#E4C766">{{ s.pill }}</span>
               </div>
               <h2 style="font-family:'Rubik',sans-serif;font-weight:300;font-size:clamp(27px,5vw,54px);line-height:1.08;margin:0 0 14px;letter-spacing:-1.2px;color:#FFFFFF">{{ s.h }}</h2>
               <p style="margin:0 0 clamp(24px,3.4vw,36px);font-size:clamp(15.5px,2vw,21px);font-weight:300;color:#AAB6CC;max-width:38em;text-wrap:pretty">{{ s.lead }}</p>
               <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:clamp(12px,2vw,20px);margin-bottom:clamp(24px,3.4vw,34px)">
                 <sc-for list="{{ s.contacts }}" as="ct" hint-placeholder-count="2">
                   <div style="background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.02));border:1px solid rgba(201,162,39,.3);border-radius:20px;padding:clamp(18px,2.6vw,26px);text-align:center">
-                    <div style="font-size:13px;letter-spacing:1.4px;color:#96A0B2;margin-bottom:8px">{{ ct.where }}</div>
+                    <div style="font-size:14px;letter-spacing:1.2px;color:#AAB6CC;margin-bottom:10px">{{ ct.where }}</div>
                     <div style="font-family:'Rubik',sans-serif;font-size:clamp(17px,2vw,21px);font-weight:700;color:#FFFFFF;margin-bottom:12px">{{ ct.name }}</div>
                     <a href="{{ ct.href }}" style="display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:9px 20px;border:1px solid #C9A227;border-radius:999px;color:#E4C766;font-family:'Rubik',sans-serif;font-size:clamp(16px,1.9vw,19px);font-weight:700" dir="ltr" style-hover="background:#C9A227;color:#1B2A4A">{{ ct.label }}</a>
                   </div>
