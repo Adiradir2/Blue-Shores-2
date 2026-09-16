@@ -59,7 +59,7 @@
           { x: L('מנכ"לים ואנשי עסקים', 'CEOs & businesspeople') },
           { x: L('אינטרס משותף לתוצר איכותי', 'Shared interest in a quality outcome') }
         ] },
-        { t: 'p', x: L('הקבוצה משמשת כחברת הניהול ומלווה את התהליך ליווי מקצועי מלא — מהרכישה ועד רישום הזכויות.', 'The group serves as the management company and provides full professional support throughout the process — from purchase to registration of rights.') }
+        { t: 'p', x: L('קבוצת שניידר נדל"ן מביאה עמה ניסיון של כ־30 שנה בתחום הנדל"ן, ובעיקר בהרצליה — לרבות הקמת <b>שכונת האירוסים</b> ו<b>שכונת הזמר העברי</b> בעיר, שהושלמו בהצלחה. הקבוצה משמשת כ<b>חברת הניהול</b> ומלווה את התהליך ליווי מקצועי מלא — מהרכישה ועד רישום הזכויות.', 'Schneider Real Estate Group brings roughly 30 years of experience in real estate, mainly in Herzliya — including the successful development of the <b>Irisim</b> and <b>Zemer Ha\'Ivri</b> neighborhoods. The group serves as the <b>management company</b> and provides full professional support throughout the process — from purchase to registration of rights.') }
       ],
       srclabel: L('אתר הקבוצה:', 'The group\'s website:'),
       srcs: [{ t: L('אתר קבוצת שניידר נדל"ן', 'Schneider Real Estate Group site'), u: 'https://schgroup.co.il' }]
@@ -77,7 +77,7 @@
           big1: L('אושרה', 'Approved'),
           big2: L('למתן תוקף', 'for validity'),
           date: L('פברואר 2022', 'February 2022'),
-          ref: L('תוכנית המתאר הר/2200/א׳', 'Master plan Har/2200/A'),
+          ref: L('תוכנית המתאר "חוף התכלת" · הר/2200/א׳', 'The "Blue Shores" master plan · Har/2200/A'),
           x: L('הבסיס לוודאות לגבי <b>הייעוד והזכויות</b>. מכאן, הדרך להיתרי בנייה עוברת בהשלמת <b>תוכנית מפורטת הכוללת איחוד וחלוקה</b>.', 'The basis for certainty on <b>land use and rights</b>. From here, the path to building permits runs through completing a <b>detailed plan including consolidation & division</b>.'),
           note: L('במקביל נחתם <b>הסכם גג</b> עם המדינה למימון הפיתוח והתשתיות.', 'In parallel, an <b>agreement</b> was signed with the State to fund development and infrastructure.') },
         { t: 'morph', a: 'assets/land.jpg', b: 'assets/map.jpg',
@@ -106,6 +106,46 @@
     {
       type: 'content',
       label: '04',
+      pill: L('מהות ההשקעה', 'The Investment'),
+      h: L('רכישת זכויות בקרקע', 'Acquiring Land Rights'),
+      lead: L('מטר קרקע → זכויות בנייה. השקעה בקרקע פרטית עם פוטנציאל מימוש עתידי.', 'A sqm of land → building rights. An investment in private land with future realization potential.'),
+      blocks: [
+        { t: 'trend', x: L('מטר קרקע = כ־1.5 מ"ר זכויות בנייה (לפי דו"ח שמאי תקן 22)', '1 sqm of land = ~1.5 sqm of building rights (per Appraisal Standard 22)') },
+        { t: 'ul', items: [
+          L('גוש וחלקה זמניים עד לפרצלציה, ולאחריה — <b>מגרש תמורה</b> במסגרת איחוד וחלוקה.', 'Temporary block and parcel until parcellation, after which — a <b>replacement plot</b> via consolidation and division.'),
+          L('רוכשים זכויות בקרקע, אשר בהמשך ייתרגמו לזכויות בנייה.', 'You acquire land rights, which later translate into building rights.'),
+          L('הקרקע פרטית ו<b>נרשמת בטאבו על שם הרוכש</b> — סחירה, וניתנת למכירה ברווח בכל שלב.', 'The land is private and <b>registered in the Land Registry (Tabu)</b> in the buyer\'s name — tradeable, and sellable at a profit at any stage.')
+        ] },
+        { t: 'note',
+          label: L('יתרון מבני', 'Structural advantage'),
+          head: L('רכישת קרקע בשלב זה חוסכת עלויות משמעותיות של עשרות אחוזים משווי הדירה', 'Buying land at this stage saves significant costs — tens of percent of an apartment\'s value'),
+          sub: L('עלויות שכלולות ממילא במחיר של דירה גמורה', 'Costs that are already built into the price of a finished apartment'),
+          items: [
+            { v: L('18%', '18%'), k: L('מע"מ', 'VAT'), d: L('על כל דירה חדשה שנמכרת בישראל', 'Charged on every new apartment sold in Israel') },
+            { v: L('מוגדל', 'Higher'), k: L('מס רכישה', 'purchase tax'), d: L('נגזר משווי הנכס — ועולה ככל שהשווי עולה (אנו קונים לפי שווי הקרקע)', 'Scaled to the value of the property — it rises as the value rises (we buy at land value)') },
+            { v: L('יזמי', 'Developer'), k: L('רווח', 'profit'), d: L('חברי הקבוצה מאורגנים כיזם ולכן חוסכים את הרווח היזמי', 'Group members are organized as the developer, so the developer\'s profit is saved') }
+          ] },
+        { t: 'media', src: K6, cap: L('הדמיה: קייזר אדריכלים', 'Rendering: Kaiser Architects') }
+      ]
+    },
+    {
+      type: 'content',
+      label: '05',
+      pill: L('מבנה העסקה', 'Deal Structure'),
+      h: L('הסכם שיתוף — לא קבוצת רכישה', 'A Sharing Agreement — Not a Purchase Group'),
+      lead: L('מבנה עסקה שקוף, בליווי מקצועי ומשפטי מלא.', 'A transparent deal structure with full professional and legal support.'),
+      blocks: [
+        { t: 'ul', items: [
+          L('<b>הסכם שיתוף בין בעלי הקרקע</b> — לא קבוצת רכישה. מבנה זה חוסך כפל מס רכישה, מע"מ ורווח יזמי.', 'A <b>sharing agreement between landowners</b> — not a purchase group. This structure avoids double purchase tax, VAT and developer profit.'),
+          L('קבוצת שניידר משמשת כ<b>חברת הניהול</b> ומלווה ליווי מקצועי.', 'Schneider serves as the <b>management company</b> with full professional support.'),
+          L('ליווי משפטי של <b>פירון משרד עורכי דין</b>.', 'Legal counsel by <b>Firon Law Firm</b>.'),
+          L('הכספים <b>מוחזקים בנאמנות</b> עד לרישום הזכויות בטאבו.', 'Funds are <b>held in trust</b> until the rights are registered in the Land Registry (Tabu).')
+        ] }
+      ]
+    },
+    {
+      type: 'content',
+      label: '06',
       pill: L('גב המדינה · הסכם הגג', 'State Backing · Agreement'),
       h: L('המדינה מממנת את הפיתוח', 'The State Funds the Development'),
       lead: L('הסכם גג נחתם ב־24.11.2025 בין המדינה (רמ"י, האוצר, השיכון) לעיריית הרצליה.', 'An agreement was signed on 24.11.2025 between the State (ILA, Finance, Housing) and the Herzliya Municipality.'),
@@ -133,7 +173,7 @@
     },
     {
       type: 'content',
-      label: '05',
+      label: '07',
       pill: L('נגישות ותחבורה', 'Access & Transport'),
       h: L('הקו הירוק במרכז המתחם', 'The Green Line at the Center'),
       lead: L('תת"ל/71/ג — תוכנית לאומית מאושרת. חיבור ישיר בין הרצליה לתל אביב.', 'NTP/71/C — an approved national plan. A direct link between Herzliya and Tel Aviv.'),
@@ -144,6 +184,8 @@
           { v: L('2030–2033', '2030–2033'), ltr: true, k: L('הפעלה מתוכננת', 'planned operation'), gold: true }
         ] },
         { t: 'p', x: L('הקו הירוק (דנקל) מחבר את הרצליה בצפון עד חולון וראשון לציון בדרום, דרך תל אביב. המקטע הצפוני (תת"ל/71/ג) עובר במרכז חוף התכלת ומגדיר את השלד התחבורתי של הרובע. על פי עיריית הרצליה, הרכבות הקלות וה־BRT צפויים להתחיל לפעול בין השנים 2030–2033.', 'The Green Line (Dankal) connects Herzliya in the north to Holon and Rishon LeZion in the south, via Tel Aviv. The northern segment (NTP/71/C) runs through the center of Blue Shores and defines the district\'s transport backbone. Per the Herzliya Municipality, the light rail and BRT are expected to begin operating between 2030 and 2033.') },
+        { t: 'map', src: 'assets/green-line.png',
+          cap: L('תוואי הקו הירוק במתחם — התחנות "חוף תכלת צפון" ו"חוף תכלת דרום" בלב הרובע, בהמשך לתחנות אבא אבן, החושלים ודפו.', 'The Green Line route through the district — the "Blue Shores North" and "Blue Shores South" stations sit at the heart of the new neighborhood, continuing from Abba Eban, HaHoshlim and Depot.') },
         { t: 'media', src: 'assets/lrail.jpg', cap: L('הדמיית תחנת הרכבת הקלה המתוכננת · לאורך כביש 2, בגבול המזרחי של המתחם, לצד בניין מיקרוסופט והים ברקע', 'Rendering of the planned light-rail station · along Route 2, on the eastern edge of the complex, beside the Microsoft building with the sea behind') }
       ],
       srclabel: L('מקורות רשמיים:', 'Official sources:'),
@@ -151,46 +193,6 @@
         { t: L('נת"ע — הקו הירוק', 'NTA — the Green Line'), u: 'https://www.nta.co.il/light-rail/%D7%94%D7%A7%D7%95-%D7%94%D7%99%D7%A8%D7%95%D7%A7/', gov: true },
         { t: L('עיריית ת"א — רכבת קלה', 'Tel Aviv Municipality — light rail'), u: 'https://www.tel-aviv.gov.il/Residents/Transportation/Pages/masstransporttrain.aspx' },
         { t: L('תת"ל/71/ג — תקנון (PDF)', 'NTP/71/C — regulations (PDF)'), u: 'https://apps.land.gov.il/IturTabotData/takanonim/Artzi/9509574.pdf', gov: true }
-      ]
-    },
-    {
-      type: 'content',
-      label: '06',
-      pill: L('מהות ההשקעה', 'The Investment'),
-      h: L('רכישת זכויות בקרקע', 'Acquiring Land Rights'),
-      lead: L('מטר קרקע → זכויות בנייה. השקעה בקרקע פרטית עם פוטנציאל מימוש עתידי.', 'A sqm of land → building rights. An investment in private land with future realization potential.'),
-      blocks: [
-        { t: 'trend', x: L('מטר קרקע = כ־1.5 מ"ר זכויות בנייה (לפי דו"ח שמאי תקן 22)', '1 sqm of land = ~1.5 sqm of building rights (per Appraisal Standard 22)') },
-        { t: 'ul', items: [
-          L('גוש וחלקה זמניים עד לפרצלציה, ולאחריה — <b>מגרש תמורה</b> במסגרת איחוד וחלוקה.', 'Temporary block and parcel until parcellation, after which — a <b>replacement plot</b> via consolidation and division.'),
-          L('רוכשים זכויות בקרקע, אשר בהמשך ייתרגמו לזכויות בנייה.', 'You acquire land rights, which later translate into building rights.'),
-          L('הקרקע פרטית ו<b>נרשמת בטאבו על שם הרוכש</b> — סחירה, וניתנת למכירה ברווח בכל שלב.', 'The land is private and <b>registered in the Land Registry (Tabu)</b> in the buyer\'s name — tradeable, and sellable at a profit at any stage.')
-        ] },
-        { t: 'note',
-          label: L('יתרון מבני', 'Structural advantage'),
-          head: L('רכישת קרקע בשלב זה חוסכת עלויות משמעותיות', 'Buying land at this stage saves major costs'),
-          sub: L('עלויות הכלולות ממילא במחיר של דירה גמורה', 'Costs that are already baked into the price of a finished apartment'),
-          items: [
-            { v: L('18%', '18%'), k: L('מע"מ', 'VAT') },
-            { v: L('מוגדל', 'Higher'), k: L('מס רכישה', 'purchase tax') },
-            { v: L('יזמי', 'Developer'), k: L('רווח', 'profit') }
-          ] },
-        { t: 'media', src: K6, cap: L('הדמיה: קייזר אדריכלים', 'Rendering: Kaiser Architects') }
-      ]
-    },
-    {
-      type: 'content',
-      label: '07',
-      pill: L('מבנה העסקה', 'Deal Structure'),
-      h: L('הסכם שיתוף — לא קבוצת רכישה', 'A Sharing Agreement — Not a Purchase Group'),
-      lead: L('מבנה עסקה שקוף, בליווי מקצועי ומשפטי מלא.', 'A transparent deal structure with full professional and legal support.'),
-      blocks: [
-        { t: 'ul', items: [
-          L('<b>הסכם שיתוף בין בעלי הקרקע</b> — לא קבוצת רכישה. מבנה זה חוסך כפל מס רכישה, מע"מ ורווח יזמי.', 'A <b>sharing agreement between landowners</b> — not a purchase group. This structure avoids double purchase tax, VAT and developer profit.'),
-          L('קבוצת שניידר משמשת כ<b>חברת הניהול</b> ומלווה ליווי מקצועי.', 'Schneider serves as the <b>management company</b> with full professional support.'),
-          L('ליווי משפטי של <b>פירון משרד עורכי דין</b>.', 'Legal counsel by <b>Firon Law Firm</b>.'),
-          L('הכספים <b>מוחזקים בנאמנות</b> עד לרישום הזכויות בטאבו.', 'Funds are <b>held in trust</b> until the rights are registered in the Land Registry (Tabu).')
-        ] }
       ]
     },
     {

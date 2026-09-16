@@ -93,7 +93,7 @@ img{max-width:100%}
                     </div>
                     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,290px),1fr))">
                       <div style="padding:clamp(20px,3vw,38px);border-left:1px solid rgba(201,162,39,.32)">
-                        <div style="font-family:'Rubik',sans-serif;font-size:clamp(34px,5.6vw,64px);font-weight:900;line-height:.95;color:#FFFFFF;letter-spacing:-1.8px">{{ b.big1 }}<br /><span style="color:#E4C766">{{ b.big2 }}</span></div>
+                        <div style="font-family:'Rubik',sans-serif;font-size:clamp(34px,5.6vw,64px);font-weight:900;line-height:1.08;color:#FFFFFF;letter-spacing:-1.8px">{{ b.big1 }}<br /><span style="color:#E4C766">{{ b.big2 }}</span></div>
                         <div style="margin-top:18px;border-top:2px solid #C9A227;padding-top:14px;display:flex;flex-wrap:wrap;align-items:baseline;gap:10px">
                           <span style="font-family:'Rubik',sans-serif;font-size:clamp(19px,2.6vw,28px);font-weight:700;color:#FFFFFF">{{ b.date }}</span>
                           <span style="font-size:clamp(13px,1.5vw,16px);color:#CFD8E8">{{ b.ref }}</span>
@@ -163,9 +163,10 @@ img{max-width:100%}
                       <div style="margin-top:10px;font-size:clamp(15px,1.8vw,18px);color:#CFD8E8;font-weight:300;max-width:34em;text-wrap:pretty">{{ b.sub }}</div>
                       <div style="margin-top:clamp(18px,2.4vw,26px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,150px),1fr));gap:clamp(10px,1.6vw,16px)">
                         <sc-for list="{{ b.items }}" as="it" hint-placeholder-count="3">
-                          <div style="background:rgba(19,31,56,.55);border:1px solid rgba(201,162,39,.4);border-radius:18px;padding:clamp(14px,2vw,20px);text-align:center">
+                          <div style="background:rgba(19,31,56,.55);border:1px solid rgba(201,162,39,.4);border-radius:18px;padding:clamp(16px,2.2vw,22px);display:flex;flex-direction:column;gap:7px">
                             <div style="font-family:'Rubik',sans-serif;font-size:clamp(22px,3vw,32px);font-weight:900;line-height:1;color:#E4C766;letter-spacing:-1px">{{ it.v }}</div>
-                            <div style="margin-top:8px;font-size:clamp(14px,1.5vw,16px);color:#FFFFFF;font-weight:700">{{ it.k }}</div>
+                            <div style="font-size:clamp(15px,1.7vw,17px);color:#FFFFFF;font-weight:800">{{ it.k }}</div>
+                            <div style="font-size:clamp(13.5px,1.5vw,15px);color:#CFD8E8;line-height:1.45;font-weight:300;text-wrap:pretty">{{ it.d }}</div>
                           </div>
                         </sc-for>
                       </div>
@@ -178,6 +179,15 @@ img{max-width:100%}
                     <sc-if value="{{ b.isRail }}" hint-placeholder-val="{{ false }}"><img src="assets/lrail.jpg" alt="" loading="lazy" decoding="async" style="width:100%;display:block;border:1px solid rgba(255,255,255,.1);border-radius:16px" /></sc-if>
                     <sc-if value="{{ b.isRender }}" hint-placeholder-val="{{ false }}"><img src="https://static.wixstatic.com/media/1691bd_c6d360bfb02744d39e604a79628c6052~mv2.png/v1/fit/w_1200,h_580,q_85,enc_avif,quality_auto/1691bd_c6d360bfb02744d39e604a79628c6052~mv2.png" alt="" loading="lazy" decoding="async" style="width:100%;display:block;border:1px solid rgba(255,255,255,.1);border-radius:16px" /></sc-if>
                     <figcaption style="margin-top:10px;font-size:clamp(13px,1.3vw,13.5px);color:#96A0B2;line-height:1.55;text-wrap:pretty">{{ b.cap }}</figcaption>
+                  </figure>
+                </sc-if>
+
+                <sc-if value="{{ b.isMap }}" hint-placeholder-val="{{ false }}">
+                  <figure style="margin:0;display:flex;flex-direction:column;gap:12px;align-items:flex-start">
+                    <div style="background:#FFFFFF;border:1px solid rgba(201,162,39,.45);border-radius:20px;padding:10px;max-width:520px;width:100%;box-shadow:0 18px 50px rgba(0,0,0,.28)">
+                      <img src="assets/green-line.png" alt="" loading="lazy" decoding="async" style="width:100%;display:block;border-radius:14px" />
+                    </div>
+                    <figcaption style="font-size:clamp(13px,1.4vw,14.5px);color:#CFD8E8;line-height:1.55;max-width:44em;text-wrap:pretty">{{ b.cap }}</figcaption>
                   </figure>
                 </sc-if>
 
@@ -212,7 +222,7 @@ img{max-width:100%}
                   <sc-for list="{{ s.srcs }}" as="sr" hint-placeholder-count="3">
                     <sc-if value="{{ sr.gov }}" hint-placeholder-val="{{ false }}">
                       <a href="{{ sr.u }}" target="_blank" rel="noopener" title="{{ officialLabel }}" style="display:inline-flex;align-items:center;gap:9px;background:#C9A227;border:2px solid #C9A227;color:#1B2A4A;border-radius:999px;padding:11px 18px;min-height:44px;font-size:clamp(13px,1.4vw,14.5px);font-weight:800;box-shadow:0 10px 26px rgba(201,162,39,.14)" style-hover="background:#E4C766;border-color:#E4C766">
-                        <span style="display:inline-flex;align-items:center;gap:6px;background:#1B2A4A;color:#E4C766;font-size:11.5px;font-weight:800;letter-spacing:.6px;border-radius:999px;padding:4px 11px">
+                        <span style="display:inline-flex;align-items:center;gap:6px;background:#1B2A4A;color:#E4C766;font-size:12.5px;font-weight:800;letter-spacing:.6px;border-radius:999px;padding:5px 12px">
                           <span style="display:block;width:7px;height:7px;border-radius:50%;background:#E4C766"></span>{{ officialLabel }}
                         </span>
                         {{ sr.t }} <span>↗</span>
@@ -241,7 +251,7 @@ img{max-width:100%}
               <sc-for list="{{ cards }}" as="c" hint-placeholder-count="6">
                 <sc-if value="{{ c.gov }}" hint-placeholder-val="{{ false }}">
                   <a href="{{ c.u }}" target="_blank" rel="noopener" style="display:block;background:linear-gradient(180deg,rgba(201,162,39,.18),rgba(201,162,39,.05));border:2px solid #C9A227;border-radius:18px;padding:16px 18px" style-hover="background:rgba(201,162,39,.3)">
-                    <div style="display:inline-flex;align-items:center;gap:6px;background:#C9A227;color:#1B2A4A;font-size:11.5px;font-weight:800;letter-spacing:.6px;border-radius:999px;padding:4px 11px;margin-bottom:10px">
+                    <div style="display:inline-flex;align-items:center;gap:6px;background:#C9A227;color:#1B2A4A;font-size:12.5px;font-weight:800;letter-spacing:.6px;border-radius:999px;padding:5px 12px;margin-bottom:10px">
                       <span style="display:block;width:7px;height:7px;border-radius:50%;background:#1B2A4A"></span>{{ c.official }}
                     </div>
                     <div style="color:#FFFFFF;font-weight:800;font-size:clamp(14px,1.55vw,15.5px);margin-bottom:6px;line-height:1.4">{{ c.h }}</div>
@@ -516,13 +526,14 @@ class Component extends DCLogic {
         o.label = this.tx(b.label);
         o.head = this.tx(b.head);
         o.sub = this.tx(b.sub);
-        o.items = (b.items || []).map((it) => ({ v: this.tx(it.v), k: this.tx(it.k) }));
+        o.items = (b.items || []).map((it) => ({ v: this.tx(it.v), k: this.tx(it.k), d: this.tx(it.d) }));
       }
       else if (b.t === 'media') {
         o.isMedia = true; o.cap = this.tx(b.cap);
         o.isRail = String(b.src).indexOf('lrail') !== -1;
         o.isRender = !o.isRail;
       }
+      else if (b.t === 'map') { o.isMap = true; o.cap = this.tx(b.cap); }
       else if (b.t === 'two') { o.isTwo = true; o.cap = this.tx(b.cap); }
       else if (b.t === 'morph') { o.isMorph = true; o.cap = this.tx(b.cap); this._morph = b; }
       return o;
