@@ -18,13 +18,15 @@
 html,body{margin:0;padding:0;height:100%;background:#080D18;overscroll-behavior:none;-webkit-font-smoothing:antialiased;-webkit-text-size-adjust:100%}
 a{color:#E4C766;text-decoration:none}
 a:hover{color:#ffffff}
+button,a{touch-action:manipulation;-webkit-tap-highlight-color:rgba(201,162,39,.2)}
+img{max-width:100%}
 ::selection{background:#C9A227;color:#0B1120}
 </style>
 <script src="i18n.js"></script>
 <script src="deck-content.js"></script>
 </helmet>
 <template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><rect width="200" height="200" fill="#0E1728"></rect><rect x="60" y="60" width="80" height="80" fill="#C9A227" transform="rotate(45 100 100)"></rect><text x="100" y="114" font-family="Helvetica,Arial,sans-serif" font-size="34" font-weight="700" fill="#0E1728" text-anchor="middle">BS</text></svg></template>
-<div dir="{{ dir }}" style="height:100dvh;min-height:100vh;display:flex;flex-direction:column;overflow:hidden;background:#080D18;font-family:'Assistant',Arial,sans-serif;color:#E7EAF1;line-height:1.7">
+<div dir="{{ dir }}" ref="{{ rootRef }}" style="height:100dvh;display:flex;flex-direction:column;overflow:hidden;background:#080D18;font-family:'Assistant',Arial,sans-serif;color:#E7EAF1;line-height:1.7">
 
   <header style="flex:0 0 auto;display:flex;align-items:center;justify-content:space-between;gap:8px;padding:6px clamp(8px,2vw,20px);padding-top:calc(6px + env(safe-area-inset-top,0px));background:#0B1224;border-bottom:1px solid rgba(201,162,39,.24);position:relative;z-index:5">
     <div style="display:flex;align-items:center;gap:9px;min-width:0">
@@ -146,8 +148,8 @@ a:hover{color:#ffffff}
 
                 <sc-if value="{{ b.isMedia }}" hint-placeholder-val="{{ false }}">
                   <figure style="margin:0">
-                    <sc-if value="{{ b.isRail }}" hint-placeholder-val="{{ false }}"><img src="assets/lrail.jpg" alt="" style="width:100%;display:block;border:1px solid rgba(255,255,255,.1)" /></sc-if>
-                    <sc-if value="{{ b.isRender }}" hint-placeholder-val="{{ false }}"><img src="https://static.wixstatic.com/media/1691bd_c6d360bfb02744d39e604a79628c6052~mv2.png/v1/fit/w_1654,h_799,q_90,enc_avif,quality_auto/1691bd_c6d360bfb02744d39e604a79628c6052~mv2.png" alt="" style="width:100%;display:block;border:1px solid rgba(255,255,255,.1)" /></sc-if>
+                    <sc-if value="{{ b.isRail }}" hint-placeholder-val="{{ false }}"><img src="assets/lrail.jpg" alt="" loading="lazy" decoding="async" style="width:100%;display:block;border:1px solid rgba(255,255,255,.1)" /></sc-if>
+                    <sc-if value="{{ b.isRender }}" hint-placeholder-val="{{ false }}"><img src="https://static.wixstatic.com/media/1691bd_c6d360bfb02744d39e604a79628c6052~mv2.png/v1/fit/w_1200,h_580,q_85,enc_avif,quality_auto/1691bd_c6d360bfb02744d39e604a79628c6052~mv2.png" alt="" loading="lazy" decoding="async" style="width:100%;display:block;border:1px solid rgba(255,255,255,.1)" /></sc-if>
                     <figcaption style="margin-top:10px;font-size:clamp(11.5px,1.3vw,13px);color:#8A97AF;line-height:1.55;text-wrap:pretty">{{ b.cap }}</figcaption>
                   </figure>
                 </sc-if>
@@ -155,8 +157,8 @@ a:hover{color:#ffffff}
                 <sc-if value="{{ b.isTwo }}" hint-placeholder-val="{{ false }}">
                   <figure style="margin:0">
                     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:clamp(10px,1.6vw,18px)">
-                      <img src="https://static.wixstatic.com/media/1691bd_4d75feadb096433d953708683ecc892b~mv2.png/v1/fit/w_1654,h_799,q_90,enc_avif,quality_auto/1691bd_4d75feadb096433d953708683ecc892b~mv2.png" alt="" style="width:100%;display:block;border:1px solid rgba(255,255,255,.1)" />
-                      <img src="https://static.wixstatic.com/media/1691bd_5017aa72fe404831a91c75c5dbb40585~mv2.png/v1/fit/w_1654,h_799,q_90,enc_avif,quality_auto/1691bd_5017aa72fe404831a91c75c5dbb40585~mv2.png" alt="" style="width:100%;display:block;border:1px solid rgba(255,255,255,.1)" />
+                      <img src="https://static.wixstatic.com/media/1691bd_4d75feadb096433d953708683ecc892b~mv2.png/v1/fit/w_1200,h_580,q_85,enc_avif,quality_auto/1691bd_4d75feadb096433d953708683ecc892b~mv2.png" alt="" loading="lazy" decoding="async" style="width:100%;display:block;border:1px solid rgba(255,255,255,.1)" />
+                      <img src="https://static.wixstatic.com/media/1691bd_5017aa72fe404831a91c75c5dbb40585~mv2.png/v1/fit/w_1200,h_580,q_85,enc_avif,quality_auto/1691bd_5017aa72fe404831a91c75c5dbb40585~mv2.png" alt="" loading="lazy" decoding="async" style="width:100%;display:block;border:1px solid rgba(255,255,255,.1)" />
                     </div>
                     <figcaption style="margin-top:10px;font-size:clamp(11.5px,1.3vw,13px);color:#8A97AF;line-height:1.55;text-wrap:pretty">{{ b.cap }}</figcaption>
                   </figure>
@@ -165,8 +167,8 @@ a:hover{color:#ffffff}
                 <sc-if value="{{ b.isMorph }}" hint-placeholder-val="{{ false }}">
                   <figure style="margin:0">
                     <button type="button" onClick="{{ toggleMorph }}" style="position:relative;display:block;width:100%;padding:0;border:1px solid rgba(201,162,39,.35);background:#0E1728;cursor:pointer;overflow:hidden;aspect-ratio:16/10;font-family:inherit">
-                      <img src="assets/land.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:{{ morphNowOpacity }};transition:opacity 1s cubic-bezier(.4,0,.2,1)" />
-                      <img src="assets/map.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:{{ morphPlanOpacity }};transition:opacity 1s cubic-bezier(.4,0,.2,1)" />
+                      <img src="assets/land.jpg" alt="" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:{{ morphNowOpacity }};transition:opacity 1s cubic-bezier(.4,0,.2,1)" />
+                      <img src="assets/map.jpg" alt="" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:{{ morphPlanOpacity }};transition:opacity 1s cubic-bezier(.4,0,.2,1)" />
                       <span style="position:absolute;inset:auto 14px 14px auto;background:#C9A227;color:#0B1120;font-weight:800;font-size:clamp(12px,1.4vw,14px);padding:9px 15px;box-shadow:0 8px 24px rgba(0,0,0,.4)">{{ morphHint }}</span>
                     </button>
                     <figcaption style="margin-top:10px;font-size:clamp(11.5px,1.3vw,13px);color:#8A97AF;line-height:1.55;text-wrap:pretty">{{ b.cap }}</figcaption>
@@ -245,7 +247,7 @@ a:hover{color:#ffffff}
       <sc-if value="{{ wide }}" hint-placeholder-val="{{ true }}">
         <div style="display:flex;align-items:center;gap:1px">
           <sc-for list="{{ dots }}" as="d" hint-placeholder-count="9">
-            <button type="button" onClick="{{ d.pick }}" title="{{ d.label }}" style="background:transparent;border:0;padding:20px 5px;min-height:44px;cursor:pointer;display:flex;align-items:center;justify-content:center">
+            <button type="button" onClick="{{ d.pick }}" title="{{ d.label }}" style="background:transparent;border:0;padding:20px 18px;min-height:44px;min-width:44px;cursor:pointer;display:flex;align-items:center;justify-content:center">
               <sc-if value="{{ d.on }}" hint-placeholder-val="{{ true }}"><span style="display:block;width:22px;height:4px;background:#C9A227"></span></sc-if>
               <sc-if value="{{ d.off }}" hint-placeholder-val="{{ true }}"><span style="display:block;width:8px;height:4px;background:rgba(255,255,255,.22)"></span></sc-if>
             </button>
@@ -254,7 +256,7 @@ a:hover{color:#ffffff}
       </sc-if>
       <sc-if value="{{ narrow }}" hint-placeholder-val="{{ false }}">
         <div style="flex:1 1 auto;height:4px;background:rgba(255,255,255,.14);min-width:40px">
-          <div style="height:100%;background:#C9A227;transition:width .25s linear;width:{{ progressPct }}"></div>
+          <div ref="{{ progressRef }}" style="height:100%;background:#C9A227;transition:width .2s linear;width:2%"></div>
         </div>
       </sc-if>
       <span style="font-family:'Rubik',sans-serif;font-size:clamp(11px,1.2vw,13px);color:#8A97AF;white-space:nowrap;flex:0 0 auto" dir="ltr">{{ counter }}</span>
@@ -287,15 +289,29 @@ class Component extends DCLogic {
       if (sl && CODES.indexOf(sl) !== -1) lang = sl;
     } catch (e) {}
     let narrow = false;
-    try { narrow = window.matchMedia('(max-width: 480px)').matches; } catch (e) {}
+    try { narrow = window.matchMedia('(max-width: 700px)').matches; } catch (e) {}
     this.state = { lang, i: 0, flipped: false, narrow, pct: 0 };
     this.scrollRef = React.createRef();
+    this.rootRef = React.createRef();
+    this.progressRef = React.createRef();
     this.ticking = false;
+    this.cache = null;
+    this.saveTimer = null;
+  }
+
+  // Lock the shell to the REAL visible height: 100dvh is unsupported on older
+  // Android/iOS and 100vh is wrong while the mobile toolbar is showing.
+  fitHeight() {
+    const el = this.rootRef.current;
+    if (!el) return;
+    const vv = window.visualViewport;
+    const h = Math.round(vv && vv.height ? vv.height : window.innerHeight);
+    if (h > 0) el.style.height = h + 'px';
   }
 
   componentDidMount() {
     try {
-      this.mq = window.matchMedia('(max-width: 480px)');
+      this.mq = window.matchMedia('(max-width: 700px)');
       this.onMq = (e) => this.setState({ narrow: e.matches });
       this.mq.addEventListener ? this.mq.addEventListener('change', this.onMq) : this.mq.addListener(this.onMq);
     } catch (e) {}
@@ -307,6 +323,11 @@ class Component extends DCLogic {
       else if (k === 'End') { e.preventDefault(); this.go(this.sections().length - 1); }
     };
     document.addEventListener('keydown', this.onKey);
+    this.onResize = () => this.fitHeight();
+    window.addEventListener('resize', this.onResize);
+    window.addEventListener('orientationchange', this.onResize);
+    if (window.visualViewport) window.visualViewport.addEventListener('resize', this.onResize);
+    this.fitHeight();
     this.syncDoc();
     let top = 0;
     try { top = parseInt(localStorage.getItem('bs_scroll') || '0', 10) || 0; } catch (e) {}
@@ -316,7 +337,12 @@ class Component extends DCLogic {
     });
   }
 
-  componentWillUnmount() { document.removeEventListener('keydown', this.onKey); }
+  componentWillUnmount() {
+    document.removeEventListener('keydown', this.onKey);
+    window.removeEventListener('resize', this.onResize);
+    window.removeEventListener('orientationchange', this.onResize);
+    if (window.visualViewport) window.visualViewport.removeEventListener('resize', this.onResize);
+  }
   componentDidUpdate(prev) { if (!prev || prev.lang !== this.state.lang) this.syncDoc(); }
 
   syncDoc() {
@@ -338,8 +364,15 @@ class Component extends DCLogic {
     for (let k = 0; k < secs.length; k++) { if (secs[k].offsetTop <= mid) idx = k; }
     const span = Math.max(1, el.scrollHeight - el.clientHeight);
     const pct = Math.max(2, Math.min(100, Math.round((el.scrollTop / span) * 100)));
-    if (idx !== this.state.i || pct !== this.state.pct) this.setState({ i: idx, pct });
-    try { localStorage.setItem('bs_scroll', String(Math.round(el.scrollTop))); } catch (e) {}
+    // progress bar is driven imperatively — re-rendering per scroll frame is far too costly
+    const bar = this.progressRef.current;
+    if (bar) bar.style.width = pct + '%';
+    if (idx !== this.state.i) this.setState({ i: idx });
+    const top = Math.round(el.scrollTop);
+    if (this.saveTimer) clearTimeout(this.saveTimer);
+    this.saveTimer = setTimeout(() => {
+      try { localStorage.setItem('bs_scroll', String(top)); } catch (e) {}
+    }, 300);
   }
 
   go(i) {
@@ -437,8 +470,18 @@ class Component extends DCLogic {
   renderVals() {
     const lang = this.state.lang;
     const u = LBL[lang] || LBL.en;
-    const raws = this.slides();
-    const slides = raws.map((r) => this.resolve(r, u.cta));
+    // resolving 9 sections of bilingual rich text is expensive — do it once per language
+    if (!this.cache || this.cache.lang !== lang || this.cache.slides.length !== this.slides().length) {
+      this.cache = {
+        lang,
+        slides: this.slides().map((r) => this.resolve(r, u.cta)),
+        cards: ((window.BS && window.BS.SRC) || []).map((c) => ({
+          h: this.tx(c.h), d: this.tx(c.d), u: c.u, host: c.u.replace(/^https?:\/\//, '').split('/')[0]
+        })),
+        disc: this.tx((window.BS && window.BS.DISC) || '')
+      };
+    }
+    const slides = this.cache.slides;
     const n = slides.length || 1;
     const idx = Math.min(this.state.i, n - 1);
     const morph = this._morph || {};
@@ -454,15 +497,14 @@ class Component extends DCLogic {
       counter: (idx + 1) + ' / ' + n,
       narrow: this.state.narrow,
       wide: !this.state.narrow,
-      progressPct: this.state.pct + '%',
       prevOpacity: idx === 0 ? 0.4 : 1,
       nextOpacity: idx === n - 1 ? 0.4 : 1,
       slides,
-      cards: ((window.BS && window.BS.SRC) || []).map((c) => ({
-        h: this.tx(c.h), d: this.tx(c.d), u: c.u, host: c.u.replace(/^https?:\/\//, '').split('/')[0]
-      })),
-      disc: this.tx((window.BS && window.BS.DISC) || ''),
+      cards: this.cache.cards,
+      disc: this.cache.disc,
       scrollRef: this.scrollRef,
+      rootRef: this.rootRef,
+      progressRef: this.progressRef,
       langs: LANGS.map((l) => ({
         code: l.code, flag: l.flag, label: l.label, title: l.title,
         on: l.code === lang, pick: () => this.setLang(l.code)
