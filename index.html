@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>חוף התכלת — מצגת השקעה | קבוצת שניידר נדל"ן</title>
+<meta name="description" content="חוף התכלת, הרצליה — רובע עירוני חדש על קו החוף. מצגת השקעה בקרקע פרטית, קבוצת שניידר נדל'ן.">
+<meta name="theme-color" content="#0B1224">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+@font-face{font-family:"Rubik";src:url("assets/Rubik.ttf");font-weight:300 900;font-display:swap}
+@font-face{font-family:"Assistant";src:url("assets/Assistant.ttf");font-weight:200 800;font-display:swap}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;height:100%;background:#080D18;overscroll-behavior:none;-webkit-font-smoothing:antialiased;-webkit-text-size-adjust:100%}
+a{color:#E4C766;text-decoration:none}
+a:hover{color:#ffffff}
+::selection{background:#C9A227;color:#0B1120}
+</style>
+<script src="i18n.js"></script>
+<script src="deck-content.js"></script>
+</helmet>
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><rect width="200" height="200" fill="#0E1728"></rect><rect x="60" y="60" width="80" height="80" fill="#C9A227" transform="rotate(45 100 100)"></rect><text x="100" y="114" font-family="Helvetica,Arial,sans-serif" font-size="34" font-weight="700" fill="#0E1728" text-anchor="middle">BS</text></svg></template>
+<div dir="{{ dir }}" style="height:100dvh;min-height:100vh;display:flex;flex-direction:column;overflow:hidden;background:#080D18;font-family:'Assistant',Arial,sans-serif;color:#E7EAF1;line-height:1.7">
+
+  <header style="flex:0 0 auto;display:flex;align-items:center;justify-content:space-between;gap:8px;padding:6px clamp(8px,2vw,20px);padding-top:calc(6px + env(safe-area-inset-top,0px));background:#0B1224;border-bottom:1px solid rgba(201,162,39,.24);position:relative;z-index:5">
+    <div style="display:flex;align-items:center;gap:9px;min-width:0">
+      <span style="background:#fff;border-radius:4px;padding:3px 7px;display:flex;flex:0 0 auto"><img src="assets/logo.png" alt="Schneider" style="height:clamp(16px,2.2vw,22px);display:block" /></span>
+      <sc-if value="{{ wide }}" hint-placeholder-val="{{ true }}">
+        <span style="font-size:clamp(10px,1.3vw,13px);font-weight:700;letter-spacing:.6px;color:#8A97AF;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ brand }}</span>
+      </sc-if>
+      <sc-if value="{{ narrow }}" hint-placeholder-val="{{ false }}">
+        <span style="font-size:11px;font-weight:800;letter-spacing:1.4px;color:#C9A227;white-space:nowrap">{{ shortBrand }}</span>
+      </sc-if>
+    </div>
+    <div style="display:flex;align-items:center;gap:4px;flex:0 0 auto">
+      <sc-for list="{{ langs }}" as="lg" hint-placeholder-count="4">
+        <button type="button" onClick="{{ lg.pick }}" title="{{ lg.title }}" style="position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;background:transparent;border:1px solid rgba(255,255,255,.14);color:#C7CFDE;border-radius:5px;padding:4px 6px;min-width:44px;min-height:44px;font-family:inherit;cursor:pointer" style-hover="border-color:#C9A227;color:#fff">
+          <span style="font-size:14px;line-height:1">{{ lg.flag }}</span>
+          <span style="font-size:11px;font-weight:800;letter-spacing:.4px;line-height:1">{{ lg.label }}</span>
+          <sc-if value="{{ lg.on }}" hint-placeholder-val="{{ true }}"><span style="position:absolute;inset:auto 5px -1px 5px;height:2px;background:#C9A227"></span></sc-if>
+        </button>
+      </sc-for>
+      <button type="button" onClick="{{ toggleFs }}" title="{{ fsLabel }}" style="background:transparent;border:1px solid rgba(255,255,255,.14);color:#C7CFDE;border-radius:5px;min-width:44px;min-height:44px;padding:7px 10px;font-family:inherit;font-size:13px;cursor:pointer" style-hover="border-color:#C9A227;color:#fff">⛶</button>
+    </div>
+  </header>
+
+  <main ref="{{ scrollRef }}" onScroll="{{ onScroll }}" style="flex:1 1 auto;min-height:0;overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch;overscroll-behavior-y:contain;position:relative;scroll-behavior:smooth">
+    <sc-for list="{{ slides }}" as="s" hint-placeholder-count="9">
+      <div data-screen-label="{{ s.label }}">
+
+        <sc-if value="{{ s.isCover }}" hint-placeholder-val="{{ false }}">
+          <section style="min-height:100%;position:relative;display:flex;flex-direction:column;justify-content:space-between;background:#0E1728;overflow:hidden">
+            <img src="https://static.wixstatic.com/media/1691bd_71cbbd35377e4b3087de3394b0780299~mv2.png/v1/fit/w_1654,h_799,q_90,enc_avif,quality_auto/1691bd_71cbbd35377e4b3087de3394b0780299~mv2.png" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.8" />
+            <div style="position:absolute;inset:0;background:radial-gradient(130% 85% at 78% 8%,rgba(8,13,24,0) 0%,rgba(8,13,24,.5) 55%,rgba(8,13,24,.96) 100%)"></div>
+            <div style="position:relative;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:clamp(18px,3vw,40px)">
+              <span style="background:#fff;border-radius:5px;padding:8px 14px;display:flex"><img src="assets/logo.png" alt="קבוצת שניידר נדלן" style="height:clamp(26px,3vw,40px);display:block" /></span>
+              <span style="font-size:clamp(11px,1.1vw,12px);font-weight:700;letter-spacing:1.8px;color:#C9A227" dir="ltr">SCHGROUP.CO.IL</span>
+            </div>
+            <div style="position:relative;padding:clamp(22px,3.4vw,48px);padding-bottom:clamp(24px,3.6vw,52px)">
+              <div style="font-size:clamp(11px,1.5vw,14px);font-weight:700;letter-spacing:2.2px;color:#E4C766;margin-bottom:10px">{{ s.kick }}</div>
+              <h1 style="font-family:'Rubik',sans-serif;font-weight:300;font-size:clamp(40px,8.6vw,94px);line-height:.96;margin:0 0 16px;letter-spacing:-2px;color:#fff">{{ s.t1 }} <b style="font-weight:900;color:#E4C766">{{ s.t2 }}</b></h1>
+              <div style="width:clamp(56px,10vw,120px);height:2px;background:linear-gradient(90deg,#C9A227,rgba(201,162,39,0));margin-bottom:18px"></div>
+              <p style="margin:0 0 clamp(18px,2.6vw,28px);font-size:clamp(15px,2vw,22px);font-weight:300;color:#C7CFDE;max-width:34em;text-wrap:pretty">{{ s.sub }}</p>
+              <div style="padding-top:14px;border-top:1px solid rgba(255,255,255,.16);font-size:clamp(11px,1.3vw,13.5px);color:#8A97AF;max-width:40em">{{ s.meta }}</div>
+              <div style="margin-top:clamp(16px,2.4vw,26px);display:flex;align-items:center;gap:10px;color:#C9A227;font-size:clamp(11px,1.3vw,13px);font-weight:700;letter-spacing:1.6px">
+                <span>{{ scrollCue }}</span>
+                <span style="font-size:16px;line-height:1">↓</span>
+              </div>
+            </div>
+          </section>
+        </sc-if>
+
+        <sc-if value="{{ s.isContent }}" hint-placeholder-val="{{ false }}">
+          <section style="max-width:1140px;margin:0 auto;padding:clamp(34px,5vw,80px) clamp(18px,3.4vw,48px) clamp(34px,5vw,80px);border-top:1px solid rgba(201,162,39,.18)">
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px">
+              <span style="font-family:'Rubik',sans-serif;font-size:clamp(11px,1.3vw,13px);font-weight:800;color:#C9A227;letter-spacing:1px" dir="ltr">{{ s.label }}</span>
+              <span style="display:block;width:8px;height:8px;background:#C9A227;transform:rotate(45deg);flex:0 0 auto"></span>
+              <span style="font-size:clamp(10.5px,1.3vw,13px);font-weight:700;letter-spacing:2px;color:#E4C766">{{ s.pill }}</span>
+            </div>
+            <h2 style="font-family:'Rubik',sans-serif;font-weight:300;font-size:clamp(25px,4.6vw,48px);line-height:1.1;margin:0 0 12px;letter-spacing:-1px;color:#fff;text-wrap:balance">{{ s.h }}</h2>
+            <p style="margin:0 0 clamp(24px,3.4vw,38px);font-size:clamp(15.5px,2vw,21px);font-weight:300;color:#A9B4C8;max-width:38em;text-wrap:pretty">{{ s.lead }}</p>
+
+            <sc-for list="{{ s.blocks }}" as="b" hint-placeholder-count="3">
+              <div style="margin-bottom:clamp(22px,3.2vw,34px)">
+
+                <sc-if value="{{ b.isStatus }}" hint-placeholder-val="{{ false }}">
+                  <div style="border:1px solid rgba(201,162,39,.4);background:linear-gradient(180deg,rgba(201,162,39,.12),rgba(201,162,39,.03));padding:clamp(16px,2.4vw,24px)">
+                    <div style="display:inline-block;background:#C9A227;color:#0B1120;font-weight:800;font-size:11.5px;letter-spacing:.6px;padding:4px 11px;margin-bottom:10px">{{ b.tag }}</div>
+                    <div style="font-size:clamp(14.5px,1.7vw,17px);color:#E7EAF1;text-wrap:pretty"><sc-for list="{{ b.parts }}" as="p" hint-placeholder-count="2"><sc-if value="{{ p.b }}" hint-placeholder-val="{{ false }}"><b style="color:#fff;font-weight:800">{{ p.s }}</b></sc-if><sc-if value="{{ p.plain }}" hint-placeholder-val="{{ true }}">{{ p.s }}</sc-if></sc-for></div>
+                  </div>
+                </sc-if>
+
+                <sc-if value="{{ b.isStats }}" hint-placeholder-val="{{ false }}">
+                  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,150px),1fr));gap:clamp(10px,1.6vw,20px)">
+                    <sc-for list="{{ b.items }}" as="st" hint-placeholder-count="3">
+                      <div style="padding:clamp(14px,2vw,20px);background:rgba(255,255,255,.04);border:1px solid rgba(201,162,39,.26)">
+                        <div style="font-family:'Rubik',sans-serif;font-size:clamp(24px,3.8vw,40px);font-weight:800;line-height:1;letter-spacing:-1.4px;color:{{ st.color }}"><span dir="ltr" style="display:inline-block">{{ st.v }}</span><span style="font-size:.44em;font-weight:700;color:#DCE2EE"> {{ st.u }}</span></div>
+                        <div style="margin-top:9px;font-size:clamp(11.5px,1.3vw,13px);letter-spacing:.8px;color:#8A97AF">{{ st.k }}</div>
+                      </div>
+                    </sc-for>
+                  </div>
+                </sc-if>
+
+                <sc-if value="{{ b.isUl }}" hint-placeholder-val="{{ false }}">
+                  <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px;max-width:52em">
+                    <sc-for list="{{ b.items }}" as="li" hint-placeholder-count="4">
+                      <li style="display:flex;gap:13px;font-size:clamp(15px,1.8vw,17.5px);color:#DCE2EE;text-wrap:pretty">
+                        <span style="color:#C9A227;font-weight:800;flex:0 0 auto">—</span>
+                        <span><sc-for list="{{ li.parts }}" as="p" hint-placeholder-count="2"><sc-if value="{{ p.b }}" hint-placeholder-val="{{ false }}"><b style="color:#fff;font-weight:800">{{ p.s }}</b></sc-if><sc-if value="{{ p.plain }}" hint-placeholder-val="{{ true }}">{{ p.s }}</sc-if></sc-for></span>
+                      </li>
+                    </sc-for>
+                  </ul>
+                </sc-if>
+
+                <sc-if value="{{ b.isP }}" hint-placeholder-val="{{ false }}">
+                  <p style="margin:0;font-size:clamp(15px,1.8vw,17.5px);color:#C7CFDE;max-width:50em;text-wrap:pretty"><sc-for list="{{ b.parts }}" as="p" hint-placeholder-count="2"><sc-if value="{{ p.b }}" hint-placeholder-val="{{ false }}"><b style="color:#fff;font-weight:700">{{ p.s }}</b></sc-if><sc-if value="{{ p.plain }}" hint-placeholder-val="{{ true }}">{{ p.s }}</sc-if></sc-for></p>
+                </sc-if>
+
+                <sc-if value="{{ b.isChips }}" hint-placeholder-val="{{ false }}">
+                  <div style="display:flex;flex-wrap:wrap;gap:9px">
+                    <sc-for list="{{ b.items }}" as="c" hint-placeholder-count="4">
+                      <sc-if value="{{ c.isLink }}" hint-placeholder-val="{{ false }}">
+                        <a href="{{ c.u }}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;background:#C9A227;color:#0B1120;border:1px solid #C9A227;padding:10px 16px;font-size:clamp(12.5px,1.4vw,14px);font-weight:800;min-height:44px" style-hover="background:#E4C766;color:#0B1120">{{ c.x }} <span>↗</span></a>
+                      </sc-if>
+                      <sc-if value="{{ c.plain }}" hint-placeholder-val="{{ true }}">
+                        <span style="display:inline-flex;align-items:center;background:rgba(255,255,255,.05);color:#DCE2EE;border:1px solid rgba(255,255,255,.16);padding:10px 16px;font-size:clamp(12.5px,1.4vw,14px);font-weight:700;min-height:44px">{{ c.x }}</span>
+                      </sc-if>
+                    </sc-for>
+                  </div>
+                </sc-if>
+
+                <sc-if value="{{ b.isTrend }}" hint-placeholder-val="{{ false }}">
+                  <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap;border:1px solid rgba(201,162,39,.3);background:rgba(255,255,255,.03);padding:clamp(14px,2vw,20px)">
+                    <span style="font-family:'Rubik',sans-serif;font-size:clamp(15px,1.9vw,19px);font-weight:700;color:#fff">{{ b.x }}</span>
+                    <svg viewBox="0 0 160 42" style="width:130px;height:34px;flex:0 0 auto"><path d="M6 36 Q 64 34 96 20 T 154 6" fill="none" stroke="#C9A227" stroke-width="3"></path><path d="M146 4 L154 6 L149 13" fill="none" stroke="#C9A227" stroke-width="3" stroke-linecap="round"></path></svg>
+                  </div>
+                </sc-if>
+
+                <sc-if value="{{ b.isNote }}" hint-placeholder-val="{{ false }}">
+                  <div style="border-right:3px solid #C9A227;background:rgba(201,162,39,.08);padding:clamp(14px,2vw,20px);font-size:clamp(14.5px,1.7vw,17px);color:#E7EAF1;max-width:52em;text-wrap:pretty"><b style="color:#E4C766;font-weight:800">{{ b.label }}</b> {{ b.x }}</div>
+                </sc-if>
+
+                <sc-if value="{{ b.isMedia }}" hint-placeholder-val="{{ false }}">
+                  <figure style="margin:0">
+                    <sc-if value="{{ b.isRail }}" hint-placeholder-val="{{ false }}"><img src="assets/lrail.jpg" alt="" style="width:100%;display:block;border:1px solid rgba(255,255,255,.1)" /></sc-if>
+                    <sc-if value="{{ b.isRender }}" hint-placeholder-val="{{ false }}"><img src="https://static.wixstatic.com/media/1691bd_c6d360bfb02744d39e604a79628c6052~mv2.png/v1/fit/w_1654,h_799,q_90,enc_avif,quality_auto/1691bd_c6d360bfb02744d39e604a79628c6052~mv2.png" alt="" style="width:100%;display:block;border:1px solid rgba(255,255,255,.1)" /></sc-if>
+                    <figcaption style="margin-top:10px;font-size:clamp(11.5px,1.3vw,13px);color:#8A97AF;line-height:1.55;text-wrap:pretty">{{ b.cap }}</figcaption>
+                  </figure>
+                </sc-if>
+
+                <sc-if value="{{ b.isTwo }}" hint-placeholder-val="{{ false }}">
+                  <figure style="margin:0">
+                    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:clamp(10px,1.6vw,18px)">
+                      <img src="https://static.wixstatic.com/media/1691bd_4d75feadb096433d953708683ecc892b~mv2.png/v1/fit/w_1654,h_799,q_90,enc_avif,quality_auto/1691bd_4d75feadb096433d953708683ecc892b~mv2.png" alt="" style="width:100%;display:block;border:1px solid rgba(255,255,255,.1)" />
+                      <img src="https://static.wixstatic.com/media/1691bd_5017aa72fe404831a91c75c5dbb40585~mv2.png/v1/fit/w_1654,h_799,q_90,enc_avif,quality_auto/1691bd_5017aa72fe404831a91c75c5dbb40585~mv2.png" alt="" style="width:100%;display:block;border:1px solid rgba(255,255,255,.1)" />
+                    </div>
+                    <figcaption style="margin-top:10px;font-size:clamp(11.5px,1.3vw,13px);color:#8A97AF;line-height:1.55;text-wrap:pretty">{{ b.cap }}</figcaption>
+                  </figure>
+                </sc-if>
+
+                <sc-if value="{{ b.isMorph }}" hint-placeholder-val="{{ false }}">
+                  <figure style="margin:0">
+                    <button type="button" onClick="{{ toggleMorph }}" style="position:relative;display:block;width:100%;padding:0;border:1px solid rgba(201,162,39,.35);background:#0E1728;cursor:pointer;overflow:hidden;aspect-ratio:16/10;font-family:inherit">
+                      <img src="assets/land.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:{{ morphNowOpacity }};transition:opacity 1s cubic-bezier(.4,0,.2,1)" />
+                      <img src="assets/map.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:{{ morphPlanOpacity }};transition:opacity 1s cubic-bezier(.4,0,.2,1)" />
+                      <span style="position:absolute;inset:auto 14px 14px auto;background:#C9A227;color:#0B1120;font-weight:800;font-size:clamp(12px,1.4vw,14px);padding:9px 15px;box-shadow:0 8px 24px rgba(0,0,0,.4)">{{ morphHint }}</span>
+                    </button>
+                    <figcaption style="margin-top:10px;font-size:clamp(11.5px,1.3vw,13px);color:#8A97AF;line-height:1.55;text-wrap:pretty">{{ b.cap }}</figcaption>
+                  </figure>
+                </sc-if>
+
+              </div>
+            </sc-for>
+
+            <sc-if value="{{ s.hasSrcs }}" hint-placeholder-val="{{ false }}">
+              <div style="border-top:1px solid rgba(255,255,255,.14);padding-top:16px">
+                <div style="font-size:clamp(11px,1.2vw,12.5px);font-weight:700;letter-spacing:1.6px;color:#8A97AF;margin-bottom:12px">{{ s.srclabel }}</div>
+                <div style="display:flex;flex-wrap:wrap;gap:9px">
+                  <sc-for list="{{ s.srcs }}" as="sr" hint-placeholder-count="3">
+                    <a href="{{ sr.u }}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(201,162,39,.42);color:#E4C766;padding:11px 16px;min-height:44px;font-size:clamp(12.5px,1.4vw,13.5px);font-weight:700" style-hover="background:#C9A227;color:#0B1120;border-color:#C9A227">{{ sr.t }} <span>↗</span></a>
+                  </sc-for>
+                </div>
+              </div>
+            </sc-if>
+          </section>
+        </sc-if>
+
+        <sc-if value="{{ s.isSources }}" hint-placeholder-val="{{ false }}">
+          <section style="max-width:1140px;margin:0 auto;padding:clamp(34px,5vw,80px) clamp(18px,3.4vw,48px);border-top:1px solid rgba(201,162,39,.18)">
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px">
+              <span style="font-family:'Rubik',sans-serif;font-size:clamp(11px,1.3vw,13px);font-weight:800;color:#C9A227;letter-spacing:1px" dir="ltr">{{ s.label }}</span>
+              <span style="display:block;width:8px;height:8px;background:#C9A227;transform:rotate(45deg);flex:0 0 auto"></span>
+              <span style="font-size:clamp(10.5px,1.3vw,13px);font-weight:700;letter-spacing:2px;color:#E4C766">{{ s.pill }}</span>
+            </div>
+            <h2 style="font-family:'Rubik',sans-serif;font-weight:300;font-size:clamp(25px,4.6vw,48px);line-height:1.1;margin:0 0 12px;letter-spacing:-1px;color:#fff">{{ s.h }}</h2>
+            <p style="margin:0 0 clamp(24px,3.4vw,34px);font-size:clamp(15.5px,2vw,21px);font-weight:300;color:#A9B4C8;max-width:38em;text-wrap:pretty">{{ s.lead }}</p>
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:clamp(10px,1.4vw,14px)">
+              <sc-for list="{{ cards }}" as="c" hint-placeholder-count="6">
+                <a href="{{ c.u }}" target="_blank" rel="noopener" style="display:block;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);padding:16px 18px" style-hover="border-color:#C9A227;background:rgba(201,162,39,.1)">
+                  <div style="color:#E4C766;font-weight:800;font-size:clamp(13.5px,1.5vw,15px);margin-bottom:6px;line-height:1.4">{{ c.h }}</div>
+                  <div style="color:#C7CFDE;font-size:clamp(12.5px,1.4vw,13.5px);line-height:1.5;margin-bottom:9px">{{ c.d }}</div>
+                  <div style="color:#7E8BA3;font-size:11.5px" dir="ltr">{{ c.host }} ↗</div>
+                </a>
+              </sc-for>
+            </div>
+            <div style="margin-top:clamp(24px,3.4vw,34px);border-top:1px solid rgba(255,255,255,.14);padding-top:16px;font-size:clamp(11.5px,1.25vw,13px);color:#7E8BA3;line-height:1.75;max-width:60em;text-wrap:pretty">{{ disc }}</div>
+          </section>
+        </sc-if>
+
+        <sc-if value="{{ s.isClosing }}" hint-placeholder-val="{{ false }}">
+          <section style="min-height:100%;display:flex;flex-direction:column;justify-content:center;background:linear-gradient(180deg,#0B1224,#0E1728);border-top:1px solid rgba(201,162,39,.35);padding:clamp(34px,5vw,80px) clamp(18px,3.4vw,48px) clamp(40px,6vw,90px)">
+            <div style="max-width:1000px;margin:0 auto;width:100%">
+              <span style="background:#fff;border-radius:6px;padding:12px 18px;display:inline-flex;margin-bottom:clamp(20px,3vw,30px)"><img src="assets/logo.png" alt="קבוצת שניידר נדלן" style="height:clamp(40px,5vw,64px);display:block" /></span>
+              <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px">
+                <span style="display:block;width:8px;height:8px;background:#C9A227;transform:rotate(45deg)"></span>
+                <span style="font-size:clamp(10.5px,1.3vw,13px);font-weight:700;letter-spacing:2px;color:#E4C766">{{ s.pill }}</span>
+              </div>
+              <h2 style="font-family:'Rubik',sans-serif;font-weight:300;font-size:clamp(27px,5vw,54px);line-height:1.08;margin:0 0 14px;letter-spacing:-1.2px;color:#fff">{{ s.h }}</h2>
+              <p style="margin:0 0 clamp(24px,3.4vw,36px);font-size:clamp(15.5px,2vw,21px);font-weight:300;color:#A9B4C8;max-width:38em;text-wrap:pretty">{{ s.lead }}</p>
+              <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:clamp(12px,2vw,20px);margin-bottom:clamp(24px,3.4vw,34px)">
+                <sc-for list="{{ s.contacts }}" as="ct" hint-placeholder-count="2">
+                  <div style="background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.02));border:1px solid rgba(201,162,39,.3);padding:clamp(18px,2.6vw,26px);text-align:center">
+                    <div style="font-size:12px;letter-spacing:1.6px;color:#8A97AF;margin-bottom:8px">{{ ct.where }}</div>
+                    <div style="font-family:'Rubik',sans-serif;font-size:clamp(17px,2vw,21px);font-weight:700;color:#fff;margin-bottom:12px">{{ ct.name }}</div>
+                    <a href="{{ ct.href }}" style="display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:9px 18px;border:1px solid #C9A227;color:#E4C766;font-family:'Rubik',sans-serif;font-size:clamp(16px,1.9vw,19px);font-weight:700" dir="ltr" style-hover="background:#C9A227;color:#0B1120">{{ ct.label }}</a>
+                  </div>
+                </sc-for>
+              </div>
+              <a href="https://schgroup.co.il" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(201,162,39,.42);color:#E4C766;padding:11px 16px;min-height:44px;font-size:clamp(12.5px,1.4vw,13.5px);font-weight:700" style-hover="background:#C9A227;color:#0B1120;border-color:#C9A227">{{ s.siteLabel }} <span>↗</span></a>
+            </div>
+          </section>
+        </sc-if>
+
+      </div>
+    </sc-for>
+  </main>
+
+  <footer style="flex:0 0 auto;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:0 clamp(10px,2vw,20px);padding-bottom:env(safe-area-inset-bottom,0px);background:#0B1224;border-top:1px solid rgba(201,162,39,.24)">
+    <button type="button" onClick="{{ prev }}" style="background:transparent;border:1px solid rgba(255,255,255,.2);color:#DCE2EE;padding:10px 14px;min-height:44px;min-width:84px;white-space:nowrap;font-family:'Rubik',sans-serif;font-size:clamp(12.5px,1.4vw,15px);font-weight:700;cursor:pointer;opacity:{{ prevOpacity }}" style-hover="border-color:#C9A227;color:#fff">{{ prevLabel }}</button>
+    <div style="display:flex;align-items:center;gap:clamp(6px,1.4vw,16px);min-width:0;flex:1 1 auto;justify-content:center">
+      <sc-if value="{{ wide }}" hint-placeholder-val="{{ true }}">
+        <div style="display:flex;align-items:center;gap:1px">
+          <sc-for list="{{ dots }}" as="d" hint-placeholder-count="9">
+            <button type="button" onClick="{{ d.pick }}" title="{{ d.label }}" style="background:transparent;border:0;padding:20px 5px;min-height:44px;cursor:pointer;display:flex;align-items:center;justify-content:center">
+              <sc-if value="{{ d.on }}" hint-placeholder-val="{{ true }}"><span style="display:block;width:22px;height:4px;background:#C9A227"></span></sc-if>
+              <sc-if value="{{ d.off }}" hint-placeholder-val="{{ true }}"><span style="display:block;width:8px;height:4px;background:rgba(255,255,255,.22)"></span></sc-if>
+            </button>
+          </sc-for>
+        </div>
+      </sc-if>
+      <sc-if value="{{ narrow }}" hint-placeholder-val="{{ false }}">
+        <div style="flex:1 1 auto;height:4px;background:rgba(255,255,255,.14);min-width:40px">
+          <div style="height:100%;background:#C9A227;transition:width .25s linear;width:{{ progressPct }}"></div>
+        </div>
+      </sc-if>
+      <span style="font-family:'Rubik',sans-serif;font-size:clamp(11px,1.2vw,13px);color:#8A97AF;white-space:nowrap;flex:0 0 auto" dir="ltr">{{ counter }}</span>
+    </div>
+    <button type="button" onClick="{{ next }}" style="background:#C9A227;border:1px solid #C9A227;color:#0B1120;padding:10px 14px;min-height:44px;min-width:84px;white-space:nowrap;font-family:'Rubik',sans-serif;font-size:clamp(12.5px,1.4vw,15px);font-weight:800;cursor:pointer;opacity:{{ nextOpacity }}" style-hover="background:#E4C766">{{ nextLabel }}</button>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{}">
+const LANGS = [
+  { code: 'he', flag: '🇮🇱', label: 'עב', title: 'עברית' },
+  { code: 'en', flag: '🇺🇸', label: 'EN', title: 'English' },
+  { code: 'fr', flag: '🇫🇷', label: 'FR', title: 'Français' },
+  { code: 'es', flag: '🇪🇸', label: 'ES', title: 'Español' }
+];
+const CODES = LANGS.map((l) => l.code);
+const LBL = {
+  he: { brand: 'קבוצת שניידר נדל"ן · חוף התכלת', fs: 'מסך מלא', prev: '↑ הקודם', next: 'הבא ↓', cta: 'לחצו כאן', cue: 'גלשו למטה' },
+  en: { brand: 'Schneider Real Estate · Blue Shores', fs: 'Fullscreen', prev: '↑ Prev', next: 'Next ↓', cta: 'Click here', cue: 'Scroll down' },
+  fr: { brand: 'Schneider Immobilier · Blue Shores', fs: 'Plein écran', prev: '↑ Préc.', next: 'Suivant ↓', cta: 'Cliquez ici', cue: 'Faites défiler' },
+  es: { brand: 'Schneider Bienes Raíces · Blue Shores', fs: 'Pantalla completa', prev: '↑ Ant.', next: 'Siguiente ↓', cta: 'Haga clic aquí', cue: 'Desplácese' }
+};
+
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    let lang = 'he';
+    try {
+      const sl = localStorage.getItem('bs_lang');
+      if (sl && CODES.indexOf(sl) !== -1) lang = sl;
+    } catch (e) {}
+    let narrow = false;
+    try { narrow = window.matchMedia('(max-width: 480px)').matches; } catch (e) {}
+    this.state = { lang, i: 0, flipped: false, narrow, pct: 0 };
+    this.scrollRef = React.createRef();
+    this.ticking = false;
+  }
+
+  componentDidMount() {
+    try {
+      this.mq = window.matchMedia('(max-width: 480px)');
+      this.onMq = (e) => this.setState({ narrow: e.matches });
+      this.mq.addEventListener ? this.mq.addEventListener('change', this.onMq) : this.mq.addListener(this.onMq);
+    } catch (e) {}
+    this.onKey = (e) => {
+      const k = e.key;
+      if (k === 'ArrowDown' || k === 'PageDown' || k === ' ' || k === 'ArrowRight') { e.preventDefault(); this.go(this.state.i + 1); }
+      else if (k === 'ArrowUp' || k === 'PageUp' || k === 'ArrowLeft') { e.preventDefault(); this.go(this.state.i - 1); }
+      else if (k === 'Home') { e.preventDefault(); this.go(0); }
+      else if (k === 'End') { e.preventDefault(); this.go(this.sections().length - 1); }
+    };
+    document.addEventListener('keydown', this.onKey);
+    this.syncDoc();
+    let top = 0;
+    try { top = parseInt(localStorage.getItem('bs_scroll') || '0', 10) || 0; } catch (e) {}
+    if (top > 0) requestAnimationFrame(() => {
+      const el = this.scrollRef.current;
+      if (el) { const b = el.style.scrollBehavior; el.style.scrollBehavior = 'auto'; el.scrollTop = top; el.style.scrollBehavior = b; this.spy(); }
+    });
+  }
+
+  componentWillUnmount() { document.removeEventListener('keydown', this.onKey); }
+  componentDidUpdate(prev) { if (!prev || prev.lang !== this.state.lang) this.syncDoc(); }
+
+  syncDoc() {
+    document.documentElement.lang = this.state.lang;
+    document.documentElement.dir = this.state.lang === 'he' ? 'rtl' : 'ltr';
+  }
+
+  sections() {
+    const el = this.scrollRef.current;
+    return el ? Array.prototype.slice.call(el.querySelectorAll('[data-screen-label]')) : [];
+  }
+
+  spy() {
+    const el = this.scrollRef.current;
+    if (!el) return;
+    const secs = this.sections();
+    const mid = el.scrollTop + el.clientHeight * 0.35;
+    let idx = 0;
+    for (let k = 0; k < secs.length; k++) { if (secs[k].offsetTop <= mid) idx = k; }
+    const span = Math.max(1, el.scrollHeight - el.clientHeight);
+    const pct = Math.max(2, Math.min(100, Math.round((el.scrollTop / span) * 100)));
+    if (idx !== this.state.i || pct !== this.state.pct) this.setState({ i: idx, pct });
+    try { localStorage.setItem('bs_scroll', String(Math.round(el.scrollTop))); } catch (e) {}
+  }
+
+  go(i) {
+    const secs = this.sections();
+    const el = this.scrollRef.current;
+    if (!el || !secs.length) return;
+    const k = Math.max(0, Math.min(i, secs.length - 1));
+    el.scrollTo({ top: secs[k].offsetTop, behavior: 'smooth' });
+  }
+
+  setLang(l) {
+    this.setState({ lang: l });
+    try { localStorage.setItem('bs_lang', l); } catch (e) {}
+  }
+
+  slides() { return (window.BS && window.BS.SLIDES) || []; }
+
+  tx(v) {
+    if (!(v && typeof v === 'object')) return v;
+    const lang = this.state.lang;
+    if (v[lang] !== undefined) return v[lang];
+    if ((lang === 'fr' || lang === 'es') && v.en !== undefined) {
+      const t = (window.TR || {})[v.en];
+      return (t && t[lang]) ? t[lang] : v.en;
+    }
+    return v.he;
+  }
+
+  parts(v) {
+    const str = String(this.tx(v) || '');
+    const out = [];
+    const re = /<b>([\s\S]*?)<\/b>/g;
+    let last = 0, m;
+    while ((m = re.exec(str))) {
+      if (m.index > last) out.push({ s: str.slice(last, m.index), b: false, plain: true });
+      out.push({ s: m[1], b: true, plain: false });
+      last = m.index + m[0].length;
+    }
+    if (last < str.length) out.push({ s: str.slice(last), b: false, plain: true });
+    return out.length ? out : [{ s: '', b: false, plain: true }];
+  }
+
+  resolve(raw, cta) {
+    const s = { label: raw.label || '' };
+    if (raw.type === 'cover') {
+      s.isCover = true;
+      s.kick = this.tx(raw.kick); s.t1 = this.tx(raw.t1); s.t2 = this.tx(raw.t2);
+      s.sub = this.tx(raw.sub); s.meta = this.tx(raw.meta);
+      return s;
+    }
+    s.pill = this.tx(raw.pill); s.h = this.tx(raw.h); s.lead = this.tx(raw.lead);
+    if (raw.type === 'sources') { s.isSources = true; return s; }
+    if (raw.type === 'closing') {
+      s.isClosing = true;
+      s.siteLabel = this.tx(raw.siteLabel);
+      s.contacts = (raw.contacts || []).map((c) => ({
+        where: this.tx(c.where), name: this.tx(c.name), label: this.tx(c.label), href: 'tel:' + c.tel
+      }));
+      return s;
+    }
+    s.isContent = true;
+    s.blocks = (raw.blocks || []).map((b) => {
+      const o = {};
+      if (b.t === 'p') { o.isP = true; o.parts = this.parts(b.x); }
+      else if (b.t === 'status') { o.isStatus = true; o.tag = this.tx(b.tag); o.parts = this.parts(b.x); }
+      else if (b.t === 'ul') { o.isUl = true; o.items = (b.items || []).map((it) => ({ parts: this.parts(it) })); }
+      else if (b.t === 'stats') {
+        o.isStats = true;
+        o.items = (b.items || []).map((st) => ({
+          v: this.tx(st.v), u: st.u ? this.tx(st.u) : '', k: this.tx(st.k),
+          color: st.gold ? '#E4C766' : '#ffffff'
+        }));
+      }
+      else if (b.t === 'chips') {
+        o.isChips = true;
+        o.items = (b.items || []).map((c) => ({ x: this.tx(c.x), u: c.u || '', isLink: !!c.u, plain: !c.u }));
+      }
+      else if (b.t === 'trend') { o.isTrend = true; o.x = this.tx(b.x); }
+      else if (b.t === 'note') { o.isNote = true; o.label = this.tx(b.label); o.x = this.tx(b.x); }
+      else if (b.t === 'media') {
+        o.isMedia = true; o.cap = this.tx(b.cap);
+        o.isRail = String(b.src).indexOf('lrail') !== -1;
+        o.isRender = !o.isRail;
+      }
+      else if (b.t === 'two') { o.isTwo = true; o.cap = this.tx(b.cap); }
+      else if (b.t === 'morph') { o.isMorph = true; o.cap = this.tx(b.cap); this._morph = b; }
+      return o;
+    });
+    s.hasSrcs = !!(raw.srcs && raw.srcs.length);
+    s.srclabel = this.tx(raw.srclabel || { he: 'מקורות:', en: 'Sources:' });
+    s.srcs = (raw.srcs || []).map((x) => ({ t: this.tx(x.t) + ' · ' + cta, u: x.u }));
+    return s;
+  }
+
+  renderVals() {
+    const lang = this.state.lang;
+    const u = LBL[lang] || LBL.en;
+    const raws = this.slides();
+    const slides = raws.map((r) => this.resolve(r, u.cta));
+    const n = slides.length || 1;
+    const idx = Math.min(this.state.i, n - 1);
+    const morph = this._morph || {};
+
+    return {
+      dir: lang === 'he' ? 'rtl' : 'ltr',
+      brand: u.brand,
+      shortBrand: lang === 'he' ? 'חוף התכלת' : 'BLUE SHORES',
+      fsLabel: u.fs,
+      prevLabel: u.prev,
+      nextLabel: u.next,
+      scrollCue: u.cue,
+      counter: (idx + 1) + ' / ' + n,
+      narrow: this.state.narrow,
+      wide: !this.state.narrow,
+      progressPct: this.state.pct + '%',
+      prevOpacity: idx === 0 ? 0.4 : 1,
+      nextOpacity: idx === n - 1 ? 0.4 : 1,
+      slides,
+      cards: ((window.BS && window.BS.SRC) || []).map((c) => ({
+        h: this.tx(c.h), d: this.tx(c.d), u: c.u, host: c.u.replace(/^https?:\/\//, '').split('/')[0]
+      })),
+      disc: this.tx((window.BS && window.BS.DISC) || ''),
+      scrollRef: this.scrollRef,
+      langs: LANGS.map((l) => ({
+        code: l.code, flag: l.flag, label: l.label, title: l.title,
+        on: l.code === lang, pick: () => this.setLang(l.code)
+      })),
+      dots: slides.map((sl, k) => ({
+        label: (k + 1) + '', on: k === idx, off: k !== idx, pick: () => this.go(k)
+      })),
+      prev: () => this.go(idx - 1),
+      next: () => this.go(idx + 1),
+      onScroll: () => {
+        if (this.ticking) return;
+        this.ticking = true;
+        requestAnimationFrame(() => { this.ticking = false; this.spy(); });
+      },
+      morphNowOpacity: this.state.flipped ? 0 : 1,
+      morphPlanOpacity: this.state.flipped ? 1 : 0,
+      morphHint: this.tx(this.state.flipped ? morph.hintB : morph.hintA),
+      toggleMorph: () => this.setState((st) => ({ flipped: !st.flipped })),
+      toggleFs: () => {
+        if (!document.fullscreenElement) { const p = document.documentElement.requestFullscreen(); if (p && p.catch) p.catch(() => {}); }
+        else document.exitFullscreen();
+      }
+    };
+  }
+}
+</script>
+</body>
+</html>
