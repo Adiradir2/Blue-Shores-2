@@ -72,7 +72,14 @@
       h: L('רובע עירוני חדש על קו החוף', 'A New Seaside Urban District'),
       lead: L('רצועת חוף פתוחה בין הים לעיר — מהקרקעות המבוקשות בישראל, בין מרינה הרצליה לגבול תל אביב.', 'An open coastal strip between the sea and the city — among the most sought-after land in Israel, between Herzliya Marina and the Tel Aviv boundary.'),
       blocks: [
-        { t: 'status', tag: L('הסטטוס התכנוני', 'Planning status'), x: L('תוכנית המתאר "חוף התכלת" (הר/2200/א׳) <b>אושרה למתן תוקף בפברואר 2022</b> — הבסיס לוודאות לגבי הייעוד והזכויות. מכאן, הדרך להיתרי בנייה עוברת בהשלמת <b>תוכנית מפורטת הכוללת איחוד וחלוקה</b>. במקביל נחתם <b>הסכם גג</b> עם המדינה למימון הפיתוח והתשתיות.', 'The "Blue Shores" master plan (Har/2200/A) was <b>approved for validity in February 2022</b> — the basis for certainty on land use and rights. From here, the path to building permits runs through completing a <b>detailed plan including consolidation & division</b>. In parallel, an <b>agreement</b> was signed with the State to fund development and infrastructure.') },
+        { t: 'status',
+          tag: L('הסטטוס התכנוני', 'Planning status'),
+          big1: L('אושרה', 'Approved'),
+          big2: L('למתן תוקף', 'for validity'),
+          date: L('פברואר 2022', 'February 2022'),
+          ref: L('תוכנית המתאר הר/2200/א׳', 'Master plan Har/2200/A'),
+          x: L('הבסיס לוודאות לגבי <b>הייעוד והזכויות</b>. מכאן, הדרך להיתרי בנייה עוברת בהשלמת <b>תוכנית מפורטת הכוללת איחוד וחלוקה</b>.', 'The basis for certainty on <b>land use and rights</b>. From here, the path to building permits runs through completing a <b>detailed plan including consolidation & division</b>.'),
+          note: L('במקביל נחתם <b>הסכם גג</b> עם המדינה למימון הפיתוח והתשתיות.', 'In parallel, an <b>agreement</b> was signed with the State to fund development and infrastructure.') },
         { t: 'morph', a: 'assets/land.jpg', b: 'assets/map.jpg',
           hintA: L('לתוכנית המאושרת לחצו', 'Tap for the approved plan'),
           hintB: L('לתמונת הקרקע לחצו', 'Tap for the land photo'),
@@ -192,7 +199,7 @@
       h: L('נשמח לעמוד לרשותכם', 'We Are Here for You'),
       lead: L('השיווק נעשה בהמלצה אישית בלבד — חבר מביא חבר. לשאלות, לקבלת מסמכים או לתיאום פגישה:', 'Marketing is by personal referral only — friend brings friend. For questions, documents or to schedule a meeting:'),
       contacts: [
-        { where: L('בישראל', 'Israel'), name: L('ג׳קי שניידר', 'Jackie Schneider'), tel: '+972505212994', label: L('050-5212994', '+972-50-5212994') },
+        { where: L('בישראל', 'Israel'), name: L('ג׳קי שניידר', 'Jacky Schneider'), tel: '+972505212994', label: L('050-5212994', '+972-50-5212994') },
         { where: L('בארה"ב', 'USA'), name: L('אדיר שניידר', 'Adir Schneider'), tel: '+13053516285', label: L('+1-305-351-6285', '+1-305-351-6285') }
       ],
       siteLabel: L('קבוצת שניידר נדל"ן — schgroup.co.il', 'Schneider Real Estate Group — schgroup.co.il')
