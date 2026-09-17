@@ -52,14 +52,14 @@
           { v: L('2', '2'), u: L('שכונות', 'neighborhoods'), k: L('האירוסים והזמר העברי — הושלמו', 'Irisim and Zemer Ha\'Ivri — completed') },
           { v: L('1', '1'), u: L('הסכם שיתוף', 'agreement'), k: L('כל השותפים תחת אותם תנאים', 'all partners on identical terms') }
         ] },
-        { t: 'p', x: L('חברי הקבוצה נמנים על בעלי מקצוע מהשורה הראשונה — מנכ"לים, מהנדסים ואנשי עסקים. את הקבוצה מלווה משפטית משרד עורכי הדין פירון, מהמובילים בישראל, אשר בין חבריו נמנים גם רוכשים בקבוצה עצמה — כמו כל שותף אחר. כל השותפים חתומים תחת אותו הסכם שיתוף, ומכאן אינטרס משותף אחד: <b>תכנון מיטבי, בנייה איכותית ותוצר סופי של בניינים ודירות ברמה גבוהה.</b>', 'The group brings together first-rate professionals — CEOs, engineers and businesspeople. It is supported legally by Firon, one of Israel\'s leading law firms, several of whose own partners are buyers in the group — just like any other partner. All partners sign the same sharing agreement, creating one shared interest: <b>optimal planning, quality construction and a high-end final product.</b>') },
+        { t: 'p', x: L('חברי הקבוצה נמנים על בעלי מקצוע מהשורה הראשונה — מנכ"לים, מהנדסים ואנשי עסקים. את הקבוצה מלווה משפטית משרד עורכי הדין פירון, מהמובילים בישראל, אשר בין חבריו נמנים גם רוכשים בקבוצה עצמה — כמו כל שותף אחר. כל השותפים חתומים תחת אותו הסכם שיתוף, ומכאן אינטרס משותף אחד: <b>עלייה מהירה על הקרקע, תכנון מיטבי, בנייה איכותית ותוצר סופי של בניינים ודירות ברמה גבוהה.</b>', 'The group brings together first-rate professionals — CEOs, engineers and businesspeople. It is supported legally by Firon, one of Israel\'s leading law firms, several of whose own partners are buyers in the group — just like any other partner. All partners sign the same sharing agreement, creating one shared interest: <b>getting on the ground quickly, optimal planning, quality construction and a final product of high-end buildings and apartments.</b>') },
         { t: 'chips', items: [
           { x: L('ליווי משפטי · משרד עורכי הדין פירון — לחצו לאתר', 'Legal counsel · Firon Law Firm — visit their site'), u: 'https://www.firon.co.il/he/', tone: 'gold' },
           { x: L('מהנדסים ומתכננים', 'Engineers & planners') },
           { x: L('מנכ"לים ואנשי עסקים', 'CEOs & businesspeople') },
           { x: L('אינטרס משותף לתוצר איכותי', 'Shared interest in a quality outcome') }
         ] },
-        { t: 'p', x: L('קבוצת שניידר נדל"ן מביאה עמה ניסיון של כ־30 שנה בנדל"ן בהרצליה — לרבות הקמת <b>שכונת האירוסים</b> ו<b>שכונת הזמר העברי</b> בעיר, שהושלמו בהצלחה. הקבוצה משמשת כ<b>חברת הניהול</b> ומלווה את התהליך ליווי מקצועי מלא — מהרכישה ועד רישום הזכויות.', 'Schneider Real Estate Group brings roughly 30 years of experience in real estate in Herzliya — including the successful development of the <b>Irisim</b> and <b>Zemer Ha\'Ivri</b> neighborhoods. The group serves as the <b>management company</b> and provides full professional support throughout the process — from purchase to registration of rights.') }
+        { t: 'p', x: L('קבוצת שניידר נדל"ן, בבעלות ג׳קי שניידר, קבלן ויזם ותיק בהרצליה, מביאה עמה ניסיון של כ־30 שנה בנדל"ן בהרצליה — לרבות הקמת <b>שכונת האירוסים</b> ו<b>שכונת הזמר העברי</b> בעיר, שהושלמו בהצלחה. הקבוצה משמשת כ<b>חברת הניהול</b> ומלווה את התהליך ליווי מקצועי מלא — מהרכישה ועד רישום הזכויות.', 'Schneider Real Estate Group, owned by Jacky Schneider, a veteran Herzliya contractor and developer, brings roughly 30 years of experience in real estate in Herzliya — including the successful development of the <b>Irisim</b> and <b>Zemer Ha\'Ivri</b> neighborhoods. The group serves as the <b>management company</b> and provides full professional support throughout the process — from purchase to registration of rights.') }
       ],
       srclabel: L('אתר הקבוצה:', 'The group\'s website:'),
       srcs: [{ t: L('אתר קבוצת שניידר נדל"ן', 'Schneider Real Estate Group site'), u: 'https://schgroup.co.il' }]
@@ -77,7 +77,7 @@
           big1: L('אושרה', 'Approved'),
           big2: L('למתן תוקף', 'for validity'),
           date: L('פברואר 2022', 'February 2022'),
-          ref: L('תוכנית המתאר "חוף התכלת" · הר/2200/א׳', 'The "Blue Shores" master plan · Har/2200/A'),
+          ref: L('תוכנית המתאר "חוף התכלת" · הר/2200/א׳ (504-0396994) · החלטת הוועדה המחוזית ת"א מיום 27.02.2022', 'The "Blue Shores" master plan · Har/2200/A (504-0396994) · Tel Aviv District Committee decision, 27 Feb 2022'),
           x: L('הבסיס לוודאות לגבי <b>הייעוד והזכויות</b>. מכאן, הדרך להיתרי בנייה עוברת בהשלמת <b>תוכנית מפורטת שמכוחה ניתן להוציא היתרי בנייה, הכוללת איחוד וחלוקה</b>.', 'The basis for certainty on <b>land use and rights</b>. From here, the path runs through completing a <b>detailed plan — including consolidation & division — under which building permits can be issued</b>.'),
           note: L('במקביל נחתם <b>הסכם גג</b> עם המדינה למימון הפיתוח והתשתיות.', 'In parallel, an <b>agreement</b> was signed with the State to fund development and infrastructure.') },
         { t: 'morph', a: 'assets/land.jpg', b: 'assets/map.jpg',
@@ -91,13 +91,13 @@
           { x: L('~463 אלף מ"ר תעסוקה ומסחר', '~463K sqm employment & commerce') },
           { x: L('פארק עירוני ~700 דונם', '~700-dunam urban park') }
         ] },
-        { t: 'p', x: L('כיום הקרקע מסווגת בייעוד חקלאי — אחת מעתודות הקרקע הפתוחות האחרונות על קו החוף במטרופולין. תכנית "חוף התכלת" (הר/2200/א׳), שתוכננה על ידי קייזר אדריכלים עבור עיריית הרצליה, משתרעת על כ־2,000 דונם — כ־10% משטח העיר — ומשלבת מגורים, תעסוקה, מסחר, מלונאות ופארק חופי של כ־700 דונם. בליבה עובר הקו הירוק של הרכבת הקלה, המגיע מרחוב אבן גבירול בתל אביב.', 'Today the land is zoned agricultural — one of the last open coastal land reserves in the metropolis. The Blue Shores plan (Har/2200/A), designed by Kaiser Architects for the Herzliya Municipality, spans about 2,000 dunam — roughly 10% of the city — combining residential, employment, commerce, hospitality and a coastal park of about 700 dunam. The light rail\'s Green Line runs through its core, arriving from Ibn Gvirol Street in Tel Aviv.') },
         { t: 'two', a: K2, b: K3, cap: L('הדמיות: קייזר אדריכלים ומתכנני ערים · עבור עיריית הרצליה', 'Renderings: Kaiser Architects & Urban Planners · for the Herzliya Municipality') }
       ],
       srclabel: L('האדריכלים, התוכנית הרשמית והסיקור:', 'Architects, official plan & coverage:'),
       srcs: [
         { t: L('קייזר אדריכלים — עמוד הפרויקט', 'Kaiser Architects — project page'), u: 'https://www.kaiser-arch.com/projects-1/%D7%93%D7%A8%D7%95%D7%9D%D6%BE%D7%9E%D7%A2%D7%A8%D7%91-%D7%94%D7%A8%D7%A6%D7%9C%D7%99%D7%94' },
         { t: L('מנהל התכנון — הר/2200/א׳ (מבא"ת)', 'Planning Administration — Har/2200/A'), u: 'https://mavat.iplan.gov.il/SV4/1/5000399529/310', gov: true },
+        { t: L('הוראות התכנית המאושרות — תקנון הר/2200/א׳ (PDF)', 'Approved plan provisions — Har/2200/A statute (PDF)'), u: 'https://apps.land.gov.il/IturTabotData/takanonim-h/telmer/5050234.pdf', gov: true },
         { t: L('ynet — אישור התוכנית', 'ynet — plan approval'), u: 'https://www.ynet.co.il/economy/article/s1kob5xny' },
         { t: L('ביזפורטל — אישור התוכנית', 'Bizportal — plan approval'), u: 'https://www.bizportal.co.il/realestates/news/article/799615' },
         { t: L('קישור ל-GovMap', 'Link to GovMap'), u: 'https://www.govmap.gov.il/?c=180911.33,673087.36&z=8&lay=14&b=2', gov: true }
@@ -121,7 +121,7 @@
           head: L('רכישת קרקע בשלב זה חוסכת עלויות משמעותיות של עשרות אחוזים משווי הדירה', 'Buying land at this stage saves significant costs — tens of percent of an apartment\'s value'),
           items: [
             { v: L('18%', '18%'), k: L('מע"מ', 'VAT'), d: L('על כל דירה חדשה שנמכרת בישראל', 'Charged on every new apartment sold in Israel') },
-            { k: L('מס רכישה מוגדל', 'Higher purchase tax'), d: L('נגזר משווי הנכס — ועולה ככל שהשווי עולה (אנו קונים לפי שווי הקרקע)', 'Scaled to the value of the property — it rises as the value rises (we buy at land value)') },
+            { k: L('מס רכישה', 'Purchase tax'), d: L('חיסכון גדול על ידי תשלום מס רכישה רק בגין הקרקע ולא לפי שווי דירה סופית', 'A major saving — purchase tax is paid on the land alone, not on the value of a finished apartment') },
             { k: L('רווח יזמי', 'Developer profit'), d: L('חברי הקבוצה מאורגנים כיזם ולכן חוסכים את רווח היזם', 'Group members are organized as the developer, so the developer\'s profit is saved') }
           ] },
         { t: 'media', src: K6, cap: L('הדמיה: קייזר אדריכלים', 'Rendering: Kaiser Architects') }
