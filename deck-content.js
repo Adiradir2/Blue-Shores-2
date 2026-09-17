@@ -48,8 +48,8 @@
       lead: L('מאחורי קבוצת שניידר עומדת קבוצה המורכבת מאנשים איכותיים ביותר — שותפים בעלי אינטרס זהה.', 'Behind Schneider stands a group of top-tier people — partners with one shared interest.'),
       blocks: [
         { t: 'stats', items: [
-          { v: L('~30', '~30'), u: L('שנות ניסיון', 'years'), k: L('בנדל"ן, בעיקר בהרצליה', 'in real estate, mainly in Herzliya'), gold: true },
-          { v: L('2', '2'), u: L('שכונות', 'neighborhoods'), k: L('האירוסים וזמר העברי — הושלמו', 'Irisim & Zemer Ha\'Ivri — completed') },
+          { v: L('30', '30'), u: L('שנות ניסיון', 'years of experience'), k: L('בנדל"ן ובנייה בהרצליה', 'in real estate and construction in Herzliya'), gold: true },
+          { v: L('2', '2'), u: L('שכונות', 'neighborhoods'), k: L('האירוסים והזמר העברי — הושלמו', 'Irisim and Zemer Ha\'Ivri — completed') },
           { v: L('1', '1'), u: L('הסכם שיתוף', 'agreement'), k: L('כל השותפים תחת אותם תנאים', 'all partners on identical terms') }
         ] },
         { t: 'p', x: L('חברי הקבוצה נמנים על בעלי מקצוע מהשורה הראשונה — מנכ"לים, מהנדסים ואנשי עסקים. את הקבוצה מלווה משפטית משרד עורכי הדין פירון, מהמובילים בישראל, אשר בין חבריו נמנים גם רוכשים בקבוצה עצמה — כמו כל שותף אחר. כל השותפים חתומים תחת אותו הסכם שיתוף, ומכאן אינטרס משותף אחד: <b>תכנון מיטבי, בנייה איכותית ותוצר סופי של בניינים ודירות ברמה גבוהה.</b>', 'The group brings together first-rate professionals — CEOs, engineers and businesspeople. It is supported legally by Firon, one of Israel\'s leading law firms, several of whose own partners are buyers in the group — just like any other partner. All partners sign the same sharing agreement, creating one shared interest: <b>optimal planning, quality construction and a high-end final product.</b>') },
@@ -59,7 +59,7 @@
           { x: L('מנכ"לים ואנשי עסקים', 'CEOs & businesspeople') },
           { x: L('אינטרס משותף לתוצר איכותי', 'Shared interest in a quality outcome') }
         ] },
-        { t: 'p', x: L('קבוצת שניידר נדל"ן מביאה עמה ניסיון של כ־30 שנה בתחום הנדל"ן, ובעיקר בהרצליה — לרבות הקמת <b>שכונת האירוסים</b> ו<b>שכונת הזמר העברי</b> בעיר, שהושלמו בהצלחה. הקבוצה משמשת כ<b>חברת הניהול</b> ומלווה את התהליך ליווי מקצועי מלא — מהרכישה ועד רישום הזכויות.', 'Schneider Real Estate Group brings roughly 30 years of experience in real estate, mainly in Herzliya — including the successful development of the <b>Irisim</b> and <b>Zemer Ha\'Ivri</b> neighborhoods. The group serves as the <b>management company</b> and provides full professional support throughout the process — from purchase to registration of rights.') }
+        { t: 'p', x: L('קבוצת שניידר נדל"ן מביאה עמה ניסיון של כ־30 שנה בנדל"ן בהרצליה — לרבות הקמת <b>שכונת האירוסים</b> ו<b>שכונת הזמר העברי</b> בעיר, שהושלמו בהצלחה. הקבוצה משמשת כ<b>חברת הניהול</b> ומלווה את התהליך ליווי מקצועי מלא — מהרכישה ועד רישום הזכויות.', 'Schneider Real Estate Group brings roughly 30 years of experience in real estate in Herzliya — including the successful development of the <b>Irisim</b> and <b>Zemer Ha\'Ivri</b> neighborhoods. The group serves as the <b>management company</b> and provides full professional support throughout the process — from purchase to registration of rights.') }
       ],
       srclabel: L('אתר הקבוצה:', 'The group\'s website:'),
       srcs: [{ t: L('אתר קבוצת שניידר נדל"ן', 'Schneider Real Estate Group site'), u: 'https://schgroup.co.il' }]
@@ -119,11 +119,10 @@
         { t: 'note',
           label: L('יתרון מבני', 'Structural advantage'),
           head: L('רכישת קרקע בשלב זה חוסכת עלויות משמעותיות של עשרות אחוזים משווי הדירה', 'Buying land at this stage saves significant costs — tens of percent of an apartment\'s value'),
-          sub: L('עלויות שכלולות ממילא במחיר של דירה גמורה', 'Costs that are already built into the price of a finished apartment'),
           items: [
             { v: L('18%', '18%'), k: L('מע"מ', 'VAT'), d: L('על כל דירה חדשה שנמכרת בישראל', 'Charged on every new apartment sold in Israel') },
             { k: L('מס רכישה מוגדל', 'Higher purchase tax'), d: L('נגזר משווי הנכס — ועולה ככל שהשווי עולה (אנו קונים לפי שווי הקרקע)', 'Scaled to the value of the property — it rises as the value rises (we buy at land value)') },
-            { k: L('רווח יזמי', 'Developer profit'), d: L('חברי הקבוצה מאורגנים כיזם ולכן חוסכים את הרווח היזמי', 'Group members are organized as the developer, so the developer\'s profit is saved') }
+            { k: L('רווח יזמי', 'Developer profit'), d: L('חברי הקבוצה מאורגנים כיזם ולכן חוסכים את רווח היזם', 'Group members are organized as the developer, so the developer\'s profit is saved') }
           ] },
         { t: 'media', src: K6, cap: L('הדמיה: קייזר אדריכלים', 'Rendering: Kaiser Architects') }
       ]
