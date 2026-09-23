@@ -36,6 +36,7 @@
       kick: L('דרום־מערב הרצליה · רובע חוף הים', 'Southwest Herzliya · Seaside District'),
       t1: L('חוף', 'Blue'),
       t2: L('התכלת', 'Shores'),
+      t3: L('הרצליה', 'Herzliya'),
       sub: L('רובע עירוני חדש על קו החוף בהרצליה — הזדמנות השקעה בקרקע פרטית בלב מטרופולין גוש דן.', 'A new seaside urban district in Herzliya — a private-land investment opportunity in the heart of the Gush Dan metropolis.'),
       meta: L('מצגת השקעה · הנתונים מבוססים על מקורות רשמיים ומסמכי תכנון מאושרים', 'Investment presentation · based on official sources and approved planning documents'),
       img: HERO
@@ -80,10 +81,8 @@
           ref: L('תוכנית המתאר "חוף התכלת" · הר/2200/א׳ (504-0396994) · החלטת הוועדה המחוזית ת"א מיום 27.02.2022', 'The "Blue Shores" master plan · Har/2200/A (504-0396994) · Tel Aviv District Committee decision, 27 Feb 2022'),
           x: L('הבסיס לוודאות לגבי <b>הייעוד והזכויות</b>. מכאן, הדרך להיתרי בנייה עוברת בהשלמת <b>תוכנית מפורטת שמכוחה ניתן להוציא היתרי בנייה, הכוללת איחוד וחלוקה</b>.', 'The basis for certainty on <b>land use and rights</b>. From here, the path runs through completing a <b>detailed plan — including consolidation & division — under which building permits can be issued</b>.'),
           note: L('במקביל נחתם <b>הסכם גג</b> עם המדינה למימון הפיתוח והתשתיות.', 'In parallel, an <b>agreement</b> was signed with the State to fund development and infrastructure.') },
-        { t: 'morph', a: 'assets/land.jpg', b: 'assets/map.jpg',
-          hintA: L('לתוכנית המאושרת לחצו', 'Tap for the approved plan'),
-          hintB: L('לתמונת הקרקע לחצו', 'Tap for the land photo'),
-          cap: L('מבט מדרום · המרינה והעיר ברקע. לחיצה מציגה את תכנית המתחם (הר/2200/א׳) — מסומנים: המרינה, מחלף רב המכר, פארק חופי וגבול תל אביב.', 'View from the south · marina and city in the background. Tap to reveal the master plan (Har/2200/A) — marked: the marina, Rav-Mecher interchange, coastal park and the Tel Aviv boundary.') },
+        { t: 'media', src: 'assets/land.jpg',
+          cap: L('מבט מדרום · המרינה והעיר ברקע. רצועת הקרקע הפתוחה בין הים לכביש 2.', 'View from the south · the marina and the city in the background. The open strip of land between the sea and Route 2.') },
         { t: 'chips', items: [
           { x: L('~2,000 דונם', '~2,000 dunam'), tone: 'gold' },
           { x: L('~10% משטח הרצליה', '~10% of Herzliya') },
@@ -106,6 +105,28 @@
     {
       type: 'content',
       label: '04',
+      wide: true,
+      pill: L('המיקום', 'The Location'),
+      h: L('תשריט התוכנית והסביבה', 'The Plan Layout and its Surroundings'),
+      lead: L('רצועת חוף במרכז המטרופולין — גובלת בכביש 2 במזרח, בים במערב, ברחוב אבא אבן בצפון ובגבול תל אביב בדרום.', 'A coastal strip at the centre of the metropolis — bounded by Route 2 to the east, the sea to the west, Abba Eban St to the north and the Tel Aviv boundary to the south.'),
+      blocks: [
+        { t: 'media', src: 'assets/map.jpg',
+          cap: L('תשריט התוכנית · קייזר אדריכלים עבור עיריית הרצליה — מסומנים: המרינה בצפון, אזור התעסוקה של הרצליה ומחלף הרב מכר במזרח, גבול שיפוט תל אביב (תא/3700) בדרום, הפארק החופי ודרך הים במערב.', 'The plan layout · Kaiser Architects for the Herzliya Municipality — marked: the marina to the north, the Herzliya employment zone and the Rav-Mecher interchange to the east, the Tel Aviv municipal boundary (TA/3700) to the south, and the coastal park and Sea Road to the west.') },
+        { t: 'chips', items: [
+          { x: L('דקות מהרצליה פיתוח', 'Minutes from Herzliya Pituach') },
+          { x: L('צמוד לגבול תל אביב', 'Adjacent to the Tel Aviv boundary') },
+          { x: L('שתי תחנות של הקו הירוק בתוך המתחם', 'Two Green Line stations inside the district') }
+        ] }
+      ],
+      srclabel: L('מקורות רשמיים:', 'Official sources:'),
+      srcs: [
+        { t: L('קישור ל-GovMap', 'Link to GovMap'), u: 'https://www.govmap.gov.il/?c=180911.33,673087.36&z=8&lay=14&b=2', gov: true },
+        { t: L('מנהל התכנון — הר/2200/א׳ (מבא"ת)', 'Planning Administration — Har/2200/A'), u: 'https://mavat.iplan.gov.il/SV4/1/5000399529/310', gov: true }
+      ]
+    },
+    {
+      type: 'content',
+      label: '05',
       pill: L('מהות ההשקעה', 'The Investment'),
       h: L('רכישת זכויות בקרקע', 'Acquiring Land Rights'),
       lead: L('מטר קרקע → זכויות בנייה. השקעה בקרקע פרטית עם פוטנציאל מימוש עתידי.', 'A sqm of land → building rights. An investment in private land with future realization potential.'),
@@ -129,7 +150,7 @@
     },
     {
       type: 'content',
-      label: '05',
+      label: '06',
       pill: L('מבנה העסקה', 'Deal Structure'),
       h: L('הסכם שיתוף — לא קבוצת רכישה', 'A Sharing Agreement — Not a Purchase Group'),
       lead: L('מבנה עסקה שקוף, בליווי מקצועי ומשפטי מלא.', 'A transparent deal structure with full professional and legal support.'),
@@ -144,7 +165,7 @@
     },
     {
       type: 'content',
-      label: '06',
+      label: '07',
       pill: L('גב המדינה · הסכם הגג', 'State Backing · Agreement'),
       h: L('המדינה מממנת את הפיתוח', 'The State Funds the Development'),
       lead: L('הסכם גג נחתם ב־24.11.2025 בין המדינה (רמ"י, האוצר, השיכון) לעיריית הרצליה.', 'An agreement was signed on 24.11.2025 between the State (ILA, Finance, Housing) and the Herzliya Municipality.'),
@@ -172,7 +193,7 @@
     },
     {
       type: 'content',
-      label: '07',
+      label: '08',
       pill: L('נגישות ותחבורה', 'Access & Transport'),
       h: L('הקו הירוק במרכז המתחם', 'The Green Line at the Center'),
       lead: L('תת"ל/71/ג — תוכנית לאומית מאושרת. חיבור ישיר בין הרצליה לתל אביב.', 'NTP/71/C — an approved national plan. A direct link between Herzliya and Tel Aviv.'),
@@ -196,14 +217,14 @@
     },
     {
       type: 'sources',
-      label: '08',
+      label: '09',
       pill: L('נספח · מקורות רשמיים', 'Appendix · Official Sources'),
       h: L('אימות עצמאי', 'Independent Verification'),
       lead: L('כל נתון במצגת ניתן לאימות במקור רשמי. מומלץ לעיין.', 'Every figure in this deck can be verified against an official source. Review recommended.')
     },
     {
       type: 'closing',
-      label: '09',
+      label: '10',
       pill: L('ליצירת קשר', 'Contact'),
       h: L('נשמח לעמוד לרשותכם', 'We Are Here for You'),
       lead: L('השיווק נעשה בהמלצה אישית בלבד — חבר מביא חבר. לשאלות, לקבלת מסמכים או לתיאום פגישה:', 'Marketing is by personal referral only — friend brings friend. For questions, documents or to schedule a meeting:'),

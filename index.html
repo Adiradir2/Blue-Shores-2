@@ -16,19 +16,19 @@
 @font-face{font-family:"Assistant";src:url("assets/Assistant.ttf");font-weight:200 800;font-display:swap}
 *{box-sizing:border-box}
 html,body{margin:0;padding:0;height:100%;background:#131F38;overscroll-behavior:none;-webkit-font-smoothing:antialiased;-webkit-text-size-adjust:100%}
-a{color:#E4C766;text-decoration:none}
+a{color:#8ECDEE;text-decoration:none}
 a:hover{color:#FFFFFF}
-button,a{touch-action:manipulation;-webkit-tap-highlight-color:rgba(201,162,39,.2)}
+button,a{touch-action:manipulation;-webkit-tap-highlight-color:rgba(79,168,216,.2)}
 img{max-width:100%}
-::selection{background:#C9A227;color:#1B2A4A}
+::selection{background:#4FA8D8;color:#1B2A4A}
 </style>
 <script src="i18n.js"></script>
 <script src="deck-content.js"></script>
 </helmet>
-<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><rect width="200" height="200" fill="#1B2A4A"></rect><rect x="60" y="60" width="80" height="80" fill="#C9A227" transform="rotate(45 100 100)"></rect><text x="100" y="114" font-family="Helvetica,Arial,sans-serif" font-size="34" font-weight="700" fill="#1B2A4A" text-anchor="middle">BS</text></svg></template>
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><rect width="200" height="200" fill="#1B2A4A"></rect><rect x="60" y="60" width="80" height="80" fill="#4FA8D8" transform="rotate(45 100 100)"></rect><text x="100" y="114" font-family="Helvetica,Arial,sans-serif" font-size="34" font-weight="700" fill="#1B2A4A" text-anchor="middle">BS</text></svg></template>
 <div dir="{{ dir }}" ref="{{ rootRef }}" style="height:100dvh;display:flex;flex-direction:column;overflow:hidden;background:#131F38;font-family:'Assistant',Arial,sans-serif;color:#EDF0F6;line-height:1.7">
 
-  <header style="flex:0 0 auto;display:flex;align-items:center;justify-content:space-between;gap:8px;padding:6px clamp(8px,2vw,20px);padding-top:calc(6px + env(safe-area-inset-top,0px));background:#1B2A4A;border-bottom:1px solid rgba(201,162,39,.24);position:relative;z-index:5">
+  <header style="flex:0 0 auto;display:flex;align-items:center;justify-content:space-between;gap:8px;padding:6px clamp(8px,2vw,20px);padding-top:calc(6px + env(safe-area-inset-top,0px));background:#1B2A4A;border-bottom:1px solid rgba(79,168,216,.24);position:relative;z-index:5">
     <div style="display:flex;align-items:center;gap:9px;min-width:0;flex:1 1 auto;overflow:hidden">
       <span style="background:#FFFFFF;border-radius:9px;padding:4px 8px;display:flex;flex:0 0 auto"><img src="assets/logo.png" alt="Schneider" style="height:clamp(16px,2.2vw,22px);display:block" /></span>
       <sc-if value="{{ wide }}" hint-placeholder-val="{{ true }}">
@@ -37,13 +37,13 @@ img{max-width:100%}
     </div>
     <div style="display:flex;align-items:center;gap:4px;flex:0 0 auto">
       <sc-for list="{{ langs }}" as="lg" hint-placeholder-count="4">
-        <button type="button" onClick="{{ lg.pick }}" title="{{ lg.title }}" style="position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;background:transparent;border:1px solid rgba(255,255,255,.14);color:#CFD8E8;border-radius:14px;padding:4px 6px;min-width:44px;min-height:44px;font-family:inherit;cursor:pointer" style-hover="border-color:#C9A227;color:#FFFFFF">
+        <button type="button" onClick="{{ lg.pick }}" title="{{ lg.title }}" style="position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;background:transparent;border:1px solid rgba(255,255,255,.14);color:#CFD8E8;border-radius:14px;padding:4px 6px;min-width:44px;min-height:44px;font-family:inherit;cursor:pointer" style-hover="border-color:#4FA8D8;color:#FFFFFF">
           <span style="font-size:14px;line-height:1">{{ lg.flag }}</span>
           <span style="font-size:11.5px;font-weight:800;letter-spacing:.4px;line-height:1">{{ lg.label }}</span>
-          <sc-if value="{{ lg.on }}" hint-placeholder-val="{{ true }}"><span style="position:absolute;inset:auto 5px -1px 5px;height:2px;background:#C9A227"></span></sc-if>
+          <sc-if value="{{ lg.on }}" hint-placeholder-val="{{ true }}"><span style="position:absolute;inset:auto 5px -1px 5px;height:2px;background:#4FA8D8"></span></sc-if>
         </button>
       </sc-for>
-      <button type="button" onClick="{{ toggleFs }}" title="{{ fsLabel }}" style="background:transparent;border:1px solid rgba(255,255,255,.14);color:#CFD8E8;border-radius:14px;min-width:44px;min-height:44px;padding:7px 10px;font-family:inherit;font-size:13px;cursor:pointer" style-hover="border-color:#C9A227;color:#FFFFFF">⛶</button>
+      <button type="button" onClick="{{ toggleFs }}" title="{{ fsLabel }}" style="background:transparent;border:1px solid rgba(255,255,255,.14);color:#CFD8E8;border-radius:14px;min-width:44px;min-height:44px;padding:7px 10px;font-family:inherit;font-size:13px;cursor:pointer" style-hover="border-color:#4FA8D8;color:#FFFFFF">⛶</button>
     </div>
   </header>
 
@@ -57,15 +57,15 @@ img{max-width:100%}
             <div style="position:absolute;inset:0;background:radial-gradient(130% 85% at 78% 8%,rgba(8,13,24,0) 0%,rgba(8,13,24,.5) 55%,rgba(8,13,24,.96) 100%)"></div>
             <div style="position:relative;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:clamp(18px,3vw,40px)">
               <span style="background:#FFFFFF;border-radius:14px;padding:9px 16px;display:flex"><img src="assets/logo.png" alt="קבוצת שניידר נדלן" style="height:clamp(26px,3vw,40px);display:block" /></span>
-              <span style="font-size:clamp(12px,1.1vw,12.5px);font-weight:700;letter-spacing:1.8px;color:#C9A227" dir="ltr">SCHGROUP.CO.IL</span>
+              <span style="font-size:clamp(12px,1.1vw,12.5px);font-weight:700;letter-spacing:1.8px;color:#4FA8D8" dir="ltr">SCHGROUP.CO.IL</span>
             </div>
             <div style="position:relative;padding:clamp(22px,3.4vw,48px);padding-bottom:clamp(24px,3.6vw,52px)">
-              <div style="font-size:clamp(12.5px,1.5vw,14px);font-weight:700;letter-spacing:2.2px;color:#E4C766;margin-bottom:10px">{{ s.kick }}</div>
-              <h1 style="font-family:'Rubik',sans-serif;font-weight:300;font-size:clamp(40px,8.6vw,94px);line-height:.96;margin:0 0 16px;letter-spacing:-2px;color:#FFFFFF">{{ s.t1 }} <b style="font-weight:900;color:#E4C766">{{ s.t2 }}</b></h1>
-              <div style="width:clamp(56px,10vw,120px);height:3px;border-radius:999px;background:linear-gradient(90deg,#C9A227,rgba(201,162,39,0));margin-bottom:18px"></div>
-              <p style="margin:0 0 clamp(18px,2.6vw,28px);font-size:clamp(15px,2vw,22px);font-weight:300;color:#CFD8E8;max-width:34em;text-wrap:pretty">{{ s.sub }}</p>
-              <div style="padding-top:16px;border-top:1px solid rgba(255,255,255,.16);font-size:clamp(13.5px,1.35vw,14.5px);line-height:1.7;color:#AAB6CC;max-width:40em">{{ s.meta }}</div>
-              <div style="margin-top:clamp(16px,2.4vw,26px);display:flex;align-items:center;gap:10px;color:#C9A227;font-size:clamp(12.5px,1.3vw,13.5px);font-weight:700;letter-spacing:1.6px">
+              <div style="display:table;max-width:100%;box-sizing:border-box;background:#131F38;border:1px solid #A6DCF5;border-radius:22px;padding:8px 16px;font-size:clamp(13px,1.5vw,15px);font-weight:800;letter-spacing:1.2px;line-height:1.4;color:#A6DCF5;margin-bottom:14px;box-shadow:0 6px 20px rgba(0,0,0,.45);text-wrap:balance">{{ s.kick }}</div>
+              <h1 style="font-family:'Rubik',sans-serif;font-weight:300;font-size:clamp(40px,8.6vw,94px);line-height:.96;margin:0 0 16px;letter-spacing:-2px;color:#FFFFFF;text-shadow:0 2px 4px rgba(0,0,0,.55),0 6px 28px rgba(0,0,0,.6)">{{ s.t1 }} <b style="font-weight:900;color:#A6DCF5">{{ s.t2 }}</b> <span style="font-weight:700;color:#FFFFFF">{{ s.t3 }}</span></h1>
+              <div style="width:clamp(56px,10vw,120px);height:3px;border-radius:999px;background:linear-gradient(90deg,#4FA8D8,rgba(79,168,216,0));margin-bottom:18px"></div>
+              <p style="margin:0 0 clamp(18px,2.6vw,28px);font-size:clamp(17px,2.4vw,26px);line-height:1.5;font-weight:500;color:#FFFFFF;max-width:32em;text-wrap:pretty;text-shadow:0 2px 3px rgba(0,0,0,.6),0 4px 22px rgba(0,0,0,.55)">{{ s.sub }}</p>
+              <div style="display:table;max-width:100%;box-sizing:border-box;background:rgba(19,31,56,.82);border:1px solid rgba(142,205,238,.55);border-radius:16px;padding:10px 16px;font-size:clamp(14px,1.5vw,16px);line-height:1.55;font-weight:600;color:#E6F4FC;box-shadow:0 6px 20px rgba(0,0,0,.35);text-wrap:pretty">{{ s.meta }}</div>
+              <div style="margin-top:clamp(16px,2.4vw,26px);display:flex;align-items:center;gap:10px;color:#4FA8D8;font-size:clamp(12.5px,1.3vw,13.5px);font-weight:700;letter-spacing:1.6px">
                 <span>{{ scrollCue }}</span>
                 <span style="font-size:16px;line-height:1">↓</span>
               </div>
@@ -74,11 +74,11 @@ img{max-width:100%}
         </sc-if>
 
         <sc-if value="{{ s.isContent }}" hint-placeholder-val="{{ false }}">
-          <section style="max-width:1140px;margin:0 auto;padding:clamp(34px,5vw,80px) clamp(18px,3.4vw,48px) clamp(34px,5vw,80px);border-top:1px solid rgba(201,162,39,.18)">
+          <section style="max-width:1140px;margin:0 auto;padding:clamp(34px,5vw,80px) clamp(18px,3.4vw,48px) clamp(34px,5vw,80px);border-top:1px solid rgba(79,168,216,.18)">
             <div style="display:flex;align-items:baseline;gap:clamp(10px,1.4vw,16px);margin-bottom:clamp(14px,1.8vw,20px);flex-wrap:wrap">
-              <span style="font-family:'Rubik',sans-serif;font-size:clamp(23px,2.8vw,32px);font-weight:800;color:#C9A227;letter-spacing:0;line-height:1" dir="ltr">{{ s.num }}</span>
-              <span style="display:block;width:10px;height:10px;border-radius:50%;background:#C9A227;flex:0 0 auto"></span>
-              <span style="font-family:'Rubik',sans-serif;font-size:clamp(23px,2.8vw,32px);font-weight:700;letter-spacing:.6px;line-height:1.3;color:#E4C766;text-wrap:balance">{{ s.pill }}</span>
+              <span style="font-family:'Rubik',sans-serif;font-size:clamp(23px,2.8vw,32px);font-weight:800;color:#4FA8D8;letter-spacing:0;line-height:1" dir="ltr">{{ s.num }}</span>
+              <span style="display:block;width:10px;height:10px;border-radius:50%;background:#4FA8D8;flex:0 0 auto"></span>
+              <span style="font-family:'Rubik',sans-serif;font-size:clamp(23px,2.8vw,32px);font-weight:700;letter-spacing:.6px;line-height:1.3;color:#8ECDEE;text-wrap:balance">{{ s.pill }}</span>
             </div>
             <h2 style="font-family:'Rubik',sans-serif;font-weight:300;font-size:clamp(25px,4.6vw,48px);line-height:1.1;margin:0 0 12px;letter-spacing:-1px;color:#FFFFFF;text-wrap:balance">{{ s.h }}</h2>
             <p style="margin:0 0 clamp(24px,3.4vw,38px);font-size:clamp(15.5px,2vw,21px);font-weight:300;color:#AAB6CC;max-width:38em;text-wrap:pretty">{{ s.lead }}</p>
@@ -87,21 +87,21 @@ img{max-width:100%}
               <div style="margin-bottom:clamp(28px,3.6vw,38px)">
 
                 <sc-if value="{{ b.isStatus }}" hint-placeholder-val="{{ false }}">
-                  <div style="border:2px solid #C9A227;border-radius:24px;overflow:hidden;background:linear-gradient(135deg,rgba(201,162,39,.2),rgba(201,162,39,.04) 65%);box-shadow:0 0 0 1px rgba(201,162,39,.22),0 26px 70px rgba(201,162,39,.12)">
-                    <div style="display:inline-flex;align-items:center;gap:11px;background:#C9A227;color:#1B2A4A;font-weight:900;font-size:clamp(16px,2.1vw,22px);letter-spacing:1.4px;padding:11px 24px;border-radius:999px;margin:clamp(18px,2.4vw,28px) clamp(20px,3vw,38px) 0">
+                  <div style="border:2px solid #4FA8D8;border-radius:24px;overflow:hidden;background:linear-gradient(135deg,rgba(79,168,216,.2),rgba(79,168,216,.04) 65%);box-shadow:0 0 0 1px rgba(79,168,216,.22),0 26px 70px rgba(79,168,216,.12)">
+                    <div style="display:inline-flex;align-items:center;gap:11px;background:#4FA8D8;color:#1B2A4A;font-weight:900;font-size:clamp(16px,2.1vw,22px);letter-spacing:1.4px;padding:11px 24px;border-radius:999px;margin:clamp(18px,2.4vw,28px) clamp(20px,3vw,38px) 0">
                       <span style="display:block;width:10px;height:10px;border-radius:50%;background:#1B2A4A"></span>{{ b.tag }}
                     </div>
                     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,290px),1fr))">
-                      <div style="padding:clamp(20px,3vw,38px);border-left:1px solid rgba(201,162,39,.32)">
-                        <div style="font-family:'Rubik',sans-serif;font-size:clamp(34px,5.6vw,64px);font-weight:900;line-height:1.08;color:#FFFFFF;letter-spacing:-1.8px">{{ b.big1 }}<br /><span style="color:#E4C766">{{ b.big2 }}</span></div>
-                        <div style="margin-top:18px;border-top:2px solid #C9A227;padding-top:14px;display:flex;flex-wrap:wrap;align-items:baseline;gap:10px">
+                      <div style="padding:clamp(20px,3vw,38px);border-left:1px solid rgba(79,168,216,.32)">
+                        <div style="font-family:'Rubik',sans-serif;font-size:clamp(34px,5.6vw,64px);font-weight:900;line-height:1.08;color:#FFFFFF;letter-spacing:-1.8px">{{ b.big1 }}<br /><span style="color:#8ECDEE">{{ b.big2 }}</span></div>
+                        <div style="margin-top:18px;border-top:2px solid #4FA8D8;padding-top:14px;display:flex;flex-wrap:wrap;align-items:baseline;gap:10px">
                           <span style="font-family:'Rubik',sans-serif;font-size:clamp(19px,2.6vw,28px);font-weight:700;color:#FFFFFF">{{ b.date }}</span>
                           <span style="font-size:clamp(13px,1.5vw,16px);color:#CFD8E8">{{ b.ref }}</span>
                         </div>
                       </div>
                       <div style="padding:clamp(20px,3vw,38px);display:flex;flex-direction:column;justify-content:center;gap:18px">
-                        <div style="font-size:clamp(16.5px,2.1vw,21px);line-height:1.6;color:#FFFFFF;font-weight:300;text-wrap:pretty"><sc-for list="{{ b.parts }}" as="p" hint-placeholder-count="2"><sc-if value="{{ p.b }}" hint-placeholder-val="{{ false }}"><b style="color:#E4C766;font-weight:800">{{ p.s }}</b></sc-if><sc-if value="{{ p.plain }}" hint-placeholder-val="{{ true }}">{{ p.s }}</sc-if></sc-for></div>
-                        <div style="border-right:3px solid #C9A227;padding-right:15px;font-size:clamp(15.5px,1.9vw,18px);color:#DFE5F0;text-wrap:pretty"><sc-for list="{{ b.noteParts }}" as="p" hint-placeholder-count="2"><sc-if value="{{ p.b }}" hint-placeholder-val="{{ false }}"><b style="color:#FFFFFF;font-weight:800">{{ p.s }}</b></sc-if><sc-if value="{{ p.plain }}" hint-placeholder-val="{{ true }}">{{ p.s }}</sc-if></sc-for></div>
+                        <div style="font-size:clamp(16.5px,2.1vw,21px);line-height:1.6;color:#FFFFFF;font-weight:300;text-wrap:pretty"><sc-for list="{{ b.parts }}" as="p" hint-placeholder-count="2"><sc-if value="{{ p.b }}" hint-placeholder-val="{{ false }}"><b style="color:#8ECDEE;font-weight:800">{{ p.s }}</b></sc-if><sc-if value="{{ p.plain }}" hint-placeholder-val="{{ true }}">{{ p.s }}</sc-if></sc-for></div>
+                        <div style="border-right:3px solid #4FA8D8;padding-right:15px;font-size:clamp(15.5px,1.9vw,18px);color:#DFE5F0;text-wrap:pretty"><sc-for list="{{ b.noteParts }}" as="p" hint-placeholder-count="2"><sc-if value="{{ p.b }}" hint-placeholder-val="{{ false }}"><b style="color:#FFFFFF;font-weight:800">{{ p.s }}</b></sc-if><sc-if value="{{ p.plain }}" hint-placeholder-val="{{ true }}">{{ p.s }}</sc-if></sc-for></div>
                       </div>
                     </div>
                   </div>
@@ -110,7 +110,7 @@ img{max-width:100%}
                 <sc-if value="{{ b.isStats }}" hint-placeholder-val="{{ false }}">
                   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,160px),1fr));gap:clamp(13px,1.8vw,20px)">
                     <sc-for list="{{ b.items }}" as="st" hint-placeholder-count="3">
-                      <div style="padding:clamp(18px,2.4vw,24px);background:rgba(255,255,255,.04);border:1px solid rgba(201,162,39,.26);border-radius:18px">
+                      <div style="padding:clamp(18px,2.4vw,24px);background:rgba(255,255,255,.04);border:1px solid rgba(79,168,216,.26);border-radius:18px">
                         <div style="font-family:'Rubik',sans-serif;font-size:clamp(24px,3.8vw,40px);font-weight:800;line-height:1;letter-spacing:-1.4px;color:{{ st.color }}"><span dir="ltr" style="display:inline-block">{{ st.v }}</span><span style="font-size:clamp(15.5px,1.7vw,18px);font-weight:700;color:#DFE5F0"> {{ st.u }}</span></div>
                         <div style="margin-top:13px;font-size:clamp(15.5px,1.6vw,17px);letter-spacing:.2px;color:#CFD8E8;line-height:1.6">{{ st.k }}</div>
                       </div>
@@ -122,7 +122,7 @@ img{max-width:100%}
                   <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:15px;max-width:52em">
                     <sc-for list="{{ b.items }}" as="li" hint-placeholder-count="4">
                       <li style="display:flex;gap:13px;font-size:clamp(16px,1.85vw,17.5px);color:#DFE5F0;text-wrap:pretty;line-height:1.75">
-                        <span style="color:#C9A227;font-weight:800;flex:0 0 auto">—</span>
+                        <span style="color:#4FA8D8;font-weight:800;flex:0 0 auto">—</span>
                         <span><sc-for list="{{ li.parts }}" as="p" hint-placeholder-count="2"><sc-if value="{{ p.b }}" hint-placeholder-val="{{ false }}"><b style="color:#FFFFFF;font-weight:800">{{ p.s }}</b></sc-if><sc-if value="{{ p.plain }}" hint-placeholder-val="{{ true }}">{{ p.s }}</sc-if></sc-for></span>
                       </li>
                     </sc-for>
@@ -137,7 +137,7 @@ img{max-width:100%}
                   <div style="display:flex;flex-wrap:wrap;gap:9px">
                     <sc-for list="{{ b.items }}" as="c" hint-placeholder-count="4">
                       <sc-if value="{{ c.isLink }}" hint-placeholder-val="{{ false }}">
-                        <a href="{{ c.u }}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;background:#C9A227;color:#1B2A4A;border:1px solid #C9A227;border-radius:999px;padding:12px 19px;font-size:clamp(14px,1.45vw,15px);font-weight:800;min-height:44px" style-hover="background:#E4C766;color:#1B2A4A">{{ c.x }} <span>↗</span></a>
+                        <a href="{{ c.u }}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;background:#4FA8D8;color:#1B2A4A;border:1px solid #4FA8D8;border-radius:999px;padding:12px 19px;font-size:clamp(14px,1.45vw,15px);font-weight:800;min-height:44px" style-hover="background:#8ECDEE;color:#1B2A4A">{{ c.x }} <span>↗</span></a>
                       </sc-if>
                       <sc-if value="{{ c.plain }}" hint-placeholder-val="{{ true }}">
                         <span style="display:inline-flex;align-items:center;background:rgba(255,255,255,.05);color:#DFE5F0;border:1px solid rgba(255,255,255,.16);border-radius:999px;padding:12px 19px;font-size:clamp(14px,1.45vw,15px);font-weight:700;min-height:44px">{{ c.x }}</span>
@@ -147,28 +147,28 @@ img{max-width:100%}
                 </sc-if>
 
                 <sc-if value="{{ b.isTrend }}" hint-placeholder-val="{{ false }}">
-                  <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap;border:1px solid rgba(201,162,39,.3);border-radius:18px;background:rgba(255,255,255,.03);padding:clamp(16px,2.2vw,22px)">
+                  <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap;border:1px solid rgba(79,168,216,.3);border-radius:18px;background:rgba(255,255,255,.03);padding:clamp(16px,2.2vw,22px)">
                     <span style="font-family:'Rubik',sans-serif;font-size:clamp(15px,1.9vw,19px);font-weight:700;color:#FFFFFF">{{ b.x }}</span>
-                    <svg viewBox="0 0 160 42" style="width:130px;height:34px;flex:0 0 auto"><path d="M6 36 Q 64 34 96 20 T 154 6" fill="none" stroke="#C9A227" stroke-width="3"></path><path d="M146 4 L154 6 L149 13" fill="none" stroke="#C9A227" stroke-width="3" stroke-linecap="round"></path></svg>
+                    <svg viewBox="0 0 160 42" style="width:130px;height:34px;flex:0 0 auto"><path d="M6 36 Q 64 34 96 20 T 154 6" fill="none" stroke="#4FA8D8" stroke-width="3"></path><path d="M146 4 L154 6 L149 13" fill="none" stroke="#4FA8D8" stroke-width="3" stroke-linecap="round"></path></svg>
                   </div>
                 </sc-if>
 
                 <sc-if value="{{ b.isNote }}" hint-placeholder-val="{{ false }}">
-                  <div style="border:2px solid #C9A227;border-radius:24px;overflow:hidden;background:linear-gradient(135deg,rgba(201,162,39,.2),rgba(201,162,39,.04) 65%);box-shadow:0 26px 70px rgba(201,162,39,.12)">
-                    <div style="display:inline-flex;align-items:center;gap:11px;background:#C9A227;color:#1B2A4A;font-weight:900;font-size:clamp(16px,2.1vw,22px);letter-spacing:1.4px;padding:11px 24px;border-radius:999px;margin:clamp(18px,2.4vw,28px) clamp(20px,3vw,38px) 0">
+                  <div style="border:2px solid #4FA8D8;border-radius:24px;overflow:hidden;background:linear-gradient(135deg,rgba(79,168,216,.2),rgba(79,168,216,.04) 65%);box-shadow:0 26px 70px rgba(79,168,216,.12)">
+                    <div style="display:inline-flex;align-items:center;gap:11px;background:#4FA8D8;color:#1B2A4A;font-weight:900;font-size:clamp(16px,2.1vw,22px);letter-spacing:1.4px;padding:11px 24px;border-radius:999px;margin:clamp(18px,2.4vw,28px) clamp(20px,3vw,38px) 0">
                       <span style="display:block;width:10px;height:10px;border-radius:50%;background:#1B2A4A"></span>{{ b.label }}
                     </div>
                     <div style="padding:clamp(18px,2.6vw,32px) clamp(20px,3vw,38px) clamp(22px,3vw,36px)">
                       <div style="font-family:'Rubik',sans-serif;font-size:clamp(22px,3.4vw,38px);font-weight:800;line-height:1.15;color:#FFFFFF;letter-spacing:-.8px;max-width:20em;text-wrap:balance">{{ b.head }}</div>
                       <div style="margin-top:clamp(18px,2.4vw,26px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,150px),1fr));gap:clamp(10px,1.6vw,16px)">
                         <sc-for list="{{ b.items }}" as="it" hint-placeholder-count="3">
-                          <div style="background:rgba(19,31,56,.55);border:1px solid rgba(201,162,39,.4);border-radius:18px;padding:clamp(19px,2.4vw,24px);display:flex;flex-direction:column;gap:9px">
+                          <div style="background:rgba(19,31,56,.55);border:1px solid rgba(79,168,216,.4);border-radius:18px;padding:clamp(19px,2.4vw,24px);display:flex;flex-direction:column;gap:9px">
                             <sc-if value="{{ it.hasV }}" hint-placeholder-val="{{ false }}">
-                              <div style="font-family:'Rubik',sans-serif;font-size:clamp(26px,3.4vw,36px);font-weight:900;line-height:1;color:#E4C766;letter-spacing:-1px">{{ it.v }}</div>
+                              <div style="font-family:'Rubik',sans-serif;font-size:clamp(26px,3.4vw,36px);font-weight:900;line-height:1;color:#8ECDEE;letter-spacing:-1px">{{ it.v }}</div>
                               <div style="font-family:'Rubik',sans-serif;font-size:clamp(17px,2vw,21px);color:#FFFFFF;font-weight:800;line-height:1.2">{{ it.k }}</div>
                             </sc-if>
                             <sc-if value="{{ it.noV }}" hint-placeholder-val="{{ true }}">
-                              <div style="font-family:'Rubik',sans-serif;font-size:clamp(19px,2.3vw,25px);font-weight:900;color:#E4C766;line-height:1.15;letter-spacing:-.5px">{{ it.k }}</div>
+                              <div style="font-family:'Rubik',sans-serif;font-size:clamp(19px,2.3vw,25px);font-weight:900;color:#8ECDEE;line-height:1.15;letter-spacing:-.5px">{{ it.k }}</div>
                             </sc-if>
                             <div style="font-size:clamp(14.5px,1.55vw,15.5px);color:#CFD8E8;line-height:1.6;font-weight:300;text-wrap:pretty">{{ it.d }}</div>
                           </div>
@@ -182,13 +182,15 @@ img{max-width:100%}
                   <figure style="margin:0">
                     <sc-if value="{{ b.isRail }}" hint-placeholder-val="{{ false }}"><img src="assets/lrail.jpg" alt="" loading="lazy" decoding="async" style="width:100%;display:block;border:1px solid rgba(255,255,255,.1);border-radius:16px" /></sc-if>
                     <sc-if value="{{ b.isRender }}" hint-placeholder-val="{{ false }}"><img src="https://static.wixstatic.com/media/1691bd_c6d360bfb02744d39e604a79628c6052~mv2.png/v1/fit/w_1200,h_580,q_85,enc_avif,quality_auto/1691bd_c6d360bfb02744d39e604a79628c6052~mv2.png" alt="" loading="lazy" decoding="async" style="width:100%;display:block;border:1px solid rgba(255,255,255,.1);border-radius:16px" /></sc-if>
+                    <sc-if value="{{ b.isLand }}" hint-placeholder-val="{{ false }}"><img src="assets/land.jpg" alt="" loading="lazy" decoding="async" style="width:100%;display:block;border:1px solid rgba(255,255,255,.1);border-radius:16px" /></sc-if>
+                    <sc-if value="{{ b.isPlan }}" hint-placeholder-val="{{ false }}"><span style="display:block;background:#FFFFFF;border:2px solid #4FA8D8;border-radius:20px;padding:10px"><img src="assets/map.jpg" alt="" loading="lazy" decoding="async" style="width:100%;display:block;border-radius:13px" /></span></sc-if>
                     <figcaption style="margin-top:13px;font-size:clamp(14px,1.4vw,15px);color:#AAB6CC;line-height:1.65;text-wrap:pretty">{{ b.cap }}</figcaption>
                   </figure>
                 </sc-if>
 
                 <sc-if value="{{ b.isMap }}" hint-placeholder-val="{{ false }}">
                   <figure style="margin:0;display:flex;flex-direction:column;gap:12px;align-items:flex-start">
-                    <div style="background:#FFFFFF;border:1px solid rgba(201,162,39,.45);border-radius:20px;padding:10px;max-width:520px;width:100%;box-shadow:0 18px 50px rgba(0,0,0,.28)">
+                    <div style="background:#FFFFFF;border:1px solid rgba(79,168,216,.45);border-radius:20px;padding:10px;max-width:520px;width:100%;box-shadow:0 18px 50px rgba(0,0,0,.28)">
                       <img src="assets/green-line.png" alt="" loading="lazy" decoding="async" style="width:100%;display:block;border-radius:14px" />
                     </div>
                     <figcaption style="font-size:clamp(13px,1.4vw,14.5px);color:#CFD8E8;line-height:1.55;max-width:44em;text-wrap:pretty">{{ b.cap }}</figcaption>
@@ -207,10 +209,10 @@ img{max-width:100%}
 
                 <sc-if value="{{ b.isMorph }}" hint-placeholder-val="{{ false }}">
                   <figure style="margin:0">
-                    <button type="button" onClick="{{ toggleMorph }}" style="position:relative;display:block;width:100%;padding:0;border:1px solid rgba(201,162,39,.35);border-radius:20px;background:#1B2A4A;cursor:pointer;overflow:hidden;aspect-ratio:16/10;font-family:inherit">
+                    <button type="button" onClick="{{ toggleMorph }}" style="position:relative;display:block;width:100%;padding:0;border:1px solid rgba(79,168,216,.35);border-radius:20px;background:#1B2A4A;cursor:pointer;overflow:hidden;aspect-ratio:16/10;font-family:inherit">
                       <img src="assets/land.jpg" alt="" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:{{ morphNowOpacity }};transition:opacity 1s cubic-bezier(.4,0,.2,1)" />
                       <img src="assets/map.jpg" alt="" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:{{ morphPlanOpacity }};transition:opacity 1s cubic-bezier(.4,0,.2,1)" />
-                      <span style="position:absolute;inset:auto 14px 14px auto;background:#C9A227;color:#1B2A4A;font-weight:800;font-size:clamp(12px,1.4vw,14px);border-radius:999px;padding:10px 17px;box-shadow:0 8px 24px rgba(0,0,0,.4)">{{ morphHint }}</span>
+                      <span style="position:absolute;inset:auto 14px 14px auto;background:#4FA8D8;color:#1B2A4A;font-weight:800;font-size:clamp(12px,1.4vw,14px);border-radius:999px;padding:10px 17px;box-shadow:0 8px 24px rgba(0,0,0,.4)">{{ morphHint }}</span>
                     </button>
                     <figcaption style="margin-top:13px;font-size:clamp(14px,1.4vw,15px);color:#AAB6CC;line-height:1.65;text-wrap:pretty">{{ b.cap }}</figcaption>
                   </figure>
@@ -225,15 +227,15 @@ img{max-width:100%}
                 <div style="display:flex;flex-wrap:wrap;gap:9px">
                   <sc-for list="{{ s.srcs }}" as="sr" hint-placeholder-count="3">
                     <sc-if value="{{ sr.gov }}" hint-placeholder-val="{{ false }}">
-                      <a href="{{ sr.u }}" target="_blank" rel="noopener" title="{{ officialLabel }}" style="display:inline-flex;align-items:center;gap:9px;background:#C9A227;border:2px solid #C9A227;color:#1B2A4A;border-radius:999px;padding:11px 18px;min-height:44px;font-size:clamp(13px,1.4vw,14.5px);font-weight:800;box-shadow:0 10px 26px rgba(201,162,39,.14)" style-hover="background:#E4C766;border-color:#E4C766">
-                        <span style="display:inline-flex;align-items:center;gap:6px;background:#1B2A4A;color:#E4C766;font-size:12.5px;font-weight:800;letter-spacing:.6px;border-radius:999px;padding:5px 12px">
-                          <span style="display:block;width:7px;height:7px;border-radius:50%;background:#E4C766"></span>{{ officialLabel }}
+                      <a href="{{ sr.u }}" target="_blank" rel="noopener" title="{{ officialLabel }}" style="display:inline-flex;align-items:center;gap:9px;background:#4FA8D8;border:2px solid #4FA8D8;color:#1B2A4A;border-radius:999px;padding:11px 18px;min-height:44px;font-size:clamp(13px,1.4vw,14.5px);font-weight:800;box-shadow:0 10px 26px rgba(79,168,216,.14)" style-hover="background:#8ECDEE;border-color:#8ECDEE">
+                        <span style="display:inline-flex;align-items:center;gap:6px;background:#1B2A4A;color:#8ECDEE;font-size:12.5px;font-weight:800;letter-spacing:.6px;border-radius:999px;padding:5px 12px">
+                          <span style="display:block;width:7px;height:7px;border-radius:50%;background:#8ECDEE"></span>{{ officialLabel }}
                         </span>
                         {{ sr.t }} <span>↗</span>
                       </a>
                     </sc-if>
                     <sc-if value="{{ sr.plain }}" hint-placeholder-val="{{ true }}">
-                      <a href="{{ sr.u }}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(255,255,255,.22);color:#CFD8E8;border-radius:999px;padding:11px 18px;min-height:44px;font-size:clamp(13px,1.4vw,14px);font-weight:700" style-hover="border-color:#C9A227;color:#E4C766">{{ sr.t }} <span>↗</span></a>
+                      <a href="{{ sr.u }}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(255,255,255,.22);color:#CFD8E8;border-radius:999px;padding:11px 18px;min-height:44px;font-size:clamp(13px,1.4vw,14px);font-weight:700" style-hover="border-color:#4FA8D8;color:#8ECDEE">{{ sr.t }} <span>↗</span></a>
                     </sc-if>
                   </sc-for>
                 </div>
@@ -243,29 +245,29 @@ img{max-width:100%}
         </sc-if>
 
         <sc-if value="{{ s.isSources }}" hint-placeholder-val="{{ false }}">
-          <section style="max-width:1140px;margin:0 auto;padding:clamp(34px,5vw,80px) clamp(18px,3.4vw,48px);border-top:1px solid rgba(201,162,39,.18)">
+          <section style="max-width:1140px;margin:0 auto;padding:clamp(34px,5vw,80px) clamp(18px,3.4vw,48px);border-top:1px solid rgba(79,168,216,.18)">
             <div style="display:flex;align-items:baseline;gap:clamp(10px,1.4vw,16px);margin-bottom:clamp(14px,1.8vw,20px);flex-wrap:wrap">
-              <span style="font-family:'Rubik',sans-serif;font-size:clamp(23px,2.8vw,32px);font-weight:800;color:#C9A227;letter-spacing:0;line-height:1" dir="ltr">{{ s.num }}</span>
-              <span style="display:block;width:10px;height:10px;border-radius:50%;background:#C9A227;flex:0 0 auto"></span>
-              <span style="font-family:'Rubik',sans-serif;font-size:clamp(23px,2.8vw,32px);font-weight:700;letter-spacing:.6px;line-height:1.3;color:#E4C766;text-wrap:balance">{{ s.pill }}</span>
+              <span style="font-family:'Rubik',sans-serif;font-size:clamp(23px,2.8vw,32px);font-weight:800;color:#4FA8D8;letter-spacing:0;line-height:1" dir="ltr">{{ s.num }}</span>
+              <span style="display:block;width:10px;height:10px;border-radius:50%;background:#4FA8D8;flex:0 0 auto"></span>
+              <span style="font-family:'Rubik',sans-serif;font-size:clamp(23px,2.8vw,32px);font-weight:700;letter-spacing:.6px;line-height:1.3;color:#8ECDEE;text-wrap:balance">{{ s.pill }}</span>
             </div>
             <h2 style="font-family:'Rubik',sans-serif;font-weight:300;font-size:clamp(25px,4.6vw,48px);line-height:1.1;margin:0 0 12px;letter-spacing:-1px;color:#FFFFFF">{{ s.h }}</h2>
             <p style="margin:0 0 clamp(24px,3.4vw,34px);font-size:clamp(15.5px,2vw,21px);font-weight:300;color:#AAB6CC;max-width:38em;text-wrap:pretty">{{ s.lead }}</p>
             <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:clamp(10px,1.4vw,14px)">
               <sc-for list="{{ cards }}" as="c" hint-placeholder-count="6">
                 <sc-if value="{{ c.gov }}" hint-placeholder-val="{{ false }}">
-                  <a href="{{ c.u }}" target="_blank" rel="noopener" style="display:block;background:linear-gradient(180deg,rgba(201,162,39,.18),rgba(201,162,39,.05));border:2px solid #C9A227;border-radius:18px;padding:16px 18px" style-hover="background:rgba(201,162,39,.3)">
-                    <div style="display:inline-flex;align-items:center;gap:6px;background:#C9A227;color:#1B2A4A;font-size:12.5px;font-weight:800;letter-spacing:.6px;border-radius:999px;padding:5px 12px;margin-bottom:10px">
+                  <a href="{{ c.u }}" target="_blank" rel="noopener" style="display:block;background:linear-gradient(180deg,rgba(79,168,216,.18),rgba(79,168,216,.05));border:2px solid #4FA8D8;border-radius:18px;padding:16px 18px" style-hover="background:rgba(79,168,216,.3)">
+                    <div style="display:inline-flex;align-items:center;gap:6px;background:#4FA8D8;color:#1B2A4A;font-size:12.5px;font-weight:800;letter-spacing:.6px;border-radius:999px;padding:5px 12px;margin-bottom:10px">
                       <span style="display:block;width:7px;height:7px;border-radius:50%;background:#1B2A4A"></span>{{ c.official }}
                     </div>
                     <div style="color:#FFFFFF;font-weight:800;font-size:clamp(14px,1.55vw,15.5px);margin-bottom:6px;line-height:1.4">{{ c.h }}</div>
                     <div style="color:#DFE5F0;font-size:clamp(14px,1.45vw,14.5px);line-height:1.6;margin-bottom:11px">{{ c.d }}</div>
-                    <div style="color:#E4C766;font-size:12.5px;font-weight:700" dir="ltr">{{ c.host }} ↗</div>
+                    <div style="color:#8ECDEE;font-size:12.5px;font-weight:700" dir="ltr">{{ c.host }} ↗</div>
                   </a>
                 </sc-if>
                 <sc-if value="{{ c.plain }}" hint-placeholder-val="{{ true }}">
-                  <a href="{{ c.u }}" target="_blank" rel="noopener" style="display:block;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:16px 18px" style-hover="border-color:#C9A227;background:rgba(201,162,39,.1)">
-                    <div style="color:#E4C766;font-weight:800;font-size:clamp(13.5px,1.5vw,15px);margin-bottom:6px;line-height:1.4">{{ c.h }}</div>
+                  <a href="{{ c.u }}" target="_blank" rel="noopener" style="display:block;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:16px 18px" style-hover="border-color:#4FA8D8;background:rgba(79,168,216,.1)">
+                    <div style="color:#8ECDEE;font-weight:800;font-size:clamp(13.5px,1.5vw,15px);margin-bottom:6px;line-height:1.4">{{ c.h }}</div>
                     <div style="color:#CFD8E8;font-size:clamp(14px,1.45vw,14.5px);line-height:1.6;margin-bottom:11px">{{ c.d }}</div>
                     <div style="color:#AAB6CC;font-size:13px" dir="ltr">{{ c.host }} ↗</div>
                   </a>
@@ -277,25 +279,25 @@ img{max-width:100%}
         </sc-if>
 
         <sc-if value="{{ s.isClosing }}" hint-placeholder-val="{{ false }}">
-          <section style="min-height:100%;display:flex;flex-direction:column;justify-content:center;background:linear-gradient(180deg,#1B2A4A,#1B2A4A);border-top:1px solid rgba(201,162,39,.35);padding:clamp(34px,5vw,80px) clamp(18px,3.4vw,48px) clamp(40px,6vw,90px)">
+          <section style="min-height:100%;display:flex;flex-direction:column;justify-content:center;background:linear-gradient(180deg,#1B2A4A,#1B2A4A);border-top:1px solid rgba(79,168,216,.35);padding:clamp(34px,5vw,80px) clamp(18px,3.4vw,48px) clamp(40px,6vw,90px)">
             <div style="max-width:1000px;margin:0 auto;width:100%">
               <span style="background:#FFFFFF;border-radius:16px;padding:13px 20px;display:inline-flex;margin-bottom:clamp(20px,3vw,30px)"><img src="assets/logo.png" alt="קבוצת שניידר נדלן" style="height:clamp(40px,5vw,64px);display:block" /></span>
               <div style="display:flex;align-items:baseline;gap:clamp(10px,1.4vw,16px);margin-bottom:clamp(14px,1.8vw,20px);flex-wrap:wrap">
-                <span style="display:block;width:9px;height:9px;border-radius:50%;background:#C9A227"></span>
-                <span style="font-family:'Rubik',sans-serif;font-size:clamp(23px,2.8vw,32px);font-weight:700;letter-spacing:.6px;line-height:1.3;color:#E4C766;text-wrap:balance">{{ s.pill }}</span>
+                <span style="display:block;width:9px;height:9px;border-radius:50%;background:#4FA8D8"></span>
+                <span style="font-family:'Rubik',sans-serif;font-size:clamp(23px,2.8vw,32px);font-weight:700;letter-spacing:.6px;line-height:1.3;color:#8ECDEE;text-wrap:balance">{{ s.pill }}</span>
               </div>
               <h2 style="font-family:'Rubik',sans-serif;font-weight:300;font-size:clamp(27px,5vw,54px);line-height:1.08;margin:0 0 14px;letter-spacing:-1.2px;color:#FFFFFF">{{ s.h }}</h2>
               <p style="margin:0 0 clamp(24px,3.4vw,36px);font-size:clamp(15.5px,2vw,21px);font-weight:300;color:#AAB6CC;max-width:38em;text-wrap:pretty">{{ s.lead }}</p>
               <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:clamp(12px,2vw,20px);margin-bottom:clamp(24px,3.4vw,34px)">
                 <sc-for list="{{ s.contacts }}" as="ct" hint-placeholder-count="2">
-                  <div style="background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.02));border:1px solid rgba(201,162,39,.3);border-radius:20px;padding:clamp(18px,2.6vw,26px);text-align:center">
+                  <div style="background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.02));border:1px solid rgba(79,168,216,.3);border-radius:20px;padding:clamp(18px,2.6vw,26px);text-align:center">
                     <div style="font-size:14px;letter-spacing:1.2px;color:#AAB6CC;margin-bottom:10px">{{ ct.where }}</div>
                     <div style="font-family:'Rubik',sans-serif;font-size:clamp(17px,2vw,21px);font-weight:700;color:#FFFFFF;margin-bottom:12px">{{ ct.name }}</div>
-                    <a href="{{ ct.href }}" style="display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:9px 20px;border:1px solid #C9A227;border-radius:999px;color:#E4C766;font-family:'Rubik',sans-serif;font-size:clamp(16px,1.9vw,19px);font-weight:700" dir="ltr" style-hover="background:#C9A227;color:#1B2A4A">{{ ct.label }}</a>
+                    <a href="{{ ct.href }}" style="display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:9px 20px;border:1px solid #4FA8D8;border-radius:999px;color:#8ECDEE;font-family:'Rubik',sans-serif;font-size:clamp(16px,1.9vw,19px);font-weight:700" dir="ltr" style-hover="background:#4FA8D8;color:#1B2A4A">{{ ct.label }}</a>
                   </div>
                 </sc-for>
               </div>
-              <a href="https://schgroup.co.il" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(201,162,39,.42);color:#E4C766;border-radius:999px;padding:11px 18px;min-height:44px;font-size:clamp(13px,1.4vw,14px);font-weight:700" style-hover="background:#C9A227;color:#1B2A4A;border-color:#C9A227">{{ s.siteLabel }} <span>↗</span></a>
+              <a href="https://schgroup.co.il" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(79,168,216,.42);color:#8ECDEE;border-radius:999px;padding:11px 18px;min-height:44px;font-size:clamp(13px,1.4vw,14px);font-weight:700" style-hover="background:#4FA8D8;color:#1B2A4A;border-color:#4FA8D8">{{ s.siteLabel }} <span>↗</span></a>
             </div>
           </section>
         </sc-if>
@@ -304,17 +306,17 @@ img{max-width:100%}
     </sc-for>
   </main>
 
-  <footer style="flex:0 0 auto;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:0 clamp(10px,2vw,20px);padding-bottom:env(safe-area-inset-bottom,0px);background:#1B2A4A;border-top:1px solid rgba(201,162,39,.24)">
-    <button type="button" onClick="{{ prev }}" style="background:transparent;border:1px solid rgba(255,255,255,.2);color:#DFE5F0;padding:10px 16px;min-height:44px;min-width:84px;border-radius:999px;white-space:nowrap;font-family:'Rubik',sans-serif;font-size:clamp(12.5px,1.4vw,15px);font-weight:700;cursor:pointer;opacity:{{ prevOpacity }}" style-hover="border-color:#C9A227;color:#FFFFFF">{{ prevLabel }}</button>
+  <footer style="flex:0 0 auto;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:0 clamp(10px,2vw,20px);padding-bottom:env(safe-area-inset-bottom,0px);background:#1B2A4A;border-top:1px solid rgba(79,168,216,.24)">
+    <button type="button" onClick="{{ prev }}" style="background:transparent;border:1px solid rgba(255,255,255,.2);color:#DFE5F0;padding:10px 16px;min-height:44px;min-width:84px;border-radius:999px;white-space:nowrap;font-family:'Rubik',sans-serif;font-size:clamp(12.5px,1.4vw,15px);font-weight:700;cursor:pointer;opacity:{{ prevOpacity }}" style-hover="border-color:#4FA8D8;color:#FFFFFF">{{ prevLabel }}</button>
     <div style="display:flex;align-items:center;gap:clamp(6px,1.4vw,16px);min-width:0;flex:1 1 auto;justify-content:center">
       <button type="button" onClick="{{ seek }}" title="{{ counter }}" style="flex:1 1 auto;min-width:40px;background:transparent;border:0;padding:19px 0;cursor:pointer;display:block">
         <span style="display:block;height:6px;border-radius:999px;overflow:hidden;background:rgba(255,255,255,.16)">
-          <span ref="{{ progressRef }}" style="display:block;height:100%;background:linear-gradient(90deg,#A6851C,#E4C766);transition:width .2s linear;width:2%"></span>
+          <span ref="{{ progressRef }}" style="display:block;height:100%;background:linear-gradient(90deg,#4FA8D8,#8ECDEE);transition:width .2s linear;width:2%"></span>
         </span>
       </button>
       <span style="font-family:'Rubik',sans-serif;font-size:clamp(12px,1.2vw,13px);color:#96A0B2;white-space:nowrap;flex:0 0 auto" dir="ltr">{{ counter }}</span>
     </div>
-    <button type="button" onClick="{{ next }}" style="background:#C9A227;border:1px solid #C9A227;color:#1B2A4A;padding:10px 16px;min-height:44px;min-width:84px;border-radius:999px;white-space:nowrap;font-family:'Rubik',sans-serif;font-size:clamp(12.5px,1.4vw,15px);font-weight:800;cursor:pointer;opacity:{{ nextOpacity }}" style-hover="background:#E4C766">{{ nextLabel }}</button>
+    <button type="button" onClick="{{ next }}" style="background:#4FA8D8;border:1px solid #4FA8D8;color:#1B2A4A;padding:10px 16px;min-height:44px;min-width:84px;border-radius:999px;white-space:nowrap;font-family:'Rubik',sans-serif;font-size:clamp(12.5px,1.4vw,15px);font-weight:800;cursor:pointer;opacity:{{ nextOpacity }}" style-hover="background:#8ECDEE">{{ nextLabel }}</button>
   </footer>
 </div>
 </x-dc>
@@ -476,7 +478,7 @@ class Component extends DCLogic {
     const s = { label: raw.label || '' };
     if (raw.type === 'cover') {
       s.isCover = true;
-      s.kick = this.tx(raw.kick); s.t1 = this.tx(raw.t1); s.t2 = this.tx(raw.t2);
+      s.kick = this.tx(raw.kick); s.t1 = this.tx(raw.t1); s.t2 = this.tx(raw.t2); s.t3 = this.tx(raw.t3);
       s.sub = this.tx(raw.sub); s.meta = this.tx(raw.meta);
       return s;
     }
@@ -508,7 +510,7 @@ class Component extends DCLogic {
         o.isStats = true;
         o.items = (b.items || []).map((st) => ({
           v: this.tx(st.v), u: st.u ? this.tx(st.u) : '', k: this.tx(st.k),
-          color: st.gold ? '#E4C766' : '#FFFFFF'
+          color: st.gold ? '#8ECDEE' : '#FFFFFF'
         }));
       }
       else if (b.t === 'chips') {
@@ -529,7 +531,9 @@ class Component extends DCLogic {
       else if (b.t === 'media') {
         o.isMedia = true; o.cap = this.tx(b.cap);
         o.isRail = String(b.src).indexOf('lrail') !== -1;
-        o.isRender = !o.isRail;
+        o.isPlan = String(b.src).indexOf('map.jpg') !== -1;
+        o.isLand = String(b.src).indexOf('land.jpg') !== -1;
+        o.isRender = !o.isRail && !o.isPlan && !o.isLand;
       }
       else if (b.t === 'map') { o.isMap = true; o.cap = this.tx(b.cap); }
       else if (b.t === 'two') { o.isTwo = true; o.cap = this.tx(b.cap); }
