@@ -81,8 +81,10 @@
           ref: L('תוכנית המתאר "חוף התכלת" · הר/2200/א׳ (504-0396994) · החלטת הוועדה המחוזית ת"א מיום 27.02.2022', 'The "Blue Shores" master plan · Har/2200/A (504-0396994) · Tel Aviv District Committee decision, 27 Feb 2022'),
           x: L('הבסיס לוודאות לגבי <b>הייעוד והזכויות</b>. מכאן, הדרך להיתרי בנייה עוברת בהשלמת <b>תוכנית מפורטת שמכוחה ניתן להוציא היתרי בנייה, הכוללת איחוד וחלוקה</b>.', 'The basis for certainty on <b>land use and rights</b>. From here, the path runs through completing a <b>detailed plan — including consolidation & division — under which building permits can be issued</b>.'),
           note: L('במקביל נחתם <b>הסכם גג</b> עם המדינה למימון הפיתוח והתשתיות.', 'In parallel, an <b>agreement</b> was signed with the State to fund development and infrastructure.') },
-        { t: 'media', src: 'assets/land.jpg',
-          cap: L('מבט מדרום · המרינה והעיר ברקע. רצועת הקרקע הפתוחה בין הים לכביש 2.', 'View from the south · the marina and the city in the background. The open strip of land between the sea and Route 2.') },
+        { t: 'morph', a: 'assets/land.jpg', b: 'assets/map.jpg',
+          hintA: L('לחצו לתוכנית המאושרת', 'Tap for the approved plan'),
+          hintB: L('לחצו לתמונת הקרקע', 'Tap for the land photo'),
+          cap: L('מבט מדרום · המרינה והעיר ברקע. לחצו לחשיפת תוכנית המתאר (הר/2200/א׳) — מסומנים: המרינה, מחלף הרב מכר, הפארק החופי וגבול תל אביב.', 'View from the south · marina and city in the background. Tap to reveal the master plan (Har/2200/A) — marked: the marina, Rav-Mecher interchange, coastal park and the Tel Aviv boundary.') },
         { t: 'chips', items: [
           { x: L('~2,000 דונם', '~2,000 dunam'), tone: 'gold' },
           { x: L('~10% משטח הרצליה', '~10% of Herzliya') },
