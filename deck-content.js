@@ -81,10 +81,17 @@
           ref: L('תוכנית המתאר "חוף התכלת" · הר/2200/א׳ (504-0396994) · החלטת הוועדה המחוזית ת"א מיום 27.02.2022', 'The "Blue Shores" master plan · Har/2200/A (504-0396994) · Tel Aviv District Committee decision, 27 Feb 2022'),
           x: L('הבסיס לוודאות לגבי <b>הייעוד והזכויות</b>. מכאן, הדרך להיתרי בנייה עוברת בהשלמת <b>תוכנית מפורטת שמכוחה ניתן להוציא היתרי בנייה, הכוללת איחוד וחלוקה</b>.', 'The basis for certainty on <b>land use and rights</b>. From here, the path runs through completing a <b>detailed plan — including consolidation & division — under which building permits can be issued</b>.'),
           note: L('במקביל נחתם <b>הסכם גג</b> עם המדינה למימון הפיתוח והתשתיות.', 'In parallel, an <b>agreement</b> was signed with the State to fund development and infrastructure.') },
-        { t: 'morph', a: 'assets/land.jpg', b: 'assets/map.jpg',
-          hintA: L('לחצו לתוכנית המאושרת', 'Tap for the approved plan'),
-          hintB: L('לחצו לתמונת הקרקע', 'Tap for the land photo'),
-          cap: L('מבט מדרום · המרינה והעיר ברקע. לחצו לחשיפת תוכנית המתאר (הר/2200/א׳) — מסומנים: המרינה, מחלף הרב מכר, הפארק החופי וגבול תל אביב.', 'View from the south · marina and city in the background. Tap to reveal the master plan (Har/2200/A) — marked: the marina, Rav-Mecher interchange, coastal park and the Tel Aviv boundary.') },
+        { t: 'morph',
+          hint: L('לחצו לתמונה הבאה', 'Tap for the next image'),
+          imgs: [
+            { src: 'assets/land.jpg', tag: L('היום', 'Today'), cap: L('מבט מדרום · המרינה והעיר ברקע. רצועת הקרקע הפתוחה בין הים לכביש 2.', 'View from the south · the marina and the city in the background. The open strip of land between the sea and Route 2.') },
+            { src: 'assets/map.jpg', tag: L('התוכנית המאושרת', 'The approved plan'), cap: L('תוכנית המתאר הר/2200/א׳ — מסומנים: המרינה, מחלף הרב מכר, הפארק החופי וגבול תל אביב.', 'Master plan Har/2200/A — marked: the marina, Rav-Mecher interchange, coastal park and the Tel Aviv boundary.') },
+            { src: 'assets/kaiser-render.jpg', tag: L('הדמיה', 'Rendering'), cap: L('הדמיית הרובע במבט מדרום — בלוקים עירוניים, שדרות ירוקות והפארק החופי לאורך הים.', 'Rendering of the district from the south — urban blocks, green boulevards and the coastal park along the sea.') },
+            { src: 'assets/kaiser-landuse.jpg', tag: L('ייעודי קרקע', 'Land uses'), cap: L('פריסת השימושים — מגורים, תעסוקה, מסחר ומבני ציבור, לצד כ־700 דונם של פארק חופי.', 'Distribution of uses — residential, employment, commerce and public buildings, alongside about 700 dunams of coastal park.') },
+            { src: 'assets/kaiser-green.jpg', tag: L('מערך ירוק', 'Green network'), cap: L('המערך הירוק — מסדרונות אקולוגיים המחברים את העיר לפארק החופי ולים.', 'The green network — ecological corridors linking the city to the coastal park and the sea.') },
+            { src: 'assets/kaiser-transport.jpg', tag: L('תנועה ותחבורה', 'Transport'), cap: L('מערך התנועה — הקו הירוק, דרך הים, מחלף הרב מכר והחיבורים לאזור התעסוקה ולרמת השרון.', 'The movement network — the Green Line, Sea Road, the Rav-Mecher interchange and links to the employment zone and Ramat HaSharon.') }
+          ],
+          credit: L('תמונות: קייזר אדריכלים עבור עיריית הרצליה', 'Images: Kaiser Architects for the Herzliya Municipality') },
         { t: 'chips', items: [
           { x: L('~2,000 דונם', '~2,000 dunam'), tone: 'gold' },
           { x: L('~10% משטח הרצליה', '~10% of Herzliya') },

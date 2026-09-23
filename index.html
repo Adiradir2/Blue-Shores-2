@@ -209,12 +209,21 @@ img{max-width:100%}
 
                 <sc-if value="{{ b.isMorph }}" hint-placeholder-val="{{ false }}">
                   <figure style="margin:0">
-                    <button type="button" onClick="{{ toggleMorph }}" style="position:relative;display:block;width:100%;padding:0;border:1px solid rgba(79,168,216,.35);border-radius:20px;background:#1B2A4A;cursor:pointer;overflow:hidden;aspect-ratio:16/10;font-family:inherit">
-                      <img src="assets/land.jpg" alt="" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:{{ morphNowOpacity }};transition:opacity 1s cubic-bezier(.4,0,.2,1)" />
-                      <img src="assets/map.jpg" alt="" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:{{ morphPlanOpacity }};transition:opacity 1s cubic-bezier(.4,0,.2,1)" />
-                      <span style="position:absolute;inset:auto 14px 14px auto;background:#4FA8D8;color:#1B2A4A;font-weight:800;font-size:clamp(12px,1.4vw,14px);border-radius:999px;padding:10px 17px;box-shadow:0 8px 24px rgba(0,0,0,.4)">{{ morphHint }}</span>
+                    <button type="button" onClick="{{ toggleMorph }}" style="position:relative;display:block;width:100%;padding:0;border:1px solid rgba(79,168,216,.35);border-radius:20px;background:#E9EEEA;cursor:pointer;overflow:hidden;aspect-ratio:2.2/1;font-family:inherit">
+                      <sc-for list="{{ morphImgs }}" as="mi" hint-placeholder-count="2">
+                        <img src="{{ mi.src }}" alt="" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:{{ mi.op }};transition:opacity .9s cubic-bezier(.4,0,.2,1)" />
+                      </sc-for>
+                      <span style="position:absolute;inset:14px auto auto 14px;display:inline-flex;align-items:center;gap:8px;background:rgba(19,31,56,.88);color:#FFFFFF;font-weight:800;font-size:clamp(12.5px,1.4vw,14px);border-radius:999px;padding:8px 14px;box-shadow:0 6px 18px rgba(0,0,0,.35)"><span dir="ltr" style="color:#8ECDEE">{{ morphCount }}</span>{{ morphTag }}</span>
+                      <span style="position:absolute;inset:auto 14px 14px auto;background:#4FA8D8;color:#1B2A4A;font-weight:800;font-size:clamp(12px,1.4vw,14px);border-radius:999px;padding:10px 17px;box-shadow:0 8px 24px rgba(0,0,0,.4)">{{ morphHint }} ←</span>
                     </button>
-                    <figcaption style="margin-top:13px;font-size:clamp(14px,1.4vw,15px);color:#AAB6CC;line-height:1.65;text-wrap:pretty">{{ b.cap }}</figcaption>
+                    <div style="display:flex;justify-content:center;gap:2px;margin-top:6px">
+                      <sc-for list="{{ morphDots }}" as="md" hint-placeholder-count="6">
+                        <button type="button" onClick="{{ md.pick }}" title="{{ md.tag }}" style="background:transparent;border:0;padding:18px 9px;min-width:44px;min-height:44px;cursor:pointer;display:flex;align-items:center;justify-content:center">
+                          <span style="display:block;height:6px;border-radius:999px;width:{{ md.w }};background:{{ md.bg }};transition:width .3s,background .3s"></span>
+                        </button>
+                      </sc-for>
+                    </div>
+                    <figcaption style="font-size:clamp(14px,1.4vw,15px);color:#CFD8E8;line-height:1.65;text-wrap:pretty">{{ morphCap }} <span style="color:#96A0B2">· {{ morphCredit }}</span></figcaption>
                   </figure>
                 </sc-if>
 
@@ -643,10 +652,25 @@ class Component extends DCLogic {
         this.ticking = true;
         requestAnimationFrame(() => { this.ticking = false; this.spy(); });
       },
-      morphNowOpacity: this.state.flipped ? 0 : 1,
-      morphPlanOpacity: this.state.flipped ? 1 : 0,
-      morphHint: this.tx(this.state.flipped ? morph.hintB : morph.hintA),
-      toggleMorph: () => this.setState((st) => ({ flipped: !st.flipped })),
+      ...(() => {
+        const imgs = morph.imgs || [];
+        const m = imgs.length || 1;
+        const k = ((this.state.mi || 0) % m + m) % m;
+        const cur = imgs[k] || {};
+        return {
+          morphImgs: imgs.map((im, j) => ({ src: im.src, op: j === k ? 1 : 0 })),
+          morphDots: imgs.map((im, j) => ({
+            tag: this.tx(im.tag), w: j === k ? '26px' : '8px', bg: j === k ? '#4FA8D8' : 'rgba(255,255,255,.28)',
+            pick: () => this.setState({ mi: j })
+          })),
+          morphTag: this.tx(cur.tag),
+          morphCap: this.tx(cur.cap),
+          morphCount: (k + 1) + '/' + m,
+          morphCredit: this.tx(morph.credit),
+          morphHint: this.tx(morph.hint)
+        };
+      })(),
+      toggleMorph: () => this.setState((st) => ({ mi: ((st.mi || 0) + 1) % ((morph.imgs || []).length || 1) })),
       toggleFs: () => {
         if (!document.fullscreenElement) { const p = document.documentElement.requestFullscreen(); if (p && p.catch) p.catch(() => {}); }
         else document.exitFullscreen();
