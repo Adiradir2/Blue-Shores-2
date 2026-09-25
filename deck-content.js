@@ -25,8 +25,8 @@
   ];
 
   var DISC = L(
-    'כל הנתונים במצגת מגובים במקורות רשמיים (מנהל התכנון, רמ"י, עיריית הרצליה, נת"ע) או בסיקור תקשורתי מהימן. מגמת השווי מוצגת איכותית בלבד ואינה התחייבות; השווי הנוכחי מתעדכן לפי השוק. מספרי שווי מתוך השמאות אינם מוצגים ללקוח (הגבלת השמאי, תקן 22). גודל התוכנית ~2,000 דונם לפי המקור הרשמי והשמאות. היטל השבחה: שיעור ~50% (סעיף 3), פטור 140 מ"ר בתנאי מגורים 4 שנים (סעיף 19(ג)) — התוספת השלישית לחוק התכנון והבנייה, התשכ"ה־1965.',
-    'All figures are backed by official sources (Planning Administration, ILA, Herzliya Municipality, NTA) or credible media. Value trends are shown qualitatively only and are not a commitment; current value updates with the market. Appraisal value figures are not shown to clients (appraiser restriction, Standard 22). Plan size ~2,000 dunam per the official source and appraisal. Betterment levy: ~50% rate (§3), 140 sqm exemption subject to a 4-year residency condition (§19(c)) — Third Schedule to the Planning and Building Law, 1965.'
+    'כל הנתונים במצגת מגובים במקורות רשמיים (מנהל התכנון, רמ"י, עיריית הרצליה, נת"ע) או בסיקור תקשורתי מהימן. מגמת השווי מוצגת איכותית בלבד ואינה התחייבות; השווי הנוכחי מתעדכן לפי השוק. מספרי שווי מתוך השמאות אינם מוצגים ללקוח (הגבלת השמאי, תקן 22). גודל התוכנית ~2,000 דונם לפי המקור הרשמי והשמאות. היטל השבחה: שיעור ~50% (סעיף 3), פטור 140 מ"ר בתנאי מגורים 4 שנים (סעיף 19(ג)) — התוספת השלישית לחוק התכנון והבנייה, התשכ"ה־1965. הקרקע חקלאית ואינה זמינה לבנייה מיידית.',
+    'All figures are backed by official sources (Planning Administration, ILA, Herzliya Municipality, NTA) or credible media. Value trends are shown qualitatively only and are not a commitment; current value updates with the market. Appraisal value figures are not shown to clients (appraiser restriction, Standard 22). Plan size ~2,000 dunam per the official source and appraisal. Betterment levy: ~50% rate (§3), 140 sqm exemption subject to a 4-year residency condition (§19(c)) — Third Schedule to the Planning and Building Law, 1965. The land is agricultural and is not available for immediate construction.'
   );
 
   var SLIDES = [
