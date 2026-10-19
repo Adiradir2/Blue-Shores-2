@@ -20,7 +20,11 @@
     { h: L('תת"ל/71/ג — תקנון (PDF)', 'NTP/71/C — regulations (PDF)'), d: L('תוכנית לאומית מאושרת · הקו הירוק מקטע צפוני', 'Approved national plan · Green Line northern segment'), u: "https://apps.land.gov.il/IturTabotData/takanonim/Artzi/9509574.pdf", gov: true },
     { h: L('עיריית ת"א — רכבת קלה', 'Tel Aviv Municipality — light rail'), d: L('רשת מלאה ~2030 · נת"ע אחראית', 'Full network ~2030 · operated by NTA'), u: "https://www.tel-aviv.gov.il/Residents/Transportation/Pages/masstransporttrain.aspx", gov: true },
     { h: L('עיריית הרצליה — היטל השבחה', 'Herzliya Municipality — betterment levy'), d: L('עמוד רשמי + טפסים · תצהיר פטור 19(ג) · בירור חבות', 'Official page + forms · §19(c) exemption affidavit · liability check'), u: "http://handasa.herzliya.muni.il/Rishuy_bnia/Pages/hashbaha.aspx", gov: true },
-    { h: L('כל־זכות — פטור 140 מ"ר', 'Kol-Zchut — 140 sqm exemption'), d: L('סעיף 19(ג) · תנאי מגורים 4 שנים · לשון החוק', '§19(c) · 4-year residency condition · statutory text'), u: "https://www.kolzchut.org.il/he/%D7%A4%D7%98%D7%95%D7%A8_%D7%9E%D7%94%D7%99%D7%98%D7%9C_%D7%94%D7%A9%D7%91%D7%97%D7%94_%D7%9C%D7%91%D7%A0%D7%99%D7%94_%D7%90%D7%95_%D7%94%D7%A8%D7%97%D7%91%D7%94_%D7%A9%D7%9C_%D7%93%D7%99%D7%A8%D7%AA_%D7%9E%D7%92%D7%95%D7%A8%D7%99%D7%9D_%D7%A2%D7%93_140_%D7%9E%22%D7%A8" },
+    { h: L('מנהל התכנון — הוראות התכנית הר/2200/א׳ (PDF)', 'Planning Administration — Har/2200/A plan provisions (PDF)'), d: L('תקנון התכנית המאושרת · 504-0396994', 'Approved plan statute · 504-0396994'), u: "https://apps.land.gov.il/IturTabotData/takanonim-h/telmer/5050234.pdf", gov: true },
+    { h: L('GovMap — מפת התוכנית', 'GovMap — plan map'), d: L('המפה הממשלתית הרשמית · שכבת תוכניות', 'Official government map · plans layer'), u: "https://www.govmap.gov.il/?c=180911.33,673087.36&z=8&lay=14&b=2", gov: true },
+    { h: L('gov.il — המדריך הממשלתי להיטל השבחה', 'gov.il — the official betterment levy guide'), d: L('שיעור ההיטל: מחצית ההשבחה · פטורים · פרק הפטורים', 'Levy rate: half of the betterment · exemptions chapter'), u: "https://www.gov.il/he/pages/bidguide?chapterIndex=8", gov: true },
+    { h: L('כל־זכות — פטור מהיטל השבחה', 'Kol-Zchut — betterment levy exemption'), d: L('פטור עד 140 מ"ר לדירת מגורים · סעיף 19(ג)', 'Up to 140 sqm for a residential apartment · §19(c)'), u: "https://www.kolzchut.org.il/he/%D7%A4%D7%98%D7%95%D7%A8_%D7%9E%D7%94%D7%99%D7%98%D7%9C_%D7%94%D7%A9%D7%91%D7%97%D7%94_%D7%9C%D7%91%D7%A0%D7%99%D7%94_%D7%90%D7%95_%D7%94%D7%A8%D7%97%D7%91%D7%94_%D7%A9%D7%9C_%D7%93%D7%99%D7%A8%D7%AA_%D7%9E%D7%92%D7%95%D7%A8%D7%99%D7%9D_%D7%A2%D7%93_140_%D7%9E%22%D7%A8" },
+    { h: L('פירון משרד עורכי דין', 'Firon Law Firm'), d: L('הליווי המשפטי של הקבוצה', 'The group\'s legal counsel'), u: "https://www.firon.co.il/he/" },
     { h: L('אתר קבוצת שניידר', 'Schneider Group website'), d: L('ביו · מיתוג · פרויקטים', 'Bio · branding · projects'), u: "https://schgroup.co.il" }
   ];
 
@@ -152,7 +156,8 @@
           items: [
             { v: L('18%', '18%'), k: L('מע"מ', 'VAT'), d: L('על כל דירה חדשה שנמכרת בישראל', 'Charged on every new apartment sold in Israel') },
             { k: L('מס רכישה', 'Purchase tax'), d: L('חיסכון גדול על ידי תשלום מס רכישה רק בגין הקרקע ולא לפי שווי דירה סופית', 'A major saving — purchase tax is paid on the land alone, not on the value of a finished apartment') },
-            { k: L('רווח יזמי', 'Developer profit'), d: L('חברי הקבוצה מאורגנים כיזם ולכן חוסכים את רווח היזם', 'Group members are organized as the developer, so the developer\'s profit is saved') }
+            { k: L('רווח יזמי', 'Developer profit'), d: L('חברי הקבוצה מאורגנים כיזם ולכן חוסכים את רווח היזם', 'Group members are organized as the developer, so the developer\'s profit is saved') },
+            { k: L('פטור מהיטל השבחה', 'Betterment levy exemption'), d: L('פטור עד 140 מ"ר לדירת מגורים', 'Exemption up to 140 sqm for a residential apartment'), u: "https://www.kolzchut.org.il/he/%D7%A4%D7%98%D7%95%D7%A8_%D7%9E%D7%94%D7%99%D7%98%D7%9C_%D7%94%D7%A9%D7%91%D7%97%D7%94_%D7%9C%D7%91%D7%A0%D7%99%D7%94_%D7%90%D7%95_%D7%94%D7%A8%D7%97%D7%91%D7%94_%D7%A9%D7%9C_%D7%93%D7%99%D7%A8%D7%AA_%D7%9E%D7%92%D7%95%D7%A8%D7%99%D7%9D_%D7%A2%D7%93_140_%D7%9E%22%D7%A8", ul: L('לנוסח החוק והתנאים ↗', 'Statute & conditions ↗') }
           ] },
         { t: 'media', src: K6, cap: L('הדמיה: קייזר אדריכלים', 'Rendering: Kaiser Architects') }
       ]

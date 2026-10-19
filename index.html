@@ -22,8 +22,8 @@ button,a{touch-action:manipulation;-webkit-tap-highlight-color:rgba(79,168,216,.
 img{max-width:100%}
 ::selection{background:#4FA8D8;color:#1B2A4A}
 </style>
-<script src="i18n.js?v=20260925b"></script>
-<script src="deck-content.js?v=20260925b"></script>
+<script src="i18n.js?v=20261019d"></script>
+<script src="deck-content.js?v=20261019d"></script>
 </helmet>
 <template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><rect width="200" height="200" fill="#1B2A4A"></rect><rect x="60" y="60" width="80" height="80" fill="#4FA8D8" transform="rotate(45 100 100)"></rect><text x="100" y="114" font-family="Helvetica,Arial,sans-serif" font-size="34" font-weight="700" fill="#1B2A4A" text-anchor="middle">BS</text></svg></template>
 <div dir="{{ dir }}" ref="{{ rootRef }}" style="height:100dvh;display:flex;flex-direction:column;overflow:hidden;background:#131F38;font-family:'Assistant',Arial,sans-serif;color:#EDF0F6;line-height:1.7">
@@ -171,6 +171,9 @@ img{max-width:100%}
                               <div style="font-family:'Rubik',sans-serif;font-size:clamp(19px,2.3vw,25px);font-weight:900;color:#8ECDEE;line-height:1.15;letter-spacing:-.5px">{{ it.k }}</div>
                             </sc-if>
                             <div style="font-size:clamp(14.5px,1.55vw,15.5px);color:#CFD8E8;line-height:1.6;font-weight:300;text-wrap:pretty">{{ it.d }}</div>
+                            <sc-if value="{{ it.hasU }}" hint-placeholder-val="{{ false }}">
+                              <a href="{{ it.u }}" target="_blank" rel="noopener" style="align-self:flex-start;display:inline-flex;align-items:center;min-height:44px;box-sizing:border-box;margin-top:auto;border:1px solid rgba(79,168,216,.55);border-radius:999px;padding:10px 16px;color:#8ECDEE;font-size:13.5px;font-weight:800" style-hover="background:#4FA8D8;color:#1B2A4A">{{ it.ul }}</a>
+                            </sc-if>
                           </div>
                         </sc-for>
                       </div>
@@ -563,7 +566,7 @@ class Component extends DCLogic {
         o.sub = this.tx(b.sub);
         o.items = (b.items || []).map((it) => {
           const v = it.v ? this.tx(it.v) : '';
-          return { v, k: this.tx(it.k), d: this.tx(it.d), hasV: !!v, noV: !v };
+          return { v, k: this.tx(it.k), d: this.tx(it.d), hasV: !!v, noV: !v, u: it.u || '', hasU: !!it.u, ul: it.ul ? this.tx(it.ul) : '' };
         });
       }
       else if (b.t === 'media') {
